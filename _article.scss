@@ -1,0 +1,31 @@
+@use 'px-to-rem';
+@use 'variabili';
+
+// caratteristiche degli article
+
+.article-card{
+    display: flex;
+    flex-direction: column;
+    gap: rem(16px); // da rivedere quando viene renderizzato 
+
+    .article-image{
+        width: 100%;
+        max-height: rem(197.84px);
+    }
+
+    .article-content{
+
+        padding: (24px);
+        .article-info{
+            display: flex;
+            &:first-child{
+                color: $origin-brand-color;
+                width: 50%;
+            }      
+        }
+
+        // Nel titolo della card assegnare le classi fs-title e fw-title
+        // Nel content della card assegnare le classi fs-body e fw-body
+
+    }  
+}
