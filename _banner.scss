@@ -1,0 +1,32 @@
+@use 'buttons';
+@use 'variabili';
+// caratteristiche dei banner
+
+// caratteristiche generali del banner
+%banner{
+
+    background: transparent;
+    display: flex;
+}
+
+// classe contenente l'intero banner
+.banner{
+    
+    @extend banner;
+    
+    
+    .banner1{
+        color: $ea-light-color;
+        &:nth-child(2){
+            @include buttons(transparent,$ea-light-color, 2px, $ea-light-color, solid);  //estendo la mixin dei bottoni
+        }
+    }
+    .banner2{
+        color: $ea-dark-color;
+        &:nth-child(2){
+            @include buttons(transparent,$ea-dark-color, 2px, $ea-dark-color, solid); //estendo la mixin dei bottoni
+        }
+        
+    }
+
+}
