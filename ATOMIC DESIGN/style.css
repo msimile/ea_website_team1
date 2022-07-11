@@ -73,12 +73,34 @@ body {
 * body {
   height: 100vh;
 }
+* body .checkbox-myCustomHover {
+  position: absolute;
+  top: 35%;
+  right: 5%;
+  display: grid;
+  place-content: center;
+}
+* body .checkbox-myCustomHover:before {
+  content: "";
+  border-radius: 2px;
+  width: 0.5rem;
+  height: 0.5rem;
+  transform: scale(0.5);
+  transition: 120ms transform ease-in-out;
+}
+* body .checkbox-myCustomHover:checked::before {
+  background-color: rgb(255, 71, 71);
+  transform: scale(1.2);
+}
 * body .container {
   height: 100%;
   background-color: rgb(22, 22, 22);
   display: flex;
   gap: 0.8rem;
   padding: 0.5rem;
+}
+* body .container .section-title {
+  position: relative;
 }
 * body .container .col-1 .colors {
   width: 100%;
@@ -127,6 +149,11 @@ body {
   flex-direction: column;
   justify-content: space-around;
   height: calc(100% - 2.8rem);
+}
+* body .container .col-1 .buttons .buttons-content .myCustomHover {
+  transform: scale(1.08);
+  transition-duration: 0.3s;
+  cursor: pointer;
 }
 * body .container .col-1 .buttons .buttons-content button:hover {
   transform: scale(1.08);
@@ -289,6 +316,17 @@ body {
   cursor: pointer;
 }
 * body .container .col-2 .logos-icons .icons-content .icons .nav-icons .kebab svg:hover {
+  fill: rgb(255, 71, 71);
+  height: 28px;
+  width: 28px;
+}
+* body .container .col-2 .logos-icons .icons-content .icons .nav-icons .myCustomHover-lightgrey {
+  fill: lightgrey;
+}
+* body .container .col-2 .logos-icons .icons-content .icons .nav-icons .myCustomHover-white {
+  fill: white;
+}
+* body .container .col-2 .logos-icons .icons-content .icons .nav-icons .myCustomHover-kebab {
   fill: rgb(255, 71, 71);
   height: 28px;
   width: 28px;
@@ -459,8 +497,8 @@ body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("assets/Fifa-Mbappe.jpg");
   background-position: center;
   background-size: cover;
-  height: 250px;
-  width: 250px;
+  height: 12vw;
+  width: 12vw;
   white-space: nowrap;
   position: relative;
   transition-duration: opacity 0.4s ease-in-out;
@@ -507,6 +545,29 @@ body {
   z-index: 2;
 }
 * body .container .col-3 .elements .game-card-wrapper .trasparente:hover a {
+  display: unset;
+  color: white;
+}
+* body .container .col-3 .elements .game-card-wrapper .myCustomHover-square-card {
+  box-shadow: 0 14px 20px 0 rgba(80, 80, 80, 0.24);
+}
+* body .container .col-3 .elements .game-card-wrapper .myCustomHover-square-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(10, 3, 90, 0.84), rgba(245, 20, 28, 0.84));
+  background-size: 100%;
+  background-position: center;
+  opacity: 0.84;
+}
+* body .container .col-3 .elements .game-card-wrapper .myCustomHover-square-card .logo_img {
+  top: 30%;
+  z-index: 2;
+}
+* body .container .col-3 .elements .game-card-wrapper .myCustomHover-square-card a {
   display: unset;
   color: white;
 }/*# sourceMappingURL=style.css.map */
