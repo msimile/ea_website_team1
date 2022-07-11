@@ -18,10 +18,7 @@ $origin-brand-color: rgb(255, 71, 71);
     url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.svg#Electronic Arts Text")
       format("svg");
 }
-body{
-  width:100vw;
-  height: 100vh;
-}
+
 // vengono definite le caratteristiche del titolo delle varie card(buttons, colors, typography, etc)
 // successivamente la singola card estenderà queste caratteristiche
 %section-title {
@@ -34,6 +31,18 @@ body{
   color: $ea-light-color;
   height: 2.8rem;
   font-size: 1.5rem;
+}
+
+%elements-title {
+  background-color: $origin-brand-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  padding: 0.1rem 0 0.1rem 0;
+  color: $ea-light-color;
+  height: 2.6rem;
+  font-size: 1.3rem;
 }
 
 // permette di definire le caratteristiche di un bottone sulla base del suo colore, bordo e sfondo
@@ -100,6 +109,40 @@ $values: 1, 2, 3;
   padding: 0;
   box-sizing: border-box;
   font-family: "Electronic Arts Text";
+  // // .rotate {
+  // //   width: 1em;
+  // //   height: 0.5em;
+  // //   background-color: yellow;
+  // //   position: relative;
+  // //   margin: 40px;
+  // // }
+  // // .rotate::before,
+  // // .rotate::after {
+  // //   transition: transform, top, 0.4s ease-in-out;
+  // //   display: inline-block;
+  // //   font-size: 14px;
+  // //   font-weight: bold;
+  // // }
+  // // .rotate::before {
+  // //   content: "|";
+  // //   transform: rotate(-45deg);
+  // //   position: absolute;
+  // //   border-color: red;
+  // //   right: 72%;
+  // // }
+  // // .rotate::after {
+  // //   content: "|";
+  // //   transform: rotate(45deg);
+  // //   position: absolute;
+  // //   border-color: blue;
+  // //   left: 72%;
+  // // }
+  // // .rotate:hover::before {
+  // //   transform: rotate(-135deg);
+  // // }
+  // // .rotate:hover::after {
+  // //   transform: rotate(135deg);
+  // // }
 
   body {
     height: 100vh;
@@ -154,11 +197,12 @@ $values: 1, 2, 3;
             flex-direction: column;
             justify-content: space-around;
             height: calc(100% - 2.8rem);
-
+            button {
+              transition: transform 0.3s ease-in-out;
+              cursor: pointer;
+            }
             button:hover {
               transform: scale(1.08);
-              transition-duration: 0.3s;
-              cursor: pointer;
             }
 
             .button-description {
@@ -240,16 +284,20 @@ $values: 1, 2, 3;
       .col-2 {
         //layout sezione logos & icons
         .logos-icons {
-          @include section(33.33%);
+          @include section(32.8%);
 
           .icons-content {
-            height: calc(100% - 2.8rem);
+            height: calc(100% - 4rem);
             display: flex;
             flex-direction: column;
+            padding-bottom: 0;
             .logos1 {
               display: flex;
               justify-content: center;
               height: 33%;
+              img:hover {
+                cursor: pointer;
+              }
             }
             .logos2 {
               display: flex;
@@ -258,8 +306,14 @@ $values: 1, 2, 3;
               border-bottom: 1px solid black;
               height: 42%;
               padding: 2rem 1rem 2rem 1rem;
+
+              & :nth-child(2),
+              & :nth-child(3) {
+                cursor: pointer;
+              }
             }
             .icons {
+              height: 25%;
               display: flex;
               align-items: center;
               justify-content: space-between;
@@ -303,8 +357,8 @@ $values: 1, 2, 3;
 
                   svg:hover {
                     fill: $origin-brand-color;
-                    height: 28px;
-                    width: 28px;
+                    height: 30px;
+                    width: 30px;
                   }
                 }
               }
@@ -316,8 +370,14 @@ $values: 1, 2, 3;
                 background-color: rgb(225, 225, 225);
                 height: 42px;
 
-                svg {
+                & {
                   cursor: pointer;
+                  .icosoc {
+                    transition: transform 0.3s ease-in-out;
+                  }
+                  .icosoc:hover {
+                    transform: scale(1.4);
+                  }
                 }
               }
             }
@@ -414,134 +474,404 @@ $values: 1, 2, 3;
             font-size: 2.8rem;
             font-weight: bold;
           }
+
+          .loader {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 30%;
+            left: 45%;
+
+            span {
+              border: 0;
+              margin: 0;
+              width: 5rem;
+              height: 5rem;
+              position: absolute;
+              border-radius: 50%;
+              animation: spin 2s ease infinite;
+              transition: all 1s;
+            }
+            & :first-child {
+              background-color: #21a6d6;
+              animation-delay: -1.5s;
+            }
+            & :nth-child(2) {
+              background-color: #ffd960;
+              animation-delay: -1s;
+            }
+            & :nth-child(3) {
+              background-color: #d7415d;
+              animation-delay: -0.5s;
+            }
+            & :last-child {
+              background-color: #1f95f2;
+            }
+            @keyframes spin {
+              0% {
+                transform: translate(0) scale(0);
+              }
+              25% {
+                transform: translate(200%) scale(1.5);
+              }
+              50% {
+                transform: translate(200%, 200%) scale(0);
+              }
+              75% {
+                transform: translate(0, 200%) scale(1.5);
+              }
+              100% {
+                transform: translate(0) scale(0);
+              }
+            }
+          }
         }
       }
       // layout della terza colonna
       .col-3 {
         .elements {
-          display: flex;
-          width: 100%;
-          align-items: center;
-          justify-content: space-between;
-          height:100%;
           @include section(100%);
-          .section-title {
-            width: 100%;
-          }
-
-          .elements-content-title {
-            font-size: 1.2rem;
-            width: 100%;
-            background-color: red;
-            color: $ea-light-color;
-            text-align: center;
-            border-radius: 5px;
-            margin: 10px 0;
-          }
-
-          .elements-upper-content {
-            width: 100%;
-            height: 70%;
-          }
-          // Square card animation template
-          .game-card-wrapper {
-            min-width: 250px;
-            min-height: 320px;
+          .elements-content {
+            height: calc(100% - 2.8rem);
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: flex-end;
-            width: 100%;
-            height: 30%;
 
-            .logo_img {
-              position: absolute;
-              transform: translate(-50%, -50%);
-              left: 50%;
-              top: 50%;
-              width: 20%;
-              height: 20%;
-              transition: top 0.4s ease-in-out;
+            .elements-title {
+              @extend %elements-title;
             }
+            .components {
+              display: flex;
+              height: 70%;
+              padding: 0.5rem;
+              column-gap: 2rem;
+              .components-1 {
+                display: flex;
+                width: 50%;
+                flex-direction: column;
+                justify-content: center;
+                row-gap: 1.2rem;
+                margin: 1rem;
+                .article-card {
+                  display: flex;
+                  flex-direction: column;
+                  transition: transform 0.3s ease-in-out;
+                  box-shadow: 8px 8px 8px 1px rgba(77, 76, 76, 0.2),
+                    -8px -4px 8px 1px rgba(77, 76, 76, 0.2),
+                    8px -4px 8px 1px rgba(77, 76, 76, 0.2),
+                    -8px 8px 8px 1px rgba(77, 76, 76, 0.2);
 
-            .trasparente {
+                  @keyframes changeshadow {
+                    0% {
+                      box-shadow: 8px 8px 8px 1px rgba(77, 76, 76, 0.2),
+                        -8px -4px 8px 1px rgba(77, 76, 76, 0.2),
+                        8px -4px 8px 1px rgba(77, 76, 76, 0.2),
+                        -8px 8px 8px 1px rgba(77, 76, 76, 0.2);
+                    }
+                    25% {
+                      box-shadow: 8px 18px 8px 1px rgba(77, 76, 76, 0.2),
+                        -8px -4px 8px 1px rgba(77, 76, 76, 0.2),
+                        8px -4px 8px 1px rgba(77, 76, 76, 0.2),
+                        -8px 18px 8px 1px rgba(77, 76, 76, 0.2);
+                    }
+                    50% {
+                      box-shadow: 8px 22px 8px 1px rgba(77, 76, 76, 0.2),
+                        -8px -4px 8px 1px rgba(77, 76, 76, 0.2),
+                        8px -4px 8px 1px rgba(77, 76, 76, 0.2),
+                        -8px 22px 8px 1px rgba(77, 76, 76, 0.2);
+                    }
+                    75% {
+                      box-shadow: 8px 24px 8px 1px rgba(77, 76, 76, 0.2),
+                        -8px -4px 8px 1px rgba(77, 76, 76, 0.2),
+                        8px -4px 8px 1px rgba(77, 76, 76, 0.2),
+                        -8px 24px 8px 1px rgba(77, 76, 76, 0.2);
+                    }
+                    100% {
+                      box-shadow: 8px 28px 8px 1px rgba(77, 76, 76, 0.2),
+                        -8px -4px 8px 1px rgba(77, 76, 76, 0.2),
+                        8px -4px 8px 1px rgba(77, 76, 76, 0.2),
+                        -8px 28px 8px 1px rgba(77, 76, 76, 0.2);
+                    }
+                  }
+                  &:hover {
+                    transform: translateY(-0.5rem);
+                    animation-name: changeshadow;
+                    animation-duration: 0.3s;
+                    box-shadow: 8px 28px 8px 1px rgba(77, 76, 76, 0.2),
+                      -8px -4px 8px 1px rgba(77, 76, 76, 0.2),
+                      8px -4px 8px 1px rgba(77, 76, 76, 0.2),
+                      -8px 28px 8px 1px rgba(77, 76, 76, 0.2);
+                  }
+                  .article-image {
+                    width: 100%;
+                    height: 12.4rem;
+                    background-color: grey;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: $ea-light-color;
+                    font-size: 2.6rem;
+                    border: 1px solid gray;
+                  }
 
-              align-items: center;
-              background-image: linear-gradient(
-                  rgba(0, 0, 0, 0.3),
-                  rgba(0, 0, 0, 0.3)
-                ),
-                url("assets/Fifa-Mbappe.jpg");
-              background-position: center;
-              background-size: cover;
-              height: 250px;
-              width: 250px;
-              white-space: nowrap;
-              position: relative;
-              transition-duration: opacity 0.4s ease-in-out;
-              &::before {
-                content: "";
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                transition: opacity 0.4s ease-in-out;
-                background: linear-gradient(
-                  90deg,
-                  rgba(10, 3, 90, 1),
-                  rgba(245, 20, 28, 1)
-                );
-                opacity: 0;
+                  .article-content {
+                    padding: 1rem 0 3.5rem 1.3rem;
+                    border: 1px solid rgb(200, 200, 200);
+                    border-top: none;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 1rem;
+                    .article-info {
+                      display: flex;
+                      font-size: 1.35rem;
+                      font-weight: bold;
+                      & :first-child {
+                        color: $origin-brand-color;
+                        width: max-content;
+                      }
+                      & :last-child {
+                        padding-left: 0.5rem;
+                      }
+                    }
+                    .article-title {
+                      font-size: 2.6rem;
+                      font-weight: bold;
+                    }
+                    .article-text {
+                      font-size: 1.8rem;
+                      font-weight: 100;
+                      padding-right: 1rem;
+                    }
+                  }
+                }
               }
+              .components-2 {
+                display: flex;
+                width: 50%;
+                flex-direction: column;
 
-              a {
-                font-size: 0.5rem;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                text-decoration: none;
-                font-weight: 400;
-                display: none;
-                color: white;
-              }
-            }
+                .banners {
+                  height: 50%;
+                  display: flex;
+                  flex-direction: column;
+                  row-gap: 2rem;
+                  padding-top: 3.3rem;
+                  .banners-content {
+                    background-image: url("ea-banner1.jpg");
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    padding: 2rem 1rem 2rem 1rem;
+                    height: 50%;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    row-gap: 1.5rem;
+                    p {
+                      text-align: center;
+                    }
 
-            // added hover effect blue/red
+                    button {
+                      @include buttons(
+                        transparent,
+                        $ea-dark-color,
+                        2px,
+                        $ea-dark-color,
+                        solid
+                      );
+                      width: 90%;
+                      padding: 0.5rem 0 0.5rem 0;
+                      margin-left: 0;
+                      cursor: pointer;
+                      transition: transform 0.3s ease-in-out;
+                      &:hover {
+                        transform: scale(1.08);
+                      }
+                    }
+                  }
+                }
+                .dropdown {
+                  height: 50%;
+                  display: flex;
+                  flex-direction: column;
+                  row-gap: 1.2rem;
+                  cursor: pointer;
+                  #dropdown-container {
+                    height: fit-content; //Necessaria una modifica per far sì che il layout non subisca modifiche durante la transizione
+                    padding: 1rem;
+                    background-color: lightgray;
+                    div {
+                      width: 130px; // p{width} + 2px
 
-            .trasparente:hover {
-              box-shadow: 0 14px 20px 0 rgb(80 80 80 / 24%);
+                      p {
+                        width: 128px; //Dimensione d'esempio
+                        padding: 1rem;
+                        font-size: 1.25rem;
+                        background-color: white;
+                        span {
+                          display: inline-block;
+                          transform: rotate(90deg);
+                          margin-left: 0.5rem;
+                        }
+                      }
 
-              &::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(
-                  90deg,
-                  rgba(10, 3, 90, 0.84),
-                  rgba(245, 20, 28, 0.84)
-                );
-                background-size: 100%;
-                background-position: center;
-                opacity: 0.84;
-              }
+                      ul {
+                        //Posizionamento
+                        width: 195px; //Dimensione d'esempio, modificabile in base alle esigenze di layout
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
 
-              .logo_img {
-                top: 30%;
-                z-index: 2;
-              }
-              a {
-                display: unset;
-                color: white;
+                        //Stile
+                        padding: 0 1rem; // Deve corrispondere al padding-left di 'p'
+                        list-style: none;
+                        margin-top: 0.5rem;
+                        border-radius: 5px;
+                        font-size: 1rem;
+                        font-weight: 100;
+                        color: $ea-dark-color;
+                        background-color: $ea-light-color;
+                        opacity: 0.8;
+                        li {
+                          padding: 0.5rem 0;
+                          &:first-child {
+                            padding-top: 1rem; // Deve corrispondere al padding-left di 'p'
+                          }
+                          &:last-child {
+                            padding-bottom: 1rem; // Deve corrispondere al padding left di 'p'
+                          }
+                          &:hover {
+                            color: $origin-brand-color; //Da sostituire con 'origin-brand-color'
+                          }
+                        }
+
+                        //Animazione
+                        max-height: 0;
+                        overflow: hidden;
+                        -webkit-transition: max-height 0.2s ease-in;
+                        transition: max-height 0.2s ease-in;
+                      }
+
+                      &:hover {
+                        color: $origin-brand-color;
+                        cursor: pointer;
+                        span {
+                          transform: rotate(-90deg);
+                        }
+                        ul {
+                          max-height: 256px;
+                          opacity: 0.8;
+                          //-webkit-box-shadow: 5px 5px 15px 5px #A0A0A0;
+                          //box-shadow: 5px 5px 15px 5px #A0A0A0;
+                        }
+                      }
+                    }
+                  }
+                }
               }
             }
           }
         }
       }
+    }
+  }
+}
+.game-card-wrapper {
+  min-width: 250px;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 30%;
+  .elements-title{
+    @extend %elements-title
+  }
+
+  & :first-child {
+    display: flex;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .logo_img {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: 20%;
+    height: 20%;
+    transition: top 0.4s ease-in-out;
+  }
+
+  .trasparente {
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("assets/Fifa-Mbappe.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    width: 250px;
+    white-space: nowrap;
+    position: relative;
+    transition-duration: opacity 0.4s ease-in-out;
+    &::before {
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transition: opacity 0.4s ease-in-out;
+      background: linear-gradient(
+        90deg,
+        rgba(10, 3, 90, 1),
+        rgba(245, 20, 28, 1)
+      );
+      opacity: 0;
+    }
+
+    a {
+      font-size: 0.5rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-decoration: none;
+      font-weight: 400;
+      display: none;
+      color: white;
+    }
+  }
+
+  // added hover effect blue/red
+
+  .trasparente:hover {
+    box-shadow: 0 14px 20px 0 rgb(80 80 80 / 24%);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        rgba(10, 3, 90, 0.84),
+        rgba(245, 20, 28, 0.84)
+      );
+      background-size: 100%;
+      background-position: center;
+      opacity: 0.84;
+    }
+
+    .logo_img {
+      top: 30%;
+      z-index: 2;
+    }
+    a {
+      display: unset;
+      color: white;
     }
   }
 }
