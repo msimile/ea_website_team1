@@ -4,9 +4,25 @@ $ea-dark-color: rgb(22,22,22);
 $origin-brand-color: rgb(255,71,71);
 
 //import del font
-@font-face {font-family: "Electronic Arts Text"; src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot"); src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff") format("woff"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.svg#Electronic Arts Text") format("svg"); }
 
-
+@font-face {
+  font-family: "Electronic Arts Text";
+  src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot");
+  src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.svg#Electronic Arts Text")
+      format("svg");
+}
+body {
+  width: 100vw;
+  height: 100vh;
+}
 // vengono definite le caratteristiche del titolo delle varie card(buttons, colors, typography, etc)
 // successivamente la singola card estenderà queste caratteristiche
 %section-title{
@@ -91,14 +107,85 @@ $values: 1,2,3;
 
 
 // Inizio definizione caratteristiche con nesting
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Electronic Arts Text";
 
-    body{
-        height: 100vh;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Electronic Arts Text";
+
+  body {
+    height: 100vh;
+    //section-title checkboxes
+    .checkbox-myCustomHover {
+      position: absolute;
+      top: 35%;
+      right: 5%;
+      display: grid;
+      place-content: center;
+    }
+
+    .checkbox-myCustomHover:before {
+      content: "";
+      border-radius: 2px;
+      width: 0.5rem;
+      height: 0.5rem;
+      transform: scale(0.5);
+      transition: 120ms transform ease-in-out;
+    }
+    .checkbox-myCustomHover:checked::before {
+      background-color: $origin-brand-color;
+      transform: scale(1.2);
+    }
+//
+    .container {
+      height: 100%;
+      background-color: $ea-dark-color;
+      display: flex;
+      gap: 0.8rem;
+      padding: 0.5rem;
+
+      .section-title {
+        @extend %section-title;
+        position: relative;
+
+        //input styles and position
+      }
+
+      // layout della prima colonna
+      .col-1 {
+        //layout sezione colors
+        .colors {
+          @include section(33.33%);
+          .colors-content {
+            display: flex;
+            width: 100%;
+            height: calc(100% - 2.8rem);
+            padding: 0 1rem 0 1rem;
+            font-size: 1.3rem;
+            .colors-square {
+              display: flex;
+              flex-direction: column;
+              width: 25%;
+              justify-content: space-around;
+            }
+            .colors-list {
+              height: 100%;
+              padding-left: 1rem;
+              ul {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                list-style-type: circle;
+              }
+            }
+          }
+        }
+        //layout sezione colors
+        .buttons {
+          @include section(67.67%);
+
 
         .container{
             height: 100%;
@@ -106,6 +193,23 @@ $values: 1,2,3;
             display: flex;
             gap: 0.8rem;
             padding: 0.5rem;
+            flex-direction: column;
+            justify-content: space-around;
+            height: calc(100% - 2.8rem);
+
+            //Triggering hover class for Checkbox
+
+            .myCustomHover {
+              transform: scale(1.08);
+              transition-duration: 0.3s;
+              cursor: pointer;
+            }
+            //
+            button:hover {
+              transform: scale(1.08);
+              transition-duration: 0.3s;
+              cursor: pointer;
+            }
 
             .section-title{
                 @extend  %section-title;
@@ -142,6 +246,7 @@ $values: 1,2,3;
                         }
                     }
                 }
+
                 //layout sezione colors
                 .buttons{
                     @include section( 67.67%);
@@ -211,6 +316,49 @@ $values: 1,2,3;
                     }  
                     }
                     
+
+                .kebab {
+                  background-color: white;
+                  height: 42px;
+                  width: 42px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  cursor: pointer;
+
+                  svg:hover {
+                    fill: $origin-brand-color;
+                    height: 28px;
+                    width: 28px;
+                  }
+                }
+                //Checkbox Class styles
+
+                .myCustomHover-lightgrey {
+                  fill: lightgrey;
+                }
+
+                .myCustomHover-white {
+                  fill: white;
+                }
+
+                .myCustomHover-kebab {
+                  fill: $origin-brand-color;
+                  height: 28px;
+                  width: 28px;
+                }
+              }
+              .social-icons {
+                display: flex;
+                align-items: center;
+                width: 60%;
+                justify-content: space-around;
+                background-color: rgb(225, 225, 225);
+                height: 42px;
+
+                svg {
+                  cursor: pointer;
+
                 }
             }
 
@@ -458,7 +606,81 @@ $values: 1,2,3;
                         }
                     }
                 }
-                
+
+              }
+            }
+          }
+        }
+        //layout sezione atomic title
+        .atomic-title {
+          @include section(33.33%, $ea-dark-color);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          color: $ea-light-color;
+
+          h1 {
+            font-size: 4.6rem;
+          }
+          p:first-of-type {
+            color: $origin-brand-color;
+            font-size: 3.8rem;
+            font-weight: bold;
+          }
+          p:nth-of-type(2) {
+            font-size: 2.8rem;
+            font-weight: bold;
+          }
+        }
+      }
+      // layout della terza colonna
+      .col-3 {
+        .elements {
+          display: flex;
+          width: 100%;
+          align-items: center;
+          justify-content: space-between;
+          height: 100%;
+          @include section(100%);
+          .section-title {
+            width: 100%;
+          }
+
+          .elements-content-title {
+            font-size: 1.2rem;
+            width: 100%;
+            background-color: red;
+            color: $ea-light-color;
+            text-align: center;
+            border-radius: 5px;
+            margin: 10px 0;
+          }
+
+          .elements-upper-content {
+            width: 100%;
+            height: 70%;
+          }
+          // Square card animation template
+          .game-card-wrapper {
+            min-width: 250px;
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            width: 100%;
+            height: 30%;
+
+            .logo_img {
+              position: absolute;
+              transform: translate(-50%, -50%);
+              left: 50%;
+              top: 50%;
+              width: 20%;
+              height: 20%;
+              transition: top 0.4s ease-in-out;
+
             }
             // layout della terza colonna
             .col-3{
@@ -468,6 +690,7 @@ $values: 1,2,3;
                         height: calc(100% - 2.8rem);
                         display: flex;
                         flex-direction: column;
+
 
                         .elements-title{
                             @extend %elements-title;
@@ -514,6 +737,50 @@ $values: 1,2,3;
                                         color: $ea-light-color;
                                         font-size: 2.6rem;
                                         border: 1px solid gray;
+
+            .trasparente {
+              align-items: center;
+              background-image: linear-gradient(
+                  rgba(0, 0, 0, 0.3),
+                  rgba(0, 0, 0, 0.3)
+                ),
+                url("assets/Fifa-Mbappe.jpg");
+              background-position: center;
+              background-size: cover;
+              height: 12vw;
+              width: 12vw;
+              white-space: nowrap;
+              position: relative;
+              transition-duration: opacity 0.4s ease-in-out;
+              &::before {
+                content: "";
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                transition: opacity 0.4s ease-in-out;
+                background: linear-gradient(
+                  90deg,
+                  rgba(10, 3, 90, 1),
+                  rgba(245, 20, 28, 1)
+                );
+                opacity: 0;
+              }
+
+              a {
+                font-size: 0.5rem;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-decoration: none;
+                font-weight: 400;
+                display: none;
+                color: white;
+              }
+            }
+
 
                                     }
                                 
@@ -729,7 +996,40 @@ $values: 1,2,3;
                 
             }
 
-            
+
+            //Checkbox classes for Square card
+
+            .myCustomHover-square-card {
+              box-shadow: 0 14px 20px 0 rgb(80 80 80 / 24%);
+
+              &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(
+                  90deg,
+                  rgba(10, 3, 90, 0.84),
+                  rgba(245, 20, 28, 0.84)
+                );
+                background-size: 100%;
+                background-position: center;
+                opacity: 0.84;
+              }
+
+              .logo_img {
+                top: 30%;
+                z-index: 2;
+              }
+              a {
+                display: unset;
+                color: white;
+              }
+            }
+          }
+
         }
     }
 }

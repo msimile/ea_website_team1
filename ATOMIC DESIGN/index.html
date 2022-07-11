@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atomic Design By Fullstack-4</title>
-    <link rel="stylesheet" href="style.css">
+    <script type='text/javascript' src="atom.js"></script>
     <script type="text/javascript" src="script.js"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <!-- creo un container per tutta la pagina -->
     <div class="container">
 
@@ -38,8 +39,35 @@
         </div>
         <!-- sezione buttons della colonna 1-->
         <div class="buttons">
-            <div class="section-title">
-                BUTTONS
+
+          <div class="section-title">BUTTONS <input type="checkbox" class="checkbox-myCustomHover" id="hover-checkbox-buttons"></div>
+          <div class="buttons-content">
+            <div class="button1">
+              <!--Ogni classe button(n) contiene affiancati un bottone e una lista delle sue caratteristiche-->
+              <div class="button">
+                <button>Button</button>
+              </div>
+              <div class="button-description">
+                <ul>
+                  <li><b>bg-color:</b> transparent</li>
+                  <li><b>border:</b> 2px solid ea-dark-color</li>
+                  <li><b>border-radius:</b> 3px</li>
+                </ul>
+              </div>
+            </div>
+            <div class="button2">
+              <!--Bottone 2 e le sue caratteristiche-->
+              <div class="button">
+                <button>Button</button>
+              </div>
+              <div class="button-description">
+                <ul>
+                  <li><b>bg-color:</b> transparent</li>
+                  <li><b>border:</b> 2px solid ea-light-color</li>
+                  <li><b>border-radius:</b> 3px</li>
+                </ul>
+              </div>
+
             </div>
             <div class="buttons-content">
                 <div class="button1">  <!--Ogni classe button(n) contiene affiancati un bottone e una lista delle sue caratteristiche-->
@@ -97,9 +125,41 @@
        <!--Seconda Colonna-->
       <div class="col-2">
         <!-- sezione logos e icons della colonna 2-->
-         <div class="logos-icons">
-            <div class="section-title">
-                LOGOS & ICONS
+
+        <div class="logos-icons">
+          <div class="section-title">LOGOS & ICONS<input type="checkbox" class="checkbox-myCustomHover" id="hover-checkbox-logos"></div>
+          <div class="icons-content">
+            <!--Suddivi in 3 righe il contenuto della sezione-->
+            <div class="logos1">
+              <!--Primo logo-->
+              <img
+                height="80"
+                width="60%"
+                src="https://media.contentapi.ea.com/content/dam/eacom/common/ea-wordmark-network-nav-coral.svg"
+                alt="Electronics Arts Home"
+              />
+            </div>
+            <div class="logos2">
+              <!--Seconda riga con i relativi 3 loghi-->
+              <img
+                height="130"
+                width="150"
+                src="https://media.contentapi.ea.com/content/dam/eacom/subscription/ea-play/common/hero-logos/color/ea-play-logo-coral-hero-logo-small.svg"
+                alt=""
+              />
+              <img
+                height="120"
+                width="150"
+                src="https://privacy-policy.truste.com/privacy-seal/seal?rid=2593a571-b03b-4951-9a22-c175bd66b351"
+                alt="TRUSTe"
+              />
+              <img
+                height="90"
+                width="90"
+                src="https://media.contentapi.ea.com/content/dam/eacom/it-it/common/october-ea-ring.png"
+                alt=""
+              />
+
             </div>
             <div class="icons-content">  <!--Suddivi in 3 righe il contenuto della sezione-->
                 <div class="logos1">  <!--Primo logo-->
@@ -202,9 +262,20 @@
 
       <!--Terza Colonna-->
       <div class="col-3">
-         <div class="elements">
-            <div class="section-title">
-                ELEMENTS
+
+        <div class="elements">
+          <div class="section-title">ELEMENTS<input type="checkbox" class="checkbox-myCustomHover" id="hover-checkbox-elements"></div>
+          <div class="elements-upper-content"></div>
+          <div class="game-card-wrapper">
+            <header class="elements-content-title">GAME CARD</header>
+            <div class="trasparente">
+              <img
+                class="logo_img"
+                src="assets\apex-mobile-adaptive-logo-white-7x2-300px.svg"
+                alt="hello"
+              />
+              <a href="#">Sito Ufficiale</a>
+
             </div>
             <div class="elements-content">
                 <div class="components">
