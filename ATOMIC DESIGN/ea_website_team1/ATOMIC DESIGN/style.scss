@@ -100,6 +100,29 @@ $values: 1,2,3;
     body{
         height: 100vh;
 
+ //section-title checkboxes
+ .checkbox-myCustomHover {
+    position: absolute;
+    top: 35%;
+    right: 5%;
+    display: grid;
+    place-content: center;
+  }
+
+  .checkbox-myCustomHover:before {
+    content: "";
+    border-radius: 2px;
+    width: 0.5rem;
+    height: 0.5rem;
+    transform: scale(0.5);
+    transition: 120ms transform ease-in-out;
+  }
+  .checkbox-myCustomHover:checked::before {
+    background-color: $origin-brand-color;
+    transform: scale(1.2);
+  }
+//
+
         .container{
             height: 100%;
             background-color: $ea-dark-color;
@@ -109,6 +132,8 @@ $values: 1,2,3;
 
             .section-title{
                 @extend  %section-title;
+        position: relative;
+
             }
 
             // layout della prima colonna
@@ -151,6 +176,16 @@ $values: 1,2,3;
                         flex-direction: column;
                         justify-content: space-around;
                         height: calc(100% - 2.8rem);
+
+            //Triggering hover class for Checkbox
+
+            .myCustomHover {
+                transform: scale(1.08);
+                transition-duration: 0.3s;
+                cursor: pointer;
+              }
+              //
+
                         button{
                             transition: transform 0.3s ease-in-out;
                             cursor: pointer;
@@ -295,6 +330,21 @@ $values: 1,2,3;
                                         width: 30px;
                                     }
                                 }
+                                //Checkbox Class styles
+
+                .myCustomHover-lightgrey {
+                    fill: lightgrey;
+                  }
+  
+                  .myCustomHover-white {
+                    fill: white;
+                  }
+  
+                  .myCustomHover-kebab {
+                    fill: $origin-brand-color;
+                    height: 28px;
+                    width: 28px;
+                  }
                             }
                             .social-icons{
                                 display: flex;
@@ -314,7 +364,9 @@ $values: 1,2,3;
                                     }
                                 }
                 
-
+                                .myCustomHover-social-icons{
+                                    transform: scale(1.4);
+                                }
                                 
                                 
                             }
@@ -504,6 +556,7 @@ $values: 1,2,3;
                                         box-shadow: 8px 28px 8px 1px rgba(77, 76, 76, 0.2), -8px -4px 8px 1px rgba(77, 76, 76, 0.2), 8px -4px 8px 1px rgba(77, 76, 76, 0.2), -8px 28px 8px 1px rgba(77, 76, 76, 0.2);
                                         
                                     }
+                
                                     .article-image{
                                         width: 100%;
                                         height: 12.4rem;
@@ -552,7 +605,12 @@ $values: 1,2,3;
                                 
                                     }  
                                 }
-                                
+                                .myCustomHover-article-card{
+                                    transform: translateY(-0.5rem);
+                                        animation-name: changeshadow;
+                                        animation-duration: 0.3s;
+                                        box-shadow: 8px 28px 8px 1px rgba(77, 76, 76, 0.2), -8px -4px 8px 1px rgba(77, 76, 76, 0.2), 8px -4px 8px 1px rgba(77, 76, 76, 0.2), -8px 28px 8px 1px rgba(77, 76, 76, 0.2);
+                                }
                             }
                             .components-2{
                                 display: flex;
@@ -592,6 +650,11 @@ $values: 1,2,3;
                                                 transform: scale(1.08);
                                             }
                                         }
+
+                                        .myCustomHover-button{
+                                            transform: scale(1.08);
+                                        }
+
                                     }
                                 }
                                 .dropdown{
@@ -629,20 +692,24 @@ $values: 1,2,3;
                                                 content: "|";
                                                 transform: rotate(-45deg);
                                                 position: absolute;
-                                                border-color: red;
                                                 right: 72%;
                                               }
                                               .rotate::after {
                                                 content: "|";
                                                 transform: rotate(45deg);
                                                 position: absolute;
-                                                border-color: blue;
                                                 left: 72%;
                                               }
                                               .rotate:hover::before {
                                                 transform: rotate(-135deg);
                                               }
                                               .rotate:hover::after {
+                                                transform: rotate(135deg);
+                                              }
+                                              .myCustomHover-rotate::before{
+                                                transform: rotate(-135deg);
+                                              }
+                                              .myCustomHover-rotate::after {
                                                 transform: rotate(135deg);
                                               }
                                               p{
@@ -670,8 +737,15 @@ $values: 1,2,3;
                                                     max-height: 100%;
                                                     color: $ea-dark-color;
                                                 }
-                                           
+                                          
                                         }
+                                        .myCustomHover-hover-effect{
+                                            color: $origin-brand-color;
+                                            ul{
+                                                max-height: 100%;
+                                                color: $ea-dark-color;
+                                            }
+                                           }
                                         ul{
                                             list-style-type: none;
                                             font-size: 2rem;                            
@@ -690,9 +764,15 @@ $values: 1,2,3;
                                             -webkit-transition: max-height 0.2s ease-in;
                                             transition: max-height 0.2s ease-in;
                                         }
+
+
                                     }
 
                                     .dropdown-list:hover{
+                                        height: 85%;
+                                    }
+                                    //checkbox class
+                                    .myCustomHover-dropdown-list{
                                         height: 85%;
                                     }
                                 }
@@ -799,6 +879,37 @@ $values: 1,2,3;
                                 color: white;
                               }
                             }
+                            //Checkbox classes for Square card
+
+            .myCustomHover-square-card {
+                box-shadow: 0 14px 20px 0 rgb(80 80 80 / 24%);
+  
+                &::before {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  background: linear-gradient(
+                    90deg,
+                    rgba(10, 3, 90, 0.84),
+                    rgba(245, 20, 28, 0.84)
+                  );
+                  background-size: 100%;
+                  background-position: center;
+                  opacity: 0.84;
+                }
+  
+                .logo_img {
+                  top: 30%;
+                  z-index: 2;
+                }
+                a {
+                  display: unset;
+                  color: white;
+                }
+              }
                           }
                     }
                 }
