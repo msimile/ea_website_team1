@@ -1,0 +1,4 @@
+@function rem($pixels){
+ //suppongo che mi venga passato un valore in px e non un semplice numero adimensionale
+ @return calc($pixels/16px*1rem) 
+}
