@@ -1,7 +1,7 @@
 @use 'px-to-rem';
 @use 'variabili';
 // mixin caratteristiche comuni dei bottoni della homepage
-@mixin buttons($bg-color, $color: $ea-dark-color, $border-dim, $border-color, $border-style){
+@mixin buttons($bg-color, $color: variabili.$ea-dark-color, $border-dim, $border-color, $border-style){
 
     border-radius: rem(3px);
     background-color: $bg-color;

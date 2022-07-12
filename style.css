@@ -1,0 +1,115 @@
+@font-face {
+  font-family: "Electronic Arts Text";
+  src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot");
+  src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff") format("woff"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.svg#Electronic Arts Text") format("svg");
+}
+.fs-16px {
+  font-size: rem(16px);
+}
+
+.fs-35px {
+  font-size: rem(35px);
+}
+
+.fs-54px {
+  font-size: rem(54px);
+}
+
+.fw-100 {
+  font-weight: 100;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Electronic Arts Text";
+  color: rgb(22, 22, 22);
+}
+
+.white-nav {
+  background-color: #FFFFFF;
+  border: 1px solid black;
+}
+.white-nav ul {
+  display: flex;
+  color: rgb(22, 22, 22);
+  align-items: center;
+  list-style-type: none;
+  height: 56px;
+  padding-left: 17px;
+}
+.white-nav ul li {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  margin-left: 20px;
+}
+.white-nav ul li a {
+  margin-left: 4px;
+  display: inline-block;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+}
+.white-nav ul li a::before {
+  content: "";
+  display: inline-block;
+  border: 1px solid rgb(22, 22, 22);
+  border-radius: 5%;
+  height: 0px;
+  width: 8px;
+  transform: rotate(45deg);
+  margin-right: -3.5px;
+  transition: transform 0.25s ease-in;
+}
+.white-nav ul li a::after {
+  content: "";
+  border: 1px solid rgb(22, 22, 22);
+  border-radius: 10%;
+  display: inline-block;
+  height: 0px;
+  width: 8px;
+  transform: rotate(-45deg);
+  transition: transform 0.25s ease-in;
+}
+.white-nav ul li:hover {
+  cursor: pointer;
+}
+.white-nav ul li:hover p {
+  color: rgb(255, 71, 71);
+}
+.white-nav ul li:hover a::after {
+  transform: rotate(45deg);
+  border-color: rgb(255, 71, 71);
+}
+.white-nav ul li:hover a::before {
+  transform: rotate(-45deg);
+  border-color: rgb(255, 71, 71);
+}
+.white-nav ul li:first-child {
+  margin-left: 0;
+}
+.white-nav ul li:first-child svg {
+  height: 20px;
+  width: 24px;
+  display: block;
+}
+.white-nav ul li:nth-child(2) {
+  font-size: 18px;
+  margin-left: 24px;
+  margin-right: 36px;
+}
+.white-nav ul li:nth-child(2) img {
+  height: 31.99px;
+  width: 145.01px;
+  display: block;
+}/*# sourceMappingURL=style.css.map */
