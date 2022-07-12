@@ -27,9 +27,6 @@ $fs_values: $body, $title, $header;  // valori per il font di header, title, bod
 }
 
 
-
-
-
 *{
     margin: 0;
     padding: 0;
@@ -37,3 +34,114 @@ $fs_values: $body, $title, $header;  // valori per il font di header, title, bod
     font-family: "Electronic Arts Text";
     color: $ea-dark-color;
 }
+
+.giochi-in-evidenza {
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: 70%;
+    height: 50vh;
+    justify-content: space-between;
+    gap:1rem;
+}
+
+.game-card-wrapper {
+    min-width: 250px;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 30%;
+    .elements-title{
+      @extend %elements-title
+    }
+  
+    & :first-child {
+      display: flex;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    .logo_img {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+      width: 20%;
+      height: 20%;
+      transition: top 0.4s ease-in-out;
+    }
+  
+    .game-card-img-content {
+      align-items: center;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("assets/Fifa-Mbappe.jpg");
+      background-position: center;
+      background-size: cover;
+      height: 250px;
+      width: 250px;
+      white-space: nowrap;
+      position: relative;
+      transition-duration: opacity 0.4s ease-in-out;
+      &::before {
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: opacity 0.4s ease-in-out;
+        background: linear-gradient(
+          90deg,
+          rgba(10, 3, 90, 1),
+          rgba(245, 20, 28, 1)
+        );
+        opacity: 0;
+      }
+  
+      a {
+        font-size: 0.5rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-decoration: none;
+        font-weight: 400;
+        display: none;
+        color: white;
+      }
+    }
+  
+    // added hover effect blue/red
+  
+    .game-card-img-content:hover {
+      box-shadow: 0 14px 20px 0 rgb(80 80 80 / 24%);
+  
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          rgba(10, 3, 90, 0.84),
+          rgba(245, 20, 28, 0.84)
+        );
+        background-size: 100%;
+        background-position: center;
+        opacity: 0.84;
+      }
+  
+      .logo_img {
+        top: 30%;
+        z-index: 2;
+      }
+      a {
+        display: unset;
+        color: white;
+      }
+    }
+  }
+
