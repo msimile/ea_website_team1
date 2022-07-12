@@ -8,7 +8,7 @@
 
 
 // typography
-$fs_values: $body, $title, $header;  // valori per il font di header, title, body
+$fs_values: variabili.$body, variabili.$title, variabili.$header;  // valori per il font di header, title, body
    
 // creo 3 classi con un ciclo
 @each $fs_value in $fs_values {
@@ -19,7 +19,7 @@ $fs_values: $body, $title, $header;  // valori per il font di header, title, bod
 }
    
 // creo 3 classi con un ciclo
-@each $fw_value in $fw_values {
+@each $fw_value in variabili.$fw_values {
    
     .fw-#{$fw_value}{   //ogni classe si caratterizza per un font-weight diverso
     font-weight: $fw_value;
