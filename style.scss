@@ -1,5 +1,6 @@
 @use 'px-to-rem';
 @use 'variabili';
+@use 'white-nav';
 
 // import del font
 @font-face {font-family: "Electronic Arts Text"; src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot"); src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff") format("woff"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.svg#Electronic Arts Text") format("svg"); }
@@ -31,94 +32,7 @@ $fs_values: variabili.$body, variabili.$title, variabili.$header;  // valori per
     color: variabili.$ea-dark-color;
 }
 
-//feature/white-navbar
-.white-nav{
-    background-color: #FFFFFF; //Colore della navbar
-    border: 1px solid black; // Test rule
-    ul{
-        display: flex;
-        color: variabili.$ea-dark-color;
-        align-items: center;
-        list-style-type: none;
-        height: 56px; //56px navbar-bianca, 96px con navbar-nera
-        padding-left: 17px; //Dimensioni prese dal sito
-        li{
-                display: flex; 
-                align-items: center;
-                font-size: 18px; //Dimensioni prese dal sito
-                margin-left: 20px; //Dimensioni prese dal sito
-            a{
-                margin-left: 4px;
-                display: inline-block;
-                margin-top: 4px;
-                display: flex;
-                align-items: center;
-                &::before{
-                    content: "";
-                    display: inline-block;
-                    border: 1px solid variabili.$ea-dark-color;
-                    border-radius: 5%;
-                    height: 0px;
-                    width: 8px;
-                    transform: rotate(45deg);
-                    margin-right: -3.5px;
-                    transition: transform 0.25s ease-in;
-                }
-                &::after{
-                    content: "";
-                    border: 1px solid variabili.$ea-dark-color;
-                    border-radius: 10%;
-                    display: inline-block;
-                    height: 0px;
-                    width: 8px;
-                    transform: rotate(-45deg);
-                    transition: transform 0.25s ease-in;
-                }
-            }
-            &:hover{
-                cursor: pointer; 
-                p{
-                    color: variabili.$origin-brand-color;
-                }
-                a::after{
-                    transform: rotate(45deg);
-                    border-color: variabili.$origin-brand-color;
-
-                }
-                a::before{
-                    transform: rotate(-45deg);
-                    border-color: variabili.$origin-brand-color;
-                }
-            }
-            &:first-child{
-                svg{
-                    height: 20px; //Dimensioni prese dal sito
-                    width: 24px; //Dimensioni prese dal sito
-                    display: block
-                }
-                margin-left: 0;
-            }
-            &:nth-child(2){
-                img{
-                    height: 31.99px; //Dimensioni prese dal sito
-                    width: 145.01px; //Dimensioni prese dal sito
-                    display: block;
-                }
-                font-size: 18px; //Dimensioni prese dal sito
-                margin-left: 24px; //Dimensioni prese dal sito
-                margin-right: 36px; //Dimensioni prese dal sito
-            }
-            &:nth-child(3){
-            }
-            &:nth-child(4){
-            }
-            &:nth-child(5){
-            }
-            &:nth-child(6){
-            }
-            &:last-child{
-            }
-        }
-    }
+//TEST RULE! - rimuovi
+body{
+    background-color: variabili.$origin-brand-color;
 }
-//feature/white-navbar

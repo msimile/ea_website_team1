@@ -1,0 +1,300 @@
+@use 'px-to-rem' as c;
+@use 'variabili';
+
+//feature/white-navbar
+%center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%center-horizontally{
+    display: flex;
+    justify-content: center;
+}
+
+%center-vertically{
+    display: flex;
+    align-items: center;
+}
+
+//Navbar bianca
+.white-nav{
+    background-color: #FFFFFF; //Colore della navbar
+    display: flex;
+    padding-left: c.rem(17px); //Dimensioni prese dal sito
+
+    //Classe assegnata ai div contenenti i due svg
+    .nav-logos{
+            @extend %center-vertically;
+            height: c.rem(56px);
+            width: fit-content;
+
+        //Menu icon
+        &:first-child{
+            position: relative;
+            svg{
+                height: c.rem(20px); //Dimensioni prese dal sito
+                width: c.rem(24px); //Dimensioni prese dal sito
+                display: block;
+                position: absolute;
+                transition: all 0.25s ease;
+
+                //Animazione sull'hover
+                &:hover{
+                    transform: scale(1.40);
+                    fill: variabili.$origin-brand-color;
+                    cursor: pointer;
+                }
+            }
+
+            margin-left: 0;
+        }
+
+        //Logo Electronic Arts
+        &:nth-child(2){
+            img{
+                height: c.rem(31.99px); //Dimensioni prese dal sito
+                width: c.rem(145.01px); //Dimensioni prese dal sito
+                display: block;
+            }
+            margin-left: c.rem(48px); //Dimensioni prese dal sito
+            margin-right: c.rem(36px); //Dimensioni prese dal sito
+        }
+    }
+
+    //Lista delle sezioni presenti nella navbar
+    .menu-section-list{
+        display: flex;
+        color: variabili.$ea-dark-color;
+        list-style-type: none;
+
+        //Classe assegnata ad ogni sezione presente nella navbar
+        .menu-section-item{
+                position: relative;
+                margin-left: c.rem(20px); //Dimensioni prese dal sito
+
+                //Nome della sezione
+                .menu-section-title{
+                    @extend %center-vertically;
+                    width: fit-content;
+                    height: c.rem(56px);
+                    font-size: c.rem(18px); //Dimensioni prese dal sito
+
+                    //Freccia accanto al nome della sezione
+                    a{
+                        margin-left: c.rem(4px);
+                        display: inline-block;
+                        margin-top: c.rem(4px);
+                        height: c.rem(56px); //56px navbar-bianca, 96px con navbar-nera
+                        display: flex;
+                        align-items: center; // è un %center-vertically ma l'extend qui non può essere usato
+                        &::before{
+                            content: "";
+                            display: inline-block;
+                            border: c.rem(1px) solid variabili.$ea-dark-color;
+                            border-radius: 5%;
+                            height: 0px;
+                            width: c.rem(8px);
+                            transform: rotate(45deg);
+                            margin-right: -3.5px;
+                            transition: transform 0.20s ease-in;
+                        }
+                        &::after{
+                            content: "";
+                            border: c.rem(1px) solid variabili.$ea-dark-color;
+                            border-radius: 10%;
+                            display: inline-block;
+                            height: 0px;
+                            width: c.rem(8px);
+                            transform: rotate(-45deg);
+                            transition: transform 0.20s ease-in;
+                        }
+                    }
+
+                    //Animazione della freccia sull'hover
+                    &:hover{
+                        cursor: pointer; 
+                        p{
+                            color: variabili.$origin-brand-color;
+                        }
+                        a::after{
+                            transform: rotate(45deg);
+                            border-color: variabili.$origin-brand-color;
+        
+                        }
+                        a::before{
+                            transform: rotate(-45deg);
+                            border-color: variabili.$origin-brand-color;
+                        }
+                    }
+
+                }
+
+            //Classe assegnata ad ogni container dei dropdown menu
+            .dropdown-container{
+                background-color: transparent;
+                position: absolute;
+                top: c.rem(56px); //ALtezza del parent
+                max-height: 0px;
+                overflow: hidden;
+                transition: max-height 0.3s ease-in-out;
+                opacity: 0.9;
+
+                //Classe assegnata ad ogni dropdown menu
+                .dropdown-content{
+                    background-color: #FFFFFF;
+                    margin-top: 0.5rem;
+                    border-radius: c.rem(4px); //Dimensioni prese dal sito
+                    a{
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            //Animazione dei dropdown menu sull'hover
+            &:hover{
+                .dropdown-container{
+                    max-height: c.rem(300px);
+                }
+            }
+            
+            //Menu 'Giochi'
+            &:first-child{
+                .dropdown-container{
+                    .dropdown-content{
+                        @extend %center-vertically;
+                        justify-content: flex-start;
+                        padding: c.rem(16px) c.rem(32px); 
+                        padding-right: 0;
+                        gap: c.rem(64px); //2x padding top
+                        ul{
+                            li{
+                                list-style: none;
+                                font-size: c.rem(16px);
+                                font-weight: 100;
+                                width: max-content;
+                                margin: c.rem(16px) 0;
+                                &:first-child{
+                                    font-weight: 900;
+                                    line-height: c.rem(32px); //2x font-size
+                                }
+                                a:hover{
+                                    color: variabili.$origin-brand-color;
+                                    cursor: pointer;
+                                }
+                                &:first-child:hover{
+                                    a{
+                                        color: variabili.$ea-dark-color;
+                                    }
+                                }
+                            }
+                            &:nth-child(2){
+                                margin-right: c.rem(48px); //3x padding-right 
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            //Menu 'Altre esperienze'
+            &:nth-child(2){
+                .dropdown-container{
+                    .dropdown-content{
+                        ul{
+                            padding: c.rem(8px) c.rem(32px);
+                            padding-right: c.rem(40px); //padding-left + 25%
+                            li{
+                                list-style: none;
+                                font-size: c.rem(16px);
+                                font-weight: 100;
+                                width: max-content;
+                                margin: c.rem(16px) 0;
+                                a:hover{
+                                    cursor: pointer;
+                                    color: variabili.$origin-brand-color;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+
+            //Menu 'Informazioni'
+            &:nth-child(3){
+                .dropdown-container{
+                    .dropdown-content{
+                        ul{
+                            padding: c.rem(8px) c.rem(32px);
+                            padding-right: c.rem(40px); //padding-left + 25%
+                            li{
+                                list-style: none;
+                                font-size: c.rem(16px);
+                                font-weight: 100;
+                                width: max-content;
+                                margin: c.rem(16px) 0;
+                                a:hover{
+                                    cursor: pointer;
+                                    color: variabili.$origin-brand-color;
+                                }
+                            }
+                            
+                        }
+                    }
+                } 
+            }
+
+            //Menu 'Impegni'
+            &:nth-child(4){
+                .dropdown-container{
+                    .dropdown-content{
+                        ul{
+                            padding: c.rem(8px) c.rem(32px);
+                            padding-right: c.rem(40px); //padding-left + 25%
+                            li{
+                                list-style: none;
+                                font-size: c.rem(16px);
+                                font-weight: 100;
+                                width: max-content;
+                                margin: c.rem(16px) 0;
+                                a:hover{
+                                    cursor: pointer;
+                                    color: variabili.$origin-brand-color;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+
+            //Menu 'Container'
+            &:last-child{
+                .dropdown-container{
+                    .dropdown-content{
+                        ul{
+                            padding: c.rem(8px) c.rem(32px);
+                            padding-right: c.rem(40px); //padding-left + 25%
+                            li{
+                                list-style: none;
+                                font-size: c.rem(16px);
+                                font-weight: 100;
+                                width: max-content;
+                                margin: c.rem(16px) 0;
+                                a:hover{
+                                    cursor: pointer;
+                                    color: variabili.$origin-brand-color;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+//feature/white-navbar
