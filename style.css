@@ -35,9 +35,25 @@
   margin-right: 2.25rem;
 }
 .white-nav .nav-logos:nth-child(2) img {
-  height: 1.999375rem;
-  width: 9.063125rem;
+  height: 2rem;
+  width: 9.0625rem;
   display: block;
+}
+.white-nav .nav-logos .hamburger-icon {
+  display: none;
+  transform: scale(0.7);
+}
+.white-nav .nav-logos .hamburger-icon div {
+  width: 1.875rem;
+  height: 0.15625rem;
+  background-color: rgb(22, 22, 22);
+  margin: 0.4375rem 0;
+}
+.white-nav .nav-logos .hamburger-icon:hover {
+  cursor: pointer;
+}
+.white-nav .nav-logos .hamburger-icon:hover div {
+  background-color: rgb(255, 71, 71);
 }
 .white-nav .menu-section-list {
   display: flex;
@@ -216,6 +232,28 @@
   color: rgb(255, 71, 71);
 }
 
+@media screen and (max-width: 1032px) {
+  .white-nav {
+    justify-content: flex-start;
+  }
+  .white-nav .nav-logos:first-child {
+    display: none;
+  }
+  .white-nav .nav-logos:nth-child(2) {
+    order: 2;
+    margin-left: 1rem;
+  }
+  .white-nav .nav-logos:nth-child(2) img {
+    width: 6.8125rem;
+    height: 3.3125rem;
+  }
+  .white-nav .nav-logos .hamburger-icon {
+    display: block;
+  }
+  .white-nav li {
+    display: none;
+  }
+}
 @font-face {
   font-family: "Electronic Arts Text";
   src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot");

@@ -1,7 +1,7 @@
 @use 'px-to-rem' as c;
 @use 'variabili';
 
-//feature/white-navbar
+//Utility classes
 %center{
     display: flex;
     align-items: center;
@@ -20,9 +20,9 @@
 
 //Navbar bianca
 .white-nav{
-    background-color: #FFFFFF; //Colore della navbar
+    background-color: #FFFFFF; 
     display: flex;
-    padding-left: c.rem(17px); //Dimensioni prese dal sito
+    padding-left: c.rem(17px); 
 
     //Classe assegnata ai div contenenti i due svg
     .nav-logos{
@@ -34,8 +34,8 @@
         &:first-child{
             position: relative;
             svg{
-                height: c.rem(20px); //Dimensioni prese dal sito
-                width: c.rem(24px); //Dimensioni prese dal sito
+                height: c.rem(20px); 
+                width: c.rem(24px); 
                 display: block;
                 position: absolute;
                 transition: all 0.25s ease;
@@ -47,48 +47,65 @@
                     cursor: pointer;
                 }
             }
-
             margin-left: 0;
         }
 
         //Logo Electronic Arts
         &:nth-child(2){
             img{
-                height: c.rem(31.99px); //Dimensioni prese dal sito
-                width: c.rem(145.01px); //Dimensioni prese dal sito
+                height: c.rem(32px); 
+                width: c.rem(145px); 
                 display: block;
             }
-            margin-left: c.rem(48px); //Dimensioni prese dal sito
-            margin-right: c.rem(36px); //Dimensioni prese dal sito
+            margin-left: c.rem(48px); 
+            margin-right: c.rem(36px); 
+        }
+
+        //Hamburger menu icon 
+        .hamburger-icon{
+            display: none;
+            transform: scale(0.70);
+            div {
+                width: c.rem(30px);
+                height: c.rem(2.5px);
+                background-color: variabili.$ea-dark-color;
+                margin: c.rem(7px) 0;
+            }
+            &:hover{
+                cursor: pointer;
+                div{
+                    background-color: variabili.$origin-brand-color;
+                }
+            }
         }
     }
 
-    //Lista delle sezioni presenti nella navbar
+    //Lista dei menu presenti nella navbar
     .menu-section-list{
         display: flex;
         color: variabili.$ea-dark-color;
         list-style-type: none;
 
-        //Classe assegnata ad ogni sezione presente nella navbar
+        //Classe assegnata ad ogni menu presente nella navbar
         .menu-section-item{
                 position: relative;
-                margin-left: c.rem(20px); //Dimensioni prese dal sito
+                margin-left: c.rem(20px); 
 
-                //Nome della sezione
+                //Nome del menu
                 .menu-section-title{
                     @extend %center-vertically;
                     width: fit-content;
                     height: c.rem(56px);
-                    font-size: c.rem(18px); //Dimensioni prese dal sito
+                    font-size: c.rem(18px); 
 
-                    //Freccia accanto al nome della sezione
+                    //Freccia accanto al nome del menu
                     a{
                         margin-left: c.rem(4px);
                         display: inline-block;
                         margin-top: c.rem(4px);
-                        height: c.rem(56px); //56px navbar-bianca, 96px con navbar-nera
+                        height: c.rem(56px);
                         display: flex;
-                        align-items: center; // è un %center-vertically ma l'extend qui non può essere usato
+                        align-items: center; 
                         &::before{
                             content: "";
                             display: inline-block;
@@ -112,7 +129,7 @@
                         }
                     }
 
-                    //Animazione della freccia sull'hover
+                    //Animazione della freccia sull'hover di .menu-section-title
                     &:hover{
                         cursor: pointer; 
                         p{
@@ -128,14 +145,13 @@
                             border-color: variabili.$origin-brand-color;
                         }
                     }
-
                 }
 
             //Classe assegnata ad ogni container dei dropdown menu
             .dropdown-container{
                 background-color: transparent;
                 position: absolute;
-                top: c.rem(56px); //ALtezza del parent
+                top: c.rem(56px); 
                 max-height: 0px;
                 overflow: hidden;
                 transition: max-height 0.3s ease-in-out;
@@ -145,7 +161,7 @@
                 .dropdown-content{
                     background-color: #FFFFFF;
                     margin-top: 0.5rem;
-                    border-radius: c.rem(4px); //Dimensioni prese dal sito
+                    border-radius: c.rem(4px); 
                     a{
                         text-decoration: none;
                     }
@@ -167,7 +183,7 @@
                         justify-content: flex-start;
                         padding: c.rem(16px) c.rem(32px); 
                         padding-right: 0;
-                        gap: c.rem(64px); //2x padding top
+                        gap: c.rem(64px); 
                         ul{
                             li{
                                 list-style: none;
@@ -177,7 +193,7 @@
                                 margin: c.rem(16px) 0;
                                 &:first-child{
                                     font-weight: 900;
-                                    line-height: c.rem(32px); //2x font-size
+                                    line-height: c.rem(32px); 
                                 }
                                 a:hover{
                                     color: variabili.$origin-brand-color;
@@ -190,10 +206,9 @@
                                 }
                             }
                             &:nth-child(2){
-                                margin-right: c.rem(48px); //3x padding-right 
+                                margin-right: c.rem(48px); 
                             }
                         }
-
                     }
                 }
             }
@@ -204,7 +219,7 @@
                     .dropdown-content{
                         ul{
                             padding: c.rem(8px) c.rem(32px);
-                            padding-right: c.rem(40px); //padding-left + 25%
+                            padding-right: c.rem(40px); 
                             li{
                                 list-style: none;
                                 font-size: c.rem(16px);
@@ -215,8 +230,7 @@
                                     cursor: pointer;
                                     color: variabili.$origin-brand-color;
                                 }
-                            }
-                            
+                            }        
                         }
                     }
                 }
@@ -228,7 +242,7 @@
                     .dropdown-content{
                         ul{
                             padding: c.rem(8px) c.rem(32px);
-                            padding-right: c.rem(40px); //padding-left + 25%
+                            padding-right: c.rem(40px); 
                             li{
                                 list-style: none;
                                 font-size: c.rem(16px);
@@ -239,8 +253,7 @@
                                     cursor: pointer;
                                     color: variabili.$origin-brand-color;
                                 }
-                            }
-                            
+                            }     
                         }
                     }
                 } 
@@ -252,7 +265,7 @@
                     .dropdown-content{
                         ul{
                             padding: c.rem(8px) c.rem(32px);
-                            padding-right: c.rem(40px); //padding-left + 25%
+                            padding-right: c.rem(40px); 
                             li{
                                 list-style: none;
                                 font-size: c.rem(16px);
@@ -263,8 +276,7 @@
                                     cursor: pointer;
                                     color: variabili.$origin-brand-color;
                                 }
-                            }
-                            
+                            }   
                         }
                     }
                 }
@@ -276,7 +288,7 @@
                     .dropdown-content{
                         ul{
                             padding: c.rem(8px) c.rem(32px);
-                            padding-right: c.rem(40px); //padding-left + 25%
+                            padding-right: c.rem(40px); 
                             li{
                                 list-style: none;
                                 font-size: c.rem(16px);
@@ -287,14 +299,41 @@
                                     cursor: pointer;
                                     color: variabili.$origin-brand-color;
                                 }
-                            }
-                            
+                            }  
                         }
                     }
                 }
-                
             }
         }
     }
 }
-//feature/white-navbar
+
+// Media query
+@media screen and (max-width: 1032px){
+    .white-nav{
+        justify-content: flex-start;
+        //Nasconde l'icona da mostrare solo in modalità desktop
+        .nav-logos{
+            &:first-child{
+                display: none;
+            }
+            //Modifica la dimensione del logo
+            &:nth-child(2){
+                order: 2;
+                margin-left: c.rem(16px);
+                img{
+                    width: c.rem(109px); // Dimensioni esatte
+                    height: c.rem(53px); // Dimensioni esatte
+                };
+            }
+            //Mostra l'icona mobile
+            .hamburger-icon{
+                display: block;
+            }
+        }
+        //Nasconde i menu nella navbar
+        li{
+            display: none;
+        }
+    }
+}
