@@ -19,7 +19,7 @@
         .article-info{
             display: flex;
             &:first-child{
-                color: $origin-brand-color;
+                color: variabili.$origin-brand-color;
                 width: 50%;
             }      
         }
