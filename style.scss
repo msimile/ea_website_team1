@@ -1,147 +1,224 @@
-@use 'px-to-rem';
-@use 'variabili';
+@use "px-to-rem";
+@use "variabili";
 
 // import del font
-@font-face {font-family: "Electronic Arts Text"; src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot"); src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff") format("woff"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.svg#Electronic Arts Text") format("svg"); }
-
-
-
+@font-face {
+  font-family: "Electronic Arts Text";
+  src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot");
+  src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.svg#Electronic Arts Text")
+      format("svg");
+}
 
 // typography
-$fs_values: variabili.$body, variabili.$title, variabili.$header;  // valori per il font di header, title, body
-   
+$fs_values: variabili.$body, variabili.$title, variabili.$header; // valori per il font di header, title, body
+
 // creo 3 classi con un ciclo
 @each $fs_value in $fs_values {
-   
-    .fs-#{$fs_value}{   //ogni classe si caratterizza per un font-size diverso
+  .fs-#{$fs_value} {
+    //ogni classe si caratterizza per un font-size diverso
     font-size: rem($fs_value);
-    }  
+  }
 }
-   
+
 // creo 3 classi con un ciclo
 @each $fw_value in variabili.$fw_values {
-   
-    .fw-#{$fw_value}{   //ogni classe si caratterizza per un font-weight diverso
+  .fw-#{$fw_value} {
+    //ogni classe si caratterizza per un font-weight diverso
     font-weight: $fw_value;
-    }  
+  }
 }
 
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Electronic Arts Text";
-    color: $ea-dark-color;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Electronic Arts Text";
+  color: variabili.$ea-dark-color;
 }
 
-.giochi-in-evidenza {
+//sezion Giochi in evidenza
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+#giochi-in-evidenza {
+  h2 {
+    font-size: px-to-rem.rem(variabili.$header);
+    font-weight: variabili.$header;
+    text-align: center;
+    padding: 1.2rem;
+  }
+  .giochi-in-evidenza {
+    margin: auto;
+    justify-content: center;
     display: flex;
-    flex-wrap: nowrap;
-    max-width: 70%;
-    height: 50vh;
-    justify-content: space-between;
-    gap:1rem;
-}
+    flex-wrap: wrap;
+    width: 80%;
+    max-width: 1400px;
+    gap: 1.3rem;
+  }
 
-.game-card-wrapper {
-    min-width: 250px;
-    min-height: 320px;
-    display: flex;
-    flex-direction: column;
+  .logo_img {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    height: auto;
+    transition: top 0.4s ease-in-out;
+  }
+  // classi per diverse grandezze del logo
+  .logo_img_small {
+    width: 25%;
+  }
+
+  .logo_img_medium {
+    width: 35%;
+  }
+
+  .logo_img_big {
+    width: 45%;
+  }
+
+  .game-card-img-content {
+    padding: 14px;
     align-items: center;
-    justify-content: flex-end;
-    width: 100%;
-    height: 30%;
-    .elements-title{
-      @extend %elements-title
-    }
-  
-    & :first-child {
-      display: flex;
+    background-position: center;
+    background-size: cover;
+    min-width: 310px;
+    min-height: 310px;
+    height: 20vw;
+    width: 20vw;
+    max-height: 380px;
+    max-width: 380px;
+    white-space: nowrap;
+    position: relative;
+    transition-duration: opacity 0.4s ease-in-out;
+    &::before {
+      content: "";
+      top: 0;
+      left: 0;
       width: 100%;
-      margin-bottom: 1rem;
-    }
-    .logo_img {
+      height: 100%;
       position: absolute;
-      transform: translate(-50%, -50%);
-      left: 50%;
+      transition: opacity 0.4s ease-in-out;
+      background: linear-gradient(
+        90deg,
+        rgba(10, 3, 90, 1),
+        rgba(245, 20, 28, 1)
+      );
+      opacity: 0;
+    }
+
+    a {
+      font-size: 1rem;
+      position: absolute;
       top: 50%;
-      width: 20%;
-      height: 20%;
-      transition: top 0.4s ease-in-out;
-    }
-  
-    .game-card-img-content {
-      align-items: center;
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url("assets/Fifa-Mbappe.jpg");
-      background-position: center;
-      background-size: cover;
-      height: 250px;
-      width: 250px;
-      white-space: nowrap;
-      position: relative;
-      transition-duration: opacity 0.4s ease-in-out;
-      &::before {
-        content: "";
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        transition: opacity 0.4s ease-in-out;
-        background: linear-gradient(
-          90deg,
-          rgba(10, 3, 90, 1),
-          rgba(245, 20, 28, 1)
-        );
-        opacity: 0;
-      }
-  
-      a {
-        font-size: 0.5rem;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-decoration: none;
-        font-weight: 400;
-        display: none;
-        color: white;
-      }
-    }
-  
-    // added hover effect blue/red
-  
-    .game-card-img-content:hover {
-      box-shadow: 0 14px 20px 0 rgb(80 80 80 / 24%);
-  
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          90deg,
-          rgba(10, 3, 90, 0.84),
-          rgba(245, 20, 28, 0.84)
-        );
-        background-size: 100%;
-        background-position: center;
-        opacity: 0.84;
-      }
-  
-      .logo_img {
-        top: 30%;
-        z-index: 2;
-      }
-      a {
-        display: unset;
-        color: white;
-      }
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-decoration: none;
+      font-weight: 400;
+      display: none;
+      color: white;
     }
   }
 
+  //immagini background game-card-content
+  .game-card-img-content-1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("assets/Apex-mobile-square-card.jpg");
+  }
+  .game-card-img-content-2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("assets/F1-card.png");
+  }
+  .game-card-img-content-3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("assets/battlefield-2042.jpg");
+  }
+  .game-card-img-content-4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("assets/Fifa-Mbappe.jpg");
+  }
+  .game-card-img-content-5 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("assets/apex-legends-desktop.jpg");
+  }
+  .game-card-img-content-6 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("assets/the-sims-4-.jpg");
+  }
+
+  // added hover effect blue/red
+
+  .game-card-img-content:hover {
+    box-shadow: 0 14px 20px 0 rgb(80 80 80 / 24%);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        rgba(10, 3, 90, 0.84),
+        rgba(245, 20, 28, 0.84)
+      );
+      background-size: 100%;
+      background-position: center;
+      opacity: 0.84;
+    }
+
+    .logo_img,
+    .logo_img_jpg {
+      top: 30%;
+      z-index: 2;
+    }
+
+    a {
+      display: unset;
+      color: white;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  #giochi-in-evidenza {
+    h2 {
+      font-size: 2.5rem;
+    }
+    .giochi-in-evidenza {
+      width: 95%;
+    }
+    .game-card-img-content {
+      width: 35vw;
+      height: 35vw;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #giochi-in-evidenza {
+    h2 {
+      font-size: 2rem;
+    }
+    .giochi-in-evidenza {
+      width: 95%;
+    }
+    .game-card-img-content {
+      width: 85vw;
+      height: 85vw;
+    }
+  }
+}
