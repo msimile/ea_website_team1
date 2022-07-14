@@ -3,7 +3,7 @@
 body {
   height: 200vh;
 }
-header {
+.nav-nera {
   display: flex;
   flex-direction: column;
   position: sticky;
@@ -38,6 +38,6 @@ header {
   }
 }
 .header-invisible {
-  transform: translate3d(0, -100%, 0);
+  transform: translateY(-100%);
   transition: transform 0.5s ease-in-out;
 }

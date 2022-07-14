@@ -2,7 +2,7 @@ body {
   height: 200vh;
 }
 
-header {
+.nav-nera {
   display: flex;
   flex-direction: column;
   position: -webkit-sticky;
@@ -11,14 +11,14 @@ header {
   transition: transform 0.3s ease-in-out;
   max-height: 2.5rem;
 }
-header .nav-icons {
+.nav-nera .nav-icons {
   max-height: 2.5rem;
   background-color: rgb(22, 22, 22);
   display: flex;
   justify-content: end;
   align-items: center;
 }
-header .nav-icons .square-icon {
+.nav-nera .nav-icons .square-icon {
   height: 2.5rem;
   width: 2.5rem;
   fill: grey;
@@ -27,18 +27,18 @@ header .nav-icons .square-icon {
   align-items: center;
   padding: 0.3125rem;
 }
-header .nav-icons .ea {
+.nav-nera .nav-icons .ea {
   margin-right: 2rem;
 }
-header .nav-icons .square-icon:hover {
+.nav-nera .nav-icons .square-icon:hover {
   fill: rgb(243, 243, 243);
 }
-header .nav-icons .ea:hover {
+.nav-nera .nav-icons .ea:hover {
   fill: #a3a3a3;
 }
 
 .header-invisible {
-  transform: translate3d(0, -100%, 0);
+  transform: translateY(-100%);
   transition: transform 0.5s ease-in-out;
 }
 
