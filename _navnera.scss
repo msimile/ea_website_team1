@@ -1,0 +1,43 @@
+@use "px-to-rem";
+@use "variabili";
+body {
+  height: 200vh;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0px;
+  transition: transform 0.3s ease-in-out;
+  max-height: 40px;
+
+  .nav-icons {
+    max-height: 40px;
+    background-color: black;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    .square-icon {
+      height: 40px;
+      width: 40px;
+      fill: grey;
+      display: flex;
+      margin-right: 20px;
+      align-items: center;
+      padding: 5px;
+    }
+    .ea {
+      margin-right: 32px;
+    }
+    .square-icon:hover {
+      fill: white;
+    }
+    .ea:hover {
+      fill: #a3a3a3;
+    }
+  }
+}
+.header-invisible {
+  transform: translate3d(0, -100%, 0);
+  transition: transform 0.5s ease-in-out;
+}

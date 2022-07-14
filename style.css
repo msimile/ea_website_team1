@@ -1,24 +1,80 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+  height: 200vh;
 }
+
 header {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  transition: transform 0.3s ease-in-out;
+  max-height: 40px;
 }
-.nav-icons {
-    height: 40px;
-    background-color: black;
-    display: flex;
-    justify-content: end;
-    align-items: center;
+header .nav-icons {
+  max-height: 40px;
+  background-color: black;
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
-.square-icon {
-    fill: grey;
-    padding: 10px;
-    margin-right: 20px;
+header .nav-icons .square-icon {
+  height: 40px;
+  width: 40px;
+  fill: grey;
+  display: flex;
+  margin-right: 20px;
+  align-items: center;
+  padding: 5px;
 }
-.ea {
-    margin-right: 32px;
+header .nav-icons .ea {
+  margin-right: 32px;
 }
+header .nav-icons .square-icon:hover {
+  fill: white;
+}
+header .nav-icons .ea:hover {
+  fill: #a3a3a3;
+}
+
+.header-invisible {
+  transform: translate3d(0, -100%, 0);
+  transition: transform 0.5s ease-in-out;
+}
+
+@font-face {
+  font-family: "Electronic Arts Text";
+  src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot");
+  src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff") format("woff"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.svg#Electronic Arts Text") format("svg");
+}
+.fs-16px {
+  font-size: rem(16px);
+}
+
+.fs-35px {
+  font-size: rem(35px);
+}
+
+.fs-54px {
+  font-size: rem(54px);
+}
+
+.fw-100 {
+  font-weight: 100;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Electronic Arts Text";
+  color: rgb(22, 22, 22);
+}/*# sourceMappingURL=style.css.map */
