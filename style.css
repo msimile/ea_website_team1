@@ -72,6 +72,9 @@ body {
 #giochi-in-evidenza .logo_img_big {
   width: 45%;
 }
+#giochi-in-evidenza #apex-legends-desktop-png {
+  fill: white;
+}
 #giochi-in-evidenza .game-card-img-content {
   padding: 14px;
   align-items: center;
@@ -144,7 +147,7 @@ body {
 }
 #giochi-in-evidenza .game-card-img-content:hover .logo_img,
 #giochi-in-evidenza .game-card-img-content:hover .logo_img_jpg {
-  top: 30%;
+  top: 33%;
   z-index: 2;
 }
 #giochi-in-evidenza .game-card-img-content:hover a {
