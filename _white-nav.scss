@@ -1,0 +1,315 @@
+@use 'px-to-rem' as c;
+@use 'variabili';
+
+//Utility classes
+%center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%center-horizontally {
+    display: flex;
+    justify-content: center;
+}
+
+%center-vertically {
+    display: flex;
+    align-items: center;
+}
+
+%dropdown-link {
+    li {
+        list-style: none;
+        font-size: c.rem(16px);
+        font-weight: 100;
+        width: max-content;
+        margin: c.rem(16px) 0;
+
+        a:hover {
+            cursor: pointer;
+            color: variabili.$origin-brand-color;
+        }
+    }
+}
+
+%dropdown-window {
+    .dropdown-container {
+        .dropdown-content {
+            ul {
+                padding: c.rem(8px) c.rem(32px);
+                padding-right: c.rem(40px);
+                @extend %dropdown-link;
+            }
+        }
+    }
+}
+
+//Assegniamo il valore 'sticky' alla proprietà 'position' dell'elemento 'header'
+header {
+    position: sticky;
+    top: 0;
+
+    //Navbar bianca
+    .white-nav {
+        background-color: #FFFFFF;
+        display: flex;
+        padding-left: c.rem(16px);
+        width: 100%;
+
+        //Classe assegnata ai div contenenti i due svg
+        .nav-logos {
+            @extend %center-vertically;
+            height: c.rem(56px);
+            width: fit-content;
+
+            //Menu icon
+            &:first-child {
+                position: relative;
+
+                svg {
+                    height: c.rem(20px);
+                    width: c.rem(24px);
+                    display: block;
+                    position: absolute;
+                    transition: all 0.25s ease;
+
+                    //Animazione sull'hover
+                    &:hover {
+                        transform: scale(1.40);
+                        fill: variabili.$origin-brand-color;
+                        cursor: pointer;
+                    }
+                }
+
+                margin-left: 0;
+            }
+
+            //Logo Electronic Arts
+            &:nth-child(2) {
+                img {
+                    height: c.rem(32px);
+                    width: c.rem(145px);
+                    display: block;
+                }
+
+                margin-left: c.rem(48px);
+                margin-right: c.rem(36px);
+            }
+
+            //Hamburger menu icon 
+            .hamburger-icon {
+                display: none;
+                transform: scale(0.70);
+
+                div {
+                    width: c.rem(30px);
+                    height: c.rem(2.5px);
+                    background-color: variabili.$ea-dark-color;
+                    margin: c.rem(7px) 0;
+                }
+
+                &:hover {
+                    cursor: pointer;
+
+                    div {
+                        background-color: variabili.$origin-brand-color;
+                    }
+                }
+            }
+        }
+
+        //Lista dei menu presenti nella navbar
+        .menu-section-list {
+            display: flex;
+            color: variabili.$ea-dark-color;
+            list-style-type: none;
+
+            //Classe assegnata ad ogni menu presente nella navbar
+            .menu-section-item {
+                position: relative;
+                margin-left: c.rem(20px);
+
+                //Nome del menu
+                .menu-section-title {
+                    @extend %center-vertically;
+                    width: fit-content;
+                    height: c.rem(56px);
+                    font-size: c.rem(18px);
+
+                    //Freccia accanto al nome del menu
+                    a {
+                        margin-left: c.rem(4px);
+                        display: inline-block;
+                        margin-top: c.rem(4px);
+                        height: c.rem(56px);
+
+                        //Da sostituire con l'utility class %center-vertically
+                        display: flex;
+                        align-items: center;
+
+                        &::before {
+                            content: "";
+                            display: inline-block;
+                            border: c.rem(1px) solid variabili.$ea-dark-color;
+                            border-radius: 5%;
+                            height: 0px;
+                            width: c.rem(8px);
+                            transform: rotate(45deg);
+                            margin-right: c.rem(-3.5px);
+                            transition: transform 0.20s ease-in;
+                        }
+
+                        &::after {
+                            content: "";
+                            border: c.rem(1px) solid variabili.$ea-dark-color;
+                            border-radius: 5%;
+                            display: inline-block;
+                            height: 0px;
+                            width: c.rem(8px);
+                            transform: rotate(-45deg);
+                            transition: transform 0.20s ease-in;
+                        }
+                    }
+
+                    //Animazione della freccia sull'hover di .menu-section-title
+                    &:hover {
+                        cursor: pointer;
+
+                        p {
+                            color: variabili.$origin-brand-color;
+                        }
+
+                        a::after {
+                            transform: rotate(45deg);
+                            border-color: variabili.$origin-brand-color;
+                        }
+
+                        a::before {
+                            transform: rotate(-45deg);
+                            border-color: variabili.$origin-brand-color;
+                        }
+                    }
+                }
+
+                //Classe assegnata ad ogni container dei dropdown menu
+                .dropdown-container {
+                    background-color: transparent;
+                    position: absolute;
+                    top: c.rem(56px);
+                    max-height: 0px;
+                    overflow: hidden;
+                    transition: max-height 0.3s ease-in-out;
+                    opacity: 0.9;
+
+                    //Classe assegnata ad ogni dropdown menu
+                    .dropdown-content {
+                        background-color: #FFFFFF;
+                        margin-top: 0.5rem;
+                        border-radius: c.rem(4px);
+
+                        a {
+                            text-decoration: none;
+                        }
+                    }
+                }
+
+                //Animazione dei dropdown menu sull'hover
+                &:hover {
+                    .dropdown-container {
+                        max-height: c.rem(300px);
+                    }
+                }
+
+                //Menu 'Giochi'
+                &:first-child {
+                    .dropdown-container {
+                        .dropdown-content {
+                            @extend %center-vertically;
+                            justify-content: flex-start;
+                            padding: c.rem(16px) c.rem(32px);
+                            padding-right: 0;
+                            gap: c.rem(64px);
+
+                            ul {
+                                @extend %dropdown-link;
+
+                                li {
+                                    &:first-child {
+                                        font-weight: 900;
+                                        line-height: c.rem(32px);
+                                    }
+
+                                    &:first-child:hover {
+                                        a {
+                                            color: variabili.$ea-dark-color;
+                                        }
+                                    }
+                                }
+
+                                &:nth-child(2) {
+                                    margin-right: c.rem(48px);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                //Menu 'Altre esperienze'
+                &:nth-child(2) {
+                    @extend %dropdown-window;
+                }
+
+                //Menu 'Informazioni'
+                &:nth-child(3) {
+                    @extend %dropdown-window;
+                }
+
+                //Menu 'Impegni'
+                &:nth-child(4) {
+                    @extend %dropdown-window;
+                }
+
+                //Menu 'Container'
+                &:last-child {
+                    @extend %dropdown-window;
+                }
+            }
+        }
+    }
+
+    // Media query
+    @media screen and (max-width: 1032px) {
+        .white-nav {
+            justify-content: flex-start;
+
+            //Nasconde l'icona da mostrare solo in modalità desktop
+            .nav-logos {
+                &:first-child {
+                    display: none;
+                }
+
+                //Modifica la dimensione del logo
+                &:nth-child(2) {
+                    order: 2;
+                    margin-left: c.rem(16px);
+
+                    img {
+                        width: c.rem(109px);
+                        height: c.rem(53px);
+                    }
+                }
+
+                //Mostra l'icona mobile
+                .hamburger-icon {
+                    display: block;
+                }
+            }
+
+            //Nasconde i menu nella navbar
+            li {
+                display: none;
+            }
+        }
+    }
+}
