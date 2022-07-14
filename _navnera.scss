@@ -1,4 +1,4 @@
-@use "px-to-rem";
+@use "px-to-rem" as f;
 @use "variabili";
 body {
   height: 200vh;
@@ -7,30 +7,30 @@ header {
   display: flex;
   flex-direction: column;
   position: sticky;
-  top: 0px;
+  top: f.rem(0px);
   transition: transform 0.3s ease-in-out;
-  max-height: 40px;
+  max-height: f.rem(40px);
 
   .nav-icons {
-    max-height: 40px;
-    background-color: black;
+    max-height: f.rem(40px);
+    background-color: variabili.$ea-dark-color;
     display: flex;
     justify-content: end;
     align-items: center;
     .square-icon {
-      height: 40px;
-      width: 40px;
+      height: f.rem(40px);
+      width: f.rem(40px);
       fill: grey;
       display: flex;
-      margin-right: 20px;
+      margin-right: f.rem(20px);
       align-items: center;
-      padding: 5px;
+      padding: f.rem(5px);
     }
     .ea {
-      margin-right: 32px;
+      margin-right: f.rem(32px);
     }
     .square-icon:hover {
-      fill: white;
+      fill: variabili.$ea-light-color;
     }
     .ea:hover {
       fill: #a3a3a3;

@@ -7,31 +7,31 @@ header {
   flex-direction: column;
   position: -webkit-sticky;
   position: sticky;
-  top: 0px;
+  top: 0rem;
   transition: transform 0.3s ease-in-out;
-  max-height: 40px;
+  max-height: 2.5rem;
 }
 header .nav-icons {
-  max-height: 40px;
-  background-color: black;
+  max-height: 2.5rem;
+  background-color: rgb(22, 22, 22);
   display: flex;
   justify-content: end;
   align-items: center;
 }
 header .nav-icons .square-icon {
-  height: 40px;
-  width: 40px;
+  height: 2.5rem;
+  width: 2.5rem;
   fill: grey;
   display: flex;
-  margin-right: 20px;
+  margin-right: 1.25rem;
   align-items: center;
-  padding: 5px;
+  padding: 0.3125rem;
 }
 header .nav-icons .ea {
-  margin-right: 32px;
+  margin-right: 2rem;
 }
 header .nav-icons .square-icon:hover {
-  fill: white;
+  fill: rgb(243, 243, 243);
 }
 header .nav-icons .ea:hover {
   fill: #a3a3a3;
