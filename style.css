@@ -1,3 +1,333 @@
+header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-container .dropdown-content, header .white-nav .menu-section-list .menu-section-item .menu-section-title, header .white-nav .nav-logos {
+  display: flex;
+  align-items: center;
+}
+
+header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-container .dropdown-content ul li, header .white-nav .menu-section-list .menu-section-item:last-child .dropdown-container .dropdown-content ul li, header .white-nav .menu-section-list .menu-section-item:nth-child(4) .dropdown-container .dropdown-content ul li, header .white-nav .menu-section-list .menu-section-item:nth-child(3) .dropdown-container .dropdown-content ul li, header .white-nav .menu-section-list .menu-section-item:nth-child(2) .dropdown-container .dropdown-content ul li {
+  list-style: none;
+  font-size: 1rem;
+  font-weight: 100;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 1rem 0;
+}
+header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-container .dropdown-content ul li a:hover, header .white-nav .menu-section-list .menu-section-item:last-child .dropdown-container .dropdown-content ul li a:hover, header .white-nav .menu-section-list .menu-section-item:nth-child(4) .dropdown-container .dropdown-content ul li a:hover, header .white-nav .menu-section-list .menu-section-item:nth-child(3) .dropdown-container .dropdown-content ul li a:hover, header .white-nav .menu-section-list .menu-section-item:nth-child(2) .dropdown-container .dropdown-content ul li a:hover {
+  cursor: pointer;
+  color: rgb(255, 71, 71);
+}
+
+header .white-nav .menu-section-list .menu-section-item:last-child .dropdown-container .dropdown-content ul, header .white-nav .menu-section-list .menu-section-item:nth-child(4) .dropdown-container .dropdown-content ul, header .white-nav .menu-section-list .menu-section-item:nth-child(3) .dropdown-container .dropdown-content ul, header .white-nav .menu-section-list .menu-section-item:nth-child(2) .dropdown-container .dropdown-content ul {
+  padding: 0.5rem 2rem;
+  padding-right: 2.5rem;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+header .white-nav {
+  background-color: #FFFFFF;
+  display: flex;
+  padding-left: 1rem;
+  width: 100%;
+}
+header .white-nav .nav-logos {
+  height: 3.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+header .white-nav .nav-logos:first-child {
+  position: relative;
+  margin-left: 0;
+}
+header .white-nav .nav-logos:first-child svg {
+  height: 1.25rem;
+  width: 1.5rem;
+  display: block;
+  position: absolute;
+  transition: all 0.25s ease;
+}
+header .white-nav .nav-logos:first-child svg:hover {
+  transform: scale(1.4);
+  fill: rgb(255, 71, 71);
+  cursor: pointer;
+}
+header .white-nav .nav-logos:nth-child(2) {
+  margin-left: 3rem;
+  margin-right: 2.25rem;
+}
+header .white-nav .nav-logos:nth-child(2) img {
+  height: 2rem;
+  width: 9.0625rem;
+  display: block;
+}
+header .white-nav .nav-logos .hamburger-icon {
+  display: none;
+  transform: scale(0.7);
+}
+header .white-nav .nav-logos .hamburger-icon div {
+  width: 1.875rem;
+  height: 0.15625rem;
+  background-color: rgb(22, 22, 22);
+  margin: 0.4375rem 0;
+}
+header .white-nav .nav-logos .hamburger-icon:hover {
+  cursor: pointer;
+}
+header .white-nav .nav-logos .hamburger-icon:hover div {
+  background-color: rgb(255, 71, 71);
+}
+header .white-nav .menu-section-list {
+  display: flex;
+  color: rgb(22, 22, 22);
+  list-style-type: none;
+}
+header .white-nav .menu-section-list .menu-section-item {
+  position: relative;
+  margin-left: 1.25rem;
+}
+header .white-nav .menu-section-list .menu-section-item .menu-section-title {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 3.5rem;
+  font-size: 1.125rem;
+}
+header .white-nav .menu-section-list .menu-section-item .menu-section-title a {
+  margin-left: 0.25rem;
+  display: inline-block;
+  margin-top: 0.25rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+}
+header .white-nav .menu-section-list .menu-section-item .menu-section-title a::before {
+  content: "";
+  display: inline-block;
+  border: 0.0625rem solid rgb(22, 22, 22);
+  border-radius: 5%;
+  height: 0px;
+  width: 0.5rem;
+  transform: rotate(45deg);
+  margin-right: -0.21875rem;
+  transition: transform 0.2s ease-in;
+}
+header .white-nav .menu-section-list .menu-section-item .menu-section-title a::after {
+  content: "";
+  border: 0.0625rem solid rgb(22, 22, 22);
+  border-radius: 5%;
+  display: inline-block;
+  height: 0px;
+  width: 0.5rem;
+  transform: rotate(-45deg);
+  transition: transform 0.2s ease-in;
+}
+header .white-nav .menu-section-list .menu-section-item .menu-section-title:hover {
+  cursor: pointer;
+}
+header .white-nav .menu-section-list .menu-section-item .menu-section-title:hover p {
+  color: rgb(255, 71, 71);
+}
+header .white-nav .menu-section-list .menu-section-item .menu-section-title:hover a::after {
+  transform: rotate(45deg);
+  border-color: rgb(255, 71, 71);
+}
+header .white-nav .menu-section-list .menu-section-item .menu-section-title:hover a::before {
+  transform: rotate(-45deg);
+  border-color: rgb(255, 71, 71);
+}
+header .white-nav .menu-section-list .menu-section-item .dropdown-container {
+  background-color: transparent;
+  position: absolute;
+  top: 3.5rem;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  opacity: 0.9;
+}
+header .white-nav .menu-section-list .menu-section-item .dropdown-container .dropdown-content {
+  background-color: #FFFFFF;
+  margin-top: 0.5rem;
+  border-radius: 0.25rem;
+}
+header .white-nav .menu-section-list .menu-section-item .dropdown-container .dropdown-content a {
+  text-decoration: none;
+}
+header .white-nav .menu-section-list .menu-section-item:hover .dropdown-container {
+  max-height: 18.75rem;
+}
+header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-container .dropdown-content {
+  justify-content: flex-start;
+  padding: 1rem 2rem;
+  padding-right: 0;
+  gap: 4rem;
+}
+header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-container .dropdown-content ul li:first-child {
+  font-weight: 900;
+  line-height: 2rem;
+}
+header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-container .dropdown-content ul li:first-child:hover a {
+  color: rgb(22, 22, 22);
+}
+header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-container .dropdown-content ul:nth-child(2) {
+  margin-right: 3rem;
+}
+@media screen and (max-width: 1032px) {
+  header .white-nav {
+    justify-content: flex-start;
+  }
+  header .white-nav .nav-logos:first-child {
+    display: none;
+  }
+  header .white-nav .nav-logos:nth-child(2) {
+    order: 2;
+    margin-left: 1rem;
+  }
+  header .white-nav .nav-logos:nth-child(2) img {
+    width: 6.8125rem;
+    height: 3.3125rem;
+  }
+  header .white-nav .nav-logos .hamburger-icon {
+    display: block;
+  }
+  header .white-nav li {
+    display: none;
+  }
+}
+
+#giochi-in-evidenza .game-card-img-content a, #giochi-in-evidenza .logo_img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+#giochi-in-evidenza h2 {
+  font-size: 3.375rem;
+  font-weight: 54px;
+  text-align: center;
+  padding: 1.2rem;
+  margin: auto;
+  white-space: nowrap;
+}
+#giochi-in-evidenza .giochi-in-evidenza {
+  margin: auto;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1100px;
+  gap: 1.3rem;
+}
+#giochi-in-evidenza .logo_img {
+  transform: translate(-50%, -50%);
+  height: auto;
+  transition: top 0.4s ease-in-out;
+}
+#giochi-in-evidenza .logo_img_small {
+  width: 25%;
+}
+#giochi-in-evidenza .logo_img_medium {
+  width: 35%;
+}
+#giochi-in-evidenza .logo_img_big {
+  width: 45%;
+}
+#giochi-in-evidenza .game-card-img-content {
+  white-space: nowrap;
+  position: relative;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  min-width: 16.25rem;
+  min-height: 16.25rem;
+  width: 20vw;
+  height: 20vw;
+  max-height: 21.875rem;
+  max-width: 21.875rem;
+  padding: 0.875rem;
+  transition-duration: opacity 0.4s ease-in-out;
+}
+#giochi-in-evidenza .game-card-img-content::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: opacity 0.4s ease-in-out;
+  background: linear-gradient(90deg, rgb(10, 3, 90), rgb(245, 20, 28));
+  opacity: 0;
+}
+#giochi-in-evidenza .game-card-img-content a {
+  font-size: 1rem;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  font-weight: 400;
+  display: none;
+  color: white;
+}
+#giochi-in-evidenza .game-card-img-content-1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("assets/Apex-mobile-square-card.jpg");
+}
+#giochi-in-evidenza .game-card-img-content-2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("assets/F1-card.png");
+}
+#giochi-in-evidenza .game-card-img-content-3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("assets/battlefield-2042.jpg");
+}
+#giochi-in-evidenza .game-card-img-content-4 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("assets/Fifa-Mbappe.jpg");
+}
+#giochi-in-evidenza .game-card-img-content-5 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("assets/apex-legends-desktop.jpg");
+}
+#giochi-in-evidenza .game-card-img-content-6 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("assets/the-sims-4-.jpg");
+}
+#giochi-in-evidenza .game-card-img-content:hover {
+  box-shadow: 0 14px 20px 0 rgba(80, 80, 80, 0.24);
+}
+#giochi-in-evidenza .game-card-img-content:hover::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(10, 3, 90, 0.84), rgba(245, 20, 28, 0.84));
+  background-size: 100%;
+  background-position: center;
+  opacity: 0.84;
+}
+#giochi-in-evidenza .game-card-img-content:hover .logo_img,
+#giochi-in-evidenza .game-card-img-content:hover .logo_img_jpg {
+  top: 33%;
+}
+#giochi-in-evidenza .game-card-img-content:hover a {
+  display: unset;
+  color: white;
+}
+
+@media (max-width: 1023px) {
+  #giochi-in-evidenza h2 {
+    font-size: 2.5rem;
+  }
+  #giochi-in-evidenza .game-card-img-content {
+    max-width: unset;
+    max-height: unset;
+    width: 40vw;
+    height: 40vw;
+  }
+}
+@media (max-width: 767px) {
+  #giochi-in-evidenza h2 {
+    font-size: 2rem;
+  }
+  #giochi-in-evidenza .game-card-img-content {
+    width: 85vw;
+    height: 85vw;
+  }
+}
 @font-face {
   font-family: "Electronic Arts Text";
   src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot");
@@ -38,139 +368,4 @@
 body {
   width: 100%;
   height: 100vh;
-}
-
-#giochi-in-evidenza h2 {
-  font-size: 3.375rem;
-  font-weight: 54px;
-  text-align: center;
-  padding: 1.2rem;
-  margin: auto;
-  white-space: nowrap;
-}
-#giochi-in-evidenza .giochi-in-evidenza {
-  margin: auto;
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: 1100px;
-  gap: 1.3rem;
-}
-#giochi-in-evidenza .logo_img {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-  height: auto;
-  transition: top 0.4s ease-in-out;
-}
-#giochi-in-evidenza .logo_img_small {
-  width: 25%;
-}
-#giochi-in-evidenza .logo_img_medium {
-  width: 35%;
-}
-#giochi-in-evidenza .logo_img_big {
-  width: 45%;
-}
-#giochi-in-evidenza .game-card-img-content {
-  padding: 14px;
-  align-items: center;
-  background-position: center;
-  background-size: cover;
-  min-width: 260px;
-  min-height: 260px;
-  width: 20vw;
-  height: 20vw;
-  max-height: 350px;
-  max-width: 350px;
-  white-space: nowrap;
-  position: relative;
-  transition-duration: opacity 0.4s ease-in-out;
-}
-#giochi-in-evidenza .game-card-img-content::before {
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  transition: opacity 0.4s ease-in-out;
-  background: linear-gradient(90deg, rgb(10, 3, 90), rgb(245, 20, 28));
-  opacity: 0;
-}
-#giochi-in-evidenza .game-card-img-content a {
-  font-size: 1rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-decoration: none;
-  font-weight: 400;
-  display: none;
-  color: white;
-}
-#giochi-in-evidenza .game-card-img-content-1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("assets/Apex-mobile-square-card.jpg");
-}
-#giochi-in-evidenza .game-card-img-content-2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("assets/F1-card.png");
-}
-#giochi-in-evidenza .game-card-img-content-3 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("assets/battlefield-2042.jpg");
-}
-#giochi-in-evidenza .game-card-img-content-4 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("assets/Fifa-Mbappe.jpg");
-}
-#giochi-in-evidenza .game-card-img-content-5 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("assets/apex-legends-desktop.jpg");
-}
-#giochi-in-evidenza .game-card-img-content-6 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("assets/the-sims-4-.jpg");
-}
-#giochi-in-evidenza .game-card-img-content:hover {
-  box-shadow: 0 14px 20px 0 rgba(80, 80, 80, 0.24);
-}
-#giochi-in-evidenza .game-card-img-content:hover::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, rgba(10, 3, 90, 0.84), rgba(245, 20, 28, 0.84));
-  background-size: 100%;
-  background-position: center;
-  opacity: 0.84;
-}
-#giochi-in-evidenza .game-card-img-content:hover .logo_img,
-#giochi-in-evidenza .game-card-img-content:hover .logo_img_jpg {
-  top: 33%;
-  z-index: 2;
-}
-#giochi-in-evidenza .game-card-img-content:hover a {
-  display: unset;
-  color: white;
-}
-
-@media (max-width: 1023px) {
-  #giochi-in-evidenza h2 {
-    font-size: 2.5rem;
-  }
-  #giochi-in-evidenza .game-card-img-content {
-    max-width: unset;
-    max-height: unset;
-    width: 40vw;
-    height: 40vw;
-  }
-}
-@media (max-width: 767px) {
-  #giochi-in-evidenza h2 {
-    font-size: 2rem;
-  }
-  #giochi-in-evidenza .game-card-img-content {
-    width: 85vw;
-    height: 85vw;
-  }
 }/*# sourceMappingURL=style.css.map */
