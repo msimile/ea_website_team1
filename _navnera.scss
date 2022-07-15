@@ -1,0 +1,42 @@
+@use "px-to-rem" as f;
+@use "variabili";
+
+
+.nav-nera {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: f.rem(0px);
+  transition: transform 0.3s ease-in-out;
+  max-height: f.rem(40px);
+
+  .nav-icons {
+    max-height: f.rem(40px);
+    background-color: variabili.$ea-dark-color;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    .square-icon {
+      height: f.rem(40px);
+      width: f.rem(40px);
+      fill: grey;
+      display: flex;
+      margin-right: f.rem(20px);
+      align-items: center;
+      padding: f.rem(5px);
+    }
+    .ea {
+      margin-right: f.rem(32px);
+    }
+    .square-icon:hover {
+      fill: variabili.$ea-light-color;
+    }
+    .ea:hover {
+      fill: #a3a3a3;
+    }
+  }
+}
+.header-invisible {
+  transform: translateY(-40px);
+  transition: transform 0.5s ease-in-out;
+}

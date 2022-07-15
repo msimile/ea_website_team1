@@ -50,9 +50,11 @@ header {
     position: sticky;
     top: 0;
     z-index: 1;
+    transition: transform 0.4s ease-in-out;
 
     //Navbar bianca
     .white-nav {
+        
         background-color: #FFFFFF;
         display: flex;
         padding-left: c.rem(16px);
