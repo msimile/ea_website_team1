@@ -1,8 +1,7 @@
 @use "px-to-rem" as f;
 @use "variabili";
-body {
-  height: 200vh;
-}
+
+
 .nav-nera {
   display: flex;
   flex-direction: column;
@@ -38,6 +37,6 @@ body {
   }
 }
 .header-invisible {
-  transform: translateY(-100%);
+  transform: translateY(-40px);
   transition: transform 0.5s ease-in-out;
 }
