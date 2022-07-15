@@ -30,9 +30,11 @@
     }
     .square-icon:hover {
       fill: variabili.$ea-light-color;
+      cursor: pointer;
     }
     .ea:hover {
       fill: #a3a3a3;
+      cursor: pointer;
     }
   }
 }

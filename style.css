@@ -28,9 +28,11 @@
 }
 .nav-nera .nav-icons .square-icon:hover {
   fill: rgb(243, 243, 243);
+  cursor: pointer;
 }
 .nav-nera .nav-icons .ea:hover {
   fill: #a3a3a3;
+  cursor: pointer;
 }
 
 .header-invisible {
