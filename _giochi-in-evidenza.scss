@@ -1,0 +1,182 @@
+@use "px-to-rem" as c;
+@use "variabili" as v;
+
+// extend per centrare elementi ed assegnare absolute
+%center-absolute-elements {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+//intero contenitore della sezione Giochi in evidenza
+#giochi-in-evidenza {
+    
+    // titolo della sezione (segue le direttive generali per i titoli)
+  h2 {
+    font-size: c.rem(v.$header);
+    font-weight: v.$header;
+    text-align: center;
+    padding: 1.2rem;
+    margin: auto;
+    white-space: nowrap;
+  }
+  .giochi-in-evidenza {
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1100px;
+    gap: 1.3rem;
+  }
+
+  // logo e animazione annessa
+  .logo_img {
+    @extend %center-absolute-elements;
+    transform: translate(-50%, -50%);
+    height: auto;
+    transition: top 0.4s ease-in-out;
+  }
+
+  // classi per diverse grandezze del logo
+  .logo_img_small {
+    width: 25%;
+  }
+
+  .logo_img_medium {
+    width: 35%;
+  }
+
+  .logo_img_big {
+    width: 45%;
+  }
+
+  //content e sizing dell'image content
+  .game-card-img-content {
+    white-space: nowrap;
+    position: relative;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    min-width: c.rem(260px);
+    min-height: c.rem(260px);
+    width: 20vw;
+    height: 20vw;
+    max-height: c.rem(350px);
+    max-width: c.rem(350px);
+    padding: c.rem(14px);
+    transition-duration: opacity 0.4s ease-in-out;
+    //
+    &::before {
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transition: opacity 0.4s ease-in-out;
+      background: linear-gradient(
+        90deg,
+        rgba(10, 3, 90, 1),
+        rgba(245, 20, 28, 1)
+      );
+      opacity: 0;
+    }
+
+    //Link al sito relativo al gioco raffigurato (di base nascosto)
+    a {
+      @extend %center-absolute-elements;
+      font-size: 1rem;
+      transform: translate(-50%, -50%);
+      text-decoration: none;
+      font-weight: 400;
+      display: none;
+      color: white;
+    }
+  }
+
+  //immagini background game-card-content
+  .game-card-img-content-1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("assets/Apex-mobile-square-card.jpg");
+  }
+  .game-card-img-content-2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("assets/F1-card.png");
+  }
+  .game-card-img-content-3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("assets/battlefield-2042.jpg");
+  }
+  .game-card-img-content-4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("assets/Fifa-Mbappe.jpg");
+  }
+  .game-card-img-content-5 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("assets/apex-legends-desktop.jpg");
+  }
+  .game-card-img-content-6 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("assets/the-sims-4-.jpg");
+  }
+
+  // added hover effect blue/red
+
+  .game-card-img-content:hover {
+    box-shadow: 0 14px 20px 0 rgb(80 80 80 / 24%);
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        rgba(10, 3, 90, 0.84),
+        rgba(245, 20, 28, 0.84)
+      );
+      background-size: 100%;
+      background-position: center;
+      opacity: 0.84;
+    }
+
+    .logo_img,
+    .logo_img_jpg {
+      top: 33%;
+    }
+
+    a {
+      display: unset;
+      color: white;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  //Giochi in evidenza
+  #giochi-in-evidenza {
+    h2 {
+      font-size: 2.5rem;
+    }
+    .game-card-img-content {
+      max-width: unset;
+      max-height: unset;
+      width: 40vw;
+      height: 40vw;
+    }
+  }
+  //
+}
+
+@media (max-width: 767px) {
+  //Giochi in evidenza
+  #giochi-in-evidenza {
+    h2 {
+      font-size: 2rem;
+    }
+    .game-card-img-content {
+      width: 85vw;
+      height: 85vw;
+    }
+  }
+  //
+}
