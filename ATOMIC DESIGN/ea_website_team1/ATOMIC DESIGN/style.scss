@@ -101,6 +101,9 @@ $values: 1,2,3;
         height: 100vh;
 
  //section-title checkboxes
+  input{
+    cursor: pointer;
+ }
  .checkbox-myCustomHover {
     position: absolute;
     top: 35%;
