@@ -3,9 +3,14 @@
 @use 'navnera';
 @use 'white-nav';
 @use 'giochi-in-evidenza';
+@use 'first-footer.scss';
 
 // import del font
-@font-face {font-family: "Electronic Arts Text"; src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot"); src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff") format("woff"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.svg#Electronic Arts Text") format("svg"); }
+@font-face {
+  font-family: "Electronic Arts Text";
+  src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot");
+  src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff") format("woff"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.svg#Electronic Arts Text") format("svg");
+}
 
 // typography
 $fs_values: variabili.$body, variabili.$title, variabili.$header; // valori per il font di header, title, body
@@ -34,12 +39,3 @@ $fs_values: variabili.$body, variabili.$title, variabili.$header; // valori per 
   color: variabili.$ea-dark-color;
 }
 
-// body {
-//   width: 100%;
-//   height: 100vh;
-// }
-
-//TEST RULE! - rimuovi
-// body{
-//     background-color: variabili.$origin-brand-color;
-// }
