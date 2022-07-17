@@ -1,8 +1,9 @@
-@use 'px-to-rem' as c;
+@use 'px-to-rem';
 @use 'variabili';
 @use 'navnera';
 @use 'white-nav';
 @use 'giochi-in-evidenza';
+@use 'first-footer.scss';
 
 // import del font
 @font-face {
@@ -38,96 +39,3 @@ $fs_values: variabili.$body, variabili.$title, variabili.$header; // valori per 
   color: variabili.$ea-dark-color;
 }
 
-//Primo footer
-.f-footer {
-  padding: 1.25rem 0rem; // 20px
-  background-color: variabili.$ea-light-color;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  ;
-  min-height: c.rem(160px);
-
-  //Contenuto del footer
-  .f-footer-content {
-    width: 77.5%; // Da cambiare per la visualizzazione Tablet & Mobile
-    display: flex;
-
-    //Contenitore dei link che rimandano a sezioni del sito
-    .f-footer-links {
-      width: 77.5%;
-
-      //Links
-      a {
-        display: inline-block;
-        margin: c.rem(12.5px) c.rem(40px) c.rem(5px) 0; //dimensioni esatte: 8px 40px 5px 0px
-        text-decoration: none;
-        color: variabili.$ea-dark-color;
-        font-size: c.rem(16px); //dimensioni esatte
-
-        &:hover {
-          color: variabili.$origin-brand-color;
-        }
-      }
-    }
-
-    //Contenitore sezione social
-    .f-footer-social {
-      position: relative;
-      width: 22.5%;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 0.75rem; // misura placeholder
-
-      //Testo 'Partecipa alla conversazione'
-      p {
-        font-size: c.rem(14px); // Dimensioni esatte
-        margin-top: c.rem(12.5px); //Deve corrispondere a margin-top dei link
-        font-weight: bold;
-        letter-spacing: c.rem(-0.25px);
-        color: variabili.$ea-dark-color;
-      }
-
-      //Icone social
-      .social-icons {
-
-        svg {
-          display: block;
-        }
-
-        display: flex;
-        gap: 1.25rem;
-      }
-
-    }
-  }
-}
-
-//MEDIA QUERIES - WIP
-@media screen and (max-width: 1200px) {
-  .f-footer {
-    min-height: 240px; //misura placeholder
-
-    .f-footer-content {
-      width: 87.5%; // + 10% di larghezza
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
-
-      .f-footer-links {
-        width: 100%;
-      }
-
-      .f-footer-social {
-        align-items: flex-start;
-        width: 100%;
-        gap: 1rem; // (+25% misura originale) misura placeholder
-        p{
-          margin-top: c.rem(12.5px * 2); // (raddoppio del margine originale) misura placeholder
-        }
-      }
-
-    }
-  }
-}
