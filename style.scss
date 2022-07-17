@@ -1,9 +1,9 @@
-@use 'px-to-rem';
-@use 'variabili';
-@use 'navnera';
-@use 'white-nav';
-@use 'giochi-in-evidenza';
-@use 'first-footer.scss';
+@use 'modules/px-to-rem';
+@use 'modules/variabili';
+@use 'modules/navnera';
+@use 'modules/white-nav';
+@use 'modules/giochi-in-evidenza';
+@use 'modules/first-footer.scss';
 
 // import del font
 @font-face {
