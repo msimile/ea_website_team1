@@ -421,6 +421,11 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
 }
 .f-footer .f-footer-content .f-footer-social .social-icons svg {
   display: block;
+  transition: transform 0.15s ease-in;
+}
+.f-footer .f-footer-content .f-footer-social .social-icons svg:hover {
+  transform: scale(1.35);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1200px) {
@@ -449,7 +454,7 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
     margin-top: 1.5rem;
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .f-footer {
     min-height: 388px;
   }
