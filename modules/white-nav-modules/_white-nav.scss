@@ -1,55 +1,6 @@
-@use 'px-to-rem' as converter;
-@use 'variabili';
-
-//utility classes
-
-//centra l'elemento
-%center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-//centra orizzontalmente l'elemento
-%center-horizontally {
-    display: flex;
-    justify-content: center;
-}
-
-//centra verticalmente l'elemento
-%center-vertically {
-    display: flex;
-    align-items: center;
-}
-
-//definisce la formattazione delle voci presenti all'interno dei dropdown menu
-%dropdown-menu-options-style {
-    .white-nav-menu-section-list-item-dropdown-container-content-list-item {
-        list-style: none;
-        font-size: converter.rem(16px);
-        font-weight: 100;
-        width: max-content;
-        margin: converter.rem(16px) 0;
-
-        a:hover {
-            cursor: pointer;
-            color: variabili.$origin-brand-color;
-        }
-    }
-}
-
-//definisce lo stile dei dropdown menu
-%dropdown-menu-style {
-    .white-nav-menu-section-list-item-dropdown-container {
-        &-content {
-            &-list {
-                padding: converter.rem(8px) converter.rem(32px);
-                padding-right: converter.rem(40px);
-                @extend %dropdown-menu-options-style;
-            }
-        }
-    }
-}
+@use '../px-to-rem' as converter;
+@use  'white-nav-utility-classes' as utility;
+@use '../variabili';
 
 //rende l'elemento <header> sticky e lo posiziona in cima allo stacking order
 header {
@@ -316,7 +267,7 @@ header {
                 }
             }
 
-            //masconde i menu nella navbar
+            //nasconde i menu nella navbar
             &-menu-section-list-item {
                 display: none;
             }
