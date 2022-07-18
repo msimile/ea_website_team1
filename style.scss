@@ -4,6 +4,7 @@
 @use 'modules/white-nav-modules/white-nav';
 @use 'modules/giochi-in-evidenza';
 @use 'modules/first-footer-modules/first-footer';
+@use 'modules/login';
 
 // import del font
 @font-face {
@@ -36,6 +37,6 @@ $fs_values: variabili.$body, variabili.$title, variabili.$header; // valori per 
   padding: 0;
   box-sizing: border-box;
   font-family: "Electronic Arts Text";
-  color: variabili.$ea-dark-color;
+  // color: variabili.$ea-dark-color;
 }
 
