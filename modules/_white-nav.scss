@@ -1,30 +1,35 @@
-@use 'px-to-rem' as c;
+@use 'px-to-rem' as converter;
 @use 'variabili';
 
-//Utility classes
+//utility classes
+
+//centra l'elemento
 %center {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+//centra orizzontalmente l'elemento
 %center-horizontally {
     display: flex;
     justify-content: center;
 }
 
+//centra verticalmente l'elemento
 %center-vertically {
     display: flex;
     align-items: center;
 }
 
-%dropdown-link {
-    li {
+//definisce la formattazione delle voci presenti all'interno dei dropdown menu
+%dropdown-menu-options-style {
+    .white-nav-menu-section-list-item-dropdown-container-content-list-item {
         list-style: none;
-        font-size: c.rem(16px);
+        font-size: converter.rem(16px);
         font-weight: 100;
         width: max-content;
-        margin: c.rem(16px) 0;
+        margin: converter.rem(16px) 0;
 
         a:hover {
             cursor: pointer;
@@ -33,46 +38,47 @@
     }
 }
 
-%dropdown-window {
-    .dropdown-container {
-        .dropdown-content {
-            ul {
-                padding: c.rem(8px) c.rem(32px);
-                padding-right: c.rem(40px);
-                @extend %dropdown-link;
+//definisce lo stile dei dropdown menu
+%dropdown-menu-style {
+    .white-nav-menu-section-list-item-dropdown-container {
+        &-content {
+            &-list {
+                padding: converter.rem(8px) converter.rem(32px);
+                padding-right: converter.rem(40px);
+                @extend %dropdown-menu-options-style;
             }
         }
     }
 }
 
-//Assegniamo il valore 'sticky' alla proprietà 'position' dell'elemento 'header'
+//rende l'elemento <header> sticky e lo posiziona in cima allo stacking order
 header {
     position: sticky;
     top: 0;
     z-index: 1;
     transition: transform 0.4s ease-in-out;
 
-    //Navbar bianca
+    //navbar bianca
     .white-nav {
-        
+
         background-color: #FFFFFF;
         display: flex;
-        padding-left: c.rem(16px);
+        padding-left: converter.rem(16px);
         width: 100%;
 
-        //Classe assegnata ai div contenenti i due svg
-        .nav-logos {
+        //Classe assegnata ai <div> contenenti il logo e le due icone dei menu(Mobile & Desktop)
+        &-logos {
             @extend %center-vertically;
-            height: c.rem(56px);
+            height: converter.rem(56px);
             width: fit-content;
 
-            //Menu icon
+            //icona desktop del menu
             &:first-child {
                 position: relative;
 
-                svg {
-                    height: c.rem(20px);
-                    width: c.rem(24px);
+                .white-nav-logos-image {
+                    height: converter.rem(20px);
+                    width: converter.rem(24px);
                     display: block;
                     position: absolute;
                     transition: all 0.25s ease;
@@ -88,94 +94,95 @@ header {
                 margin-left: 0;
             }
 
-            //Logo Electronic Arts
+            //logo 'Electronic Arts'
             &:nth-child(2) {
-                img {
-                    height: c.rem(32px);
-                    width: c.rem(145px);
+                .white-nav-logos-image {
+                    height: converter.rem(32px);
+                    width: converter.rem(145px);
                     display: block;
                 }
 
-                margin-left: c.rem(48px);
-                margin-right: c.rem(36px);
+                margin-left: converter.rem(48px);
+                margin-right: converter.rem(36px);
             }
 
-            //Hamburger menu icon 
-            .hamburger-icon {
+            //icona mobile del menu (definita dai designer 'hamburger menu icon')
+            &-hamburger-icon {
                 display: none;
                 transform: scale(0.70);
 
-                div {
-                    width: c.rem(30px);
-                    height: c.rem(2.5px);
+                //classe assegnata alle linee che vanno a comporre l'icona dell'hamburger menu
+                &-line {
+                    width: converter.rem(30px);
+                    height: converter.rem(2.5px);
                     background-color: variabili.$ea-dark-color;
-                    margin: c.rem(7px) 0;
+                    margin: converter.rem(7px) 0;
                 }
 
                 &:hover {
                     cursor: pointer;
 
-                    div {
+                    .white-nav-logos-hamburger-icon-line {
                         background-color: variabili.$origin-brand-color;
                     }
                 }
             }
         }
 
-        //Lista dei menu presenti nella navbar
-        .menu-section-list {
+        //lista dei menu presenti nella navbar
+        &-menu-section-list {
             display: flex;
             color: variabili.$ea-dark-color;
             list-style-type: none;
 
-            //Classe assegnata ad ogni menu presente nella navbar
-            .menu-section-item {
+            //classe assegnata ad ogni menu presente nella navbar
+            &-item {
                 position: relative;
-                margin-left: c.rem(20px);
+                margin-left: converter.rem(20px);
 
-                //Nome del menu
-                .menu-section-title {
+                //nome del menu
+                &-title {
                     @extend %center-vertically;
                     width: fit-content;
-                    height: c.rem(56px);
-                    font-size: c.rem(18px);
+                    height: converter.rem(56px);
+                    font-size: converter.rem(18px);
 
-                    //Freccia accanto al nome del menu
-                    a {
-                        margin-left: c.rem(4px);
+                    //freccia accanto al nome del menu
+                    &-arrow {
+                        margin-left: converter.rem(4px);
                         display: inline-block;
-                        margin-top: c.rem(4px);
-                        height: c.rem(56px);
+                        margin-top: converter.rem(4px);
+                        height: converter.rem(56px);
 
-                        //Da sostituire con l'utility class %center-vertically
+                        //da sostituire con l'utility class %center-vertically
                         display: flex;
                         align-items: center;
 
                         &::before {
                             content: "";
                             display: inline-block;
-                            border: c.rem(1px) solid variabili.$ea-dark-color;
+                            border: converter.rem(1px) solid variabili.$ea-dark-color;
                             border-radius: 5%;
                             height: 0px;
-                            width: c.rem(8px);
+                            width: converter.rem(8px);
                             transform: rotate(45deg);
-                            margin-right: c.rem(-3.5px);
+                            margin-right: converter.rem(-3.5px);
                             transition: transform 0.20s ease-in;
                         }
 
                         &::after {
                             content: "";
-                            border: c.rem(1px) solid variabili.$ea-dark-color;
+                            border: converter.rem(1px) solid variabili.$ea-dark-color;
                             border-radius: 5%;
                             display: inline-block;
                             height: 0px;
-                            width: c.rem(8px);
+                            width: converter.rem(8px);
                             transform: rotate(-45deg);
                             transition: transform 0.20s ease-in;
                         }
                     }
 
-                    //Animazione della freccia sull'hover di .menu-section-title
+                    //animazione della freccia sull'hover di .menu-section-title
                     &:hover {
                         cursor: pointer;
 
@@ -195,21 +202,21 @@ header {
                     }
                 }
 
-                //Classe assegnata ad ogni container dei dropdown menu
-                .dropdown-container {
+                //classe assegnata al container di ogni dropdown menu
+                &-dropdown-container {
                     background-color: transparent;
                     position: absolute;
-                    top: c.rem(56px);
+                    top: converter.rem(56px);
                     max-height: 0px;
                     overflow: hidden;
                     transition: max-height 0.3s ease-in-out;
                     opacity: 0.9;
 
-                    //Classe assegnata ad ogni dropdown menu
-                    .dropdown-content {
+                    //classe assegnata al contenuto di ogni dropdown menu
+                    &-content {
                         background-color: #FFFFFF;
                         margin-top: 0.5rem;
-                        border-radius: c.rem(4px);
+                        border-radius: converter.rem(4px);
 
                         a {
                             text-decoration: none;
@@ -217,30 +224,30 @@ header {
                     }
                 }
 
-                //Animazione dei dropdown menu sull'hover
+                //animazione dei dropdown menu sull'hover
                 &:hover {
-                    .dropdown-container {
-                        max-height: c.rem(300px);
+                    .white-nav-menu-section-list-item-dropdown-container {
+                        max-height: converter.rem(300px);
                     }
                 }
 
-                //Menu 'Giochi'
+                //menu 'Giochi'
                 &:first-child {
-                    .dropdown-container {
-                        .dropdown-content {
+                    .white-nav-menu-section-list-item-dropdown-container {
+                        &-content {
                             @extend %center-vertically;
                             justify-content: flex-start;
-                            padding: c.rem(16px) c.rem(32px);
+                            padding: converter.rem(16px) converter.rem(32px);
                             padding-right: 0;
-                            gap: c.rem(64px);
+                            gap: converter.rem(64px);
 
-                            ul {
-                                @extend %dropdown-link;
+                            &-list {
+                                @extend %dropdown-menu-options-style;
 
-                                li {
+                                &-item {
                                     &:first-child {
                                         font-weight: 900;
-                                        line-height: c.rem(32px);
+                                        line-height: converter.rem(32px);
                                     }
 
                                     &:first-child:hover {
@@ -251,66 +258,66 @@ header {
                                 }
 
                                 &:nth-child(2) {
-                                    margin-right: c.rem(48px);
+                                    margin-right: converter.rem(48px);
                                 }
                             }
                         }
                     }
                 }
 
-                //Menu 'Altre esperienze'
+                //menu 'Altre esperienze'
                 &:nth-child(2) {
-                    @extend %dropdown-window;
+                    @extend %dropdown-menu-style;
                 }
 
-                //Menu 'Informazioni'
+                //menu 'Informazioni'
                 &:nth-child(3) {
-                    @extend %dropdown-window;
+                    @extend %dropdown-menu-style;
                 }
 
-                //Menu 'Impegni'
+                //menu 'Impegni'
                 &:nth-child(4) {
-                    @extend %dropdown-window;
+                    @extend %dropdown-menu-style;
                 }
 
-                //Menu 'Container'
+                //menu 'Container'
                 &:last-child {
-                    @extend %dropdown-window;
+                    @extend %dropdown-menu-style;
                 }
             }
         }
     }
 
-    // Media query
+    // media queries
     @media screen and (max-width: 1032px) {
         .white-nav {
             justify-content: flex-start;
 
-            //Nasconde l'icona da mostrare solo in modalità desktop
-            .nav-logos {
+            //nasconde l'icona da mostrare solo in modalità desktop
+            &-logos {
                 &:first-child {
                     display: none;
                 }
 
-                //Modifica la dimensione del logo
+                //modifica la dimensione del logo
                 &:nth-child(2) {
                     order: 2;
-                    margin-left: c.rem(16px);
+                    margin-left: converter.rem(16px);
 
-                    img {
-                        width: c.rem(109px);
-                        height: c.rem(53px);
+                    .wh {
+                        width: converter.rem(109px);
+                        height: converter.rem(53px);
                     }
                 }
 
-                //Mostra l'icona mobile
-                .hamburger-icon {
+                //mostra l'icona mobile
+                &-hamburger-icon {
                     display: block;
                 }
             }
 
-            //Nasconde i menu nella navbar
-            li {
+            //masconde i menu nella navbar
+            &-menu-section-list-item {
                 display: none;
             }
         }
