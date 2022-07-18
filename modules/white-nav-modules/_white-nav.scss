@@ -18,7 +18,7 @@ header {
         width: 100%;
 
         //Classe assegnata ai <div> contenenti il logo e le due icone dei menu(Mobile & Desktop)
-        &_logos {
+        &__logos {
             @extend %center-vertically;
             height: converter.rem(56px);
             width: fit-content;
@@ -27,7 +27,7 @@ header {
             &:first-child {
                 position: relative;
 
-                .white-nav_logos_image {
+                .white-nav__logos__image {
                     height: converter.rem(20px);
                     width: converter.rem(24px);
                     display: block;
@@ -47,7 +47,7 @@ header {
 
             //logo 'Electronic Arts'
             &:nth-child(2) {
-                .white-nav_logos_image {
+                .white-nav__logos__image {
                     height: converter.rem(32px);
                     width: converter.rem(145px);
                     display: block;
@@ -58,12 +58,12 @@ header {
             }
 
             //icona mobile del menu (definita dai designer 'hamburger menu icon')
-            &_hamburger-icon {
+            &__hamburger-icon {
                 display: none;
                 transform: scale(0.70);
 
                 //classe assegnata alle linee che vanno a comporre l'icona dell'hamburger menu
-                &_line {
+                &__line {
                     width: converter.rem(30px);
                     height: converter.rem(2.5px);
                     background-color: variabili.$ea-dark-color;
@@ -73,7 +73,7 @@ header {
                 &:hover {
                     cursor: pointer;
 
-                    .white-nav_logos_hamburger-icon_line {
+                    .white-nav__logos__hamburger-icon__line {
                         background-color: variabili.$origin-brand-color;
                     }
                 }
@@ -81,25 +81,25 @@ header {
         }
 
         //lista dei menu presenti nella navbar
-        &_list {
+        &__list {
             display: flex;
             color: variabili.$ea-dark-color;
             list-style-type: none;
 
             //classe assegnata ad ogni menu presente nella navbar
-            &_item {
+            &__item {
                 position: relative;
                 margin-left: converter.rem(20px);
 
                 //nome del menu
-                &_title {
+                &__title {
                     @extend %center-vertically;
                     width: fit-content;
                     height: converter.rem(56px);
                     font-size: converter.rem(18px);
 
                     //freccia accanto al nome del menu
-                    &_arrow {
+                    &__arrow {
                         margin-left: converter.rem(4px);
                         display: inline-block;
                         margin-top: converter.rem(4px);
@@ -154,7 +154,7 @@ header {
                 }
 
                 //classe assegnata al container di ogni dropdown menu
-                &_dropdown-container {
+                &__dropdown-container {
                     background-color: transparent;
                     position: absolute;
                     top: converter.rem(56px);
@@ -164,7 +164,7 @@ header {
                     opacity: 0.9;
 
                     //classe assegnata al contenuto di ogni dropdown menu
-                    &_content {
+                    &__content {
                         background-color: #FFFFFF;
                         margin-top: 0.5rem;
                         border-radius: converter.rem(4px);
@@ -177,25 +177,25 @@ header {
 
                 //animazione dei dropdown menu sull'hover
                 &:hover {
-                    .white-nav_list_item_dropdown-container {
+                    .white-nav__list__item__dropdown-container {
                         max-height: converter.rem(300px);
                     }
                 }
 
                 //menu 'Giochi'
                 &:first-child {
-                    .white-nav_list_item_dropdown-container {
-                        &_content {
+                    .white-nav__list__item__dropdown-container {
+                        &__content {
                             @extend %center-vertically;
                             justify-content: flex-start;
                             padding: converter.rem(16px) converter.rem(32px);
                             padding-right: 0;
                             gap: converter.rem(64px);
 
-                            &_list {
+                            &__list {
                                 @extend %dropdown-menu-options-style;
 
-                                &_item {
+                                &__item {
                                     &:first-child {
                                         font-weight: 900;
                                         line-height: converter.rem(32px);
@@ -245,7 +245,7 @@ header {
             justify-content: flex-start;
 
             //nasconde l'icona da mostrare solo in modalità desktop
-            &_logos {
+            &__logos {
                 &:first-child {
                     display: none;
                 }
@@ -255,20 +255,20 @@ header {
                     order: 2;
                     margin-left: converter.rem(16px);
 
-                    .white-nav_logos_image{
+                    .white-nav__logos__image{
                         width: converter.rem(109px);
                         height: converter.rem(53px);
                     }
                 }
 
                 //mostra l'icona mobile
-                &_hamburger-icon {
+                &__hamburger-icon {
                     display: block;
                 }
             }
 
             //nasconde i menu nella navbar
-            &_list_item {
+            &__list__item {
                 display: none;
             }
         }
