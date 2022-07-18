@@ -1,32 +1,31 @@
-@use 'px-to-rem' as c;
-@use 'variabili';
+@use '../px-to-rem' as converter;
+@use '../variabili';
 
-//Primo footer
+//primo footer
 .f-footer {
-    padding: 1.25rem 0rem; 
+    padding: 1.25rem 0rem;
     background-color: variabili.$ea-light-color;
     display: flex;
     justify-content: center;
     width: 100%;
-    ;
-    min-height: c.rem(160px);
+    min-height: converter.rem(160px);
 
-    //Contenuto del footer
-    .f-footer-content {
+    //contenuto del footer
+    &-content {
         width: 77.5%;
         display: flex;
 
-        //Contenitore dei link che rimandano a sezioni del sito
-        .f-footer-links {
+        //contenitore dei link che rimandano a sezioni del sito
+        &-link-container {
             width: 77.5%;
 
-            //Links
-            a {
+            //links
+            &-element {
                 display: inline-block;
-                margin: c.rem(12px) c.rem(40px) 0 0;
+                margin: converter.rem(12px) converter.rem(40px) 0 0;
                 text-decoration: none;
                 color: variabili.$ea-dark-color;
-                font-size: c.rem(16px); 
+                font-size: converter.rem(16px);
 
                 &:hover {
                     color: variabili.$origin-brand-color;
@@ -38,8 +37,8 @@
             }
         }
 
-        //Contenitore sezione social
-        .f-footer-social {
+        //contenitore sezione social
+        &-social-container {
             position: relative;
             width: 22.5%;
             display: flex;
@@ -47,22 +46,23 @@
             align-items: flex-end;
             gap: 0.75rem;
 
-            //Testo 'Partecipa alla conversazione'
-            p {
-                font-size: c.rem(14px); 
-                margin-top: c.rem(12px); 
+            //testo 'Partecipa alla conversazione'
+            &-title {
+                font-size: converter.rem(14px);
+                margin-top: converter.rem(12px);
                 font-weight: bold;
-                letter-spacing: c.rem(-0.25px);
+                letter-spacing: converter.rem(-0.25px);
                 color: variabili.$ea-dark-color;
             }
 
-            //Icone social
-            .social-icons {
+            //icone social
+            &-icon-container {
 
-                svg {
+                &-element {
                     display: block;
                     transition: transform 0.15s ease-in;
-                    &:hover{
+
+                    &:hover {
                         transform: scale(1.35);
                         cursor: pointer;
                     }
@@ -76,36 +76,42 @@
     }
 }
 
-//MEDIA QUERIES
+//media queries
 @media screen and (max-width: 1200px) {
     .f-footer {
-        .f-footer-content {
-            width: 87.5%; 
+
+        //aumenta la grandezza del contenuto del footer se viene visualizzato su un dispositivo di risoluzione uguale o inferiore a 1200px
+        &-content {
+            width: 87.5%;
         }
     }
 }
 
 
 @media screen and (max-width: 1024px) {
+
+    //definisce l'altezza minima del footer su dispositivi con una risoluzione uguale o inferiore a 1024px
     .f-footer {
         min-height: 256px;
 
-        .f-footer-content {
+        //applica una disposizione a colonna agli elementi che compongono il contenuto del footer
+        &-content {
             flex-direction: column;
             align-items: flex-start;
             justify-content: flex-start;
 
-            .f-footer-links {
+            //data la disposizione a colonna, i contenuti occupano il 100% della larghezza
+            &-link-container {
                 width: 100%;
             }
 
-            .f-footer-social {
+            &-social-container {
                 align-items: flex-start;
                 width: 100%;
-                gap: 1rem; 
+                gap: 1rem;
 
-                p {
-                    margin-top: c.rem(12px * 2); 
+                &-social-container-title {
+                    margin-top: converter.rem(12px * 2);
                 }
             }
 
@@ -114,19 +120,23 @@
 }
 
 @media screen and (max-width: 768px) {
+
+    //definisce l'altezza minima del footer su dispositivi con una risoluzione uguale o inferiore a 768px
     .f-footer {
         min-height: 388px;
 
-        .f-footer-content {
+        //aumenta la grandezza del contenuto del footer se viene visualizzato su un dispositivo di risoluzione uguale o inferiore a 768px
+        &-content {
             width: 90%;
 
-            .f-footer-links {
+            //applica una disposizione a griglia ai link del footer
+            &-link-container {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 gap: 0.5rem;
                 border-bottom: 1px solid gray;
 
-                a {
+                &-element {
                     margin-right: 0;
 
                     &:last-child {
@@ -136,5 +146,4 @@
             }
         }
     }
-
 }
