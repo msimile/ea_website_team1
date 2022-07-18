@@ -24,7 +24,7 @@
 
 //definisce la formattazione delle voci presenti all'interno dei dropdown menu
 %dropdown-menu-options-style {
-    .white-nav-list-item-dropdown-container-content-list-item {
+    .white-nav_list_item_dropdown-container_content_list_item {
         list-style: none;
         font-size: converter.rem(16px);
         font-weight: 100;
@@ -40,9 +40,9 @@
 
 //definisce lo stile dei dropdown menu
 %dropdown-menu-style {
-    .white-nav-list-item-dropdown-container {
-        &-content {
-            &-list {
+    .white-nav_list_item_dropdown-container {
+        &_content {
+            &_list {
                 padding: converter.rem(8px) converter.rem(32px);
                 padding-right: converter.rem(40px);
                 @extend %dropdown-menu-options-style;
