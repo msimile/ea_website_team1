@@ -268,7 +268,7 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
 #giochi-in-evidenza .logo_img {
   transform: translate(-50%, -50%);
   height: auto;
-  transition: top 0.4s ease-in-out;
+  transition: top 0.23s ease-in-out;
 }
 #giochi-in-evidenza .logo_img_small {
   width: 25%;
@@ -306,7 +306,7 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
   opacity: 0;
 }
 #giochi-in-evidenza .game-card-img-content a {
-  font-size: 1rem;
+  font-size: 1.1rem;
   transform: translate(-50%, -50%);
   text-decoration: none;
   font-weight: 400;
@@ -345,7 +345,7 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
 }
 #giochi-in-evidenza .game-card-img-content:hover .logo_img,
 #giochi-in-evidenza .game-card-img-content:hover .logo_img_jpg {
-  top: 33%;
+  top: 29%;
 }
 #giochi-in-evidenza .game-card-img-content:hover a {
   display: unset;
