@@ -81,7 +81,7 @@ header {
         }
 
         //lista dei menu presenti nella navbar
-        &-menu-section-list {
+        &-list {
             display: flex;
             color: variabili.$ea-dark-color;
             list-style-type: none;
@@ -177,14 +177,14 @@ header {
 
                 //animazione dei dropdown menu sull'hover
                 &:hover {
-                    .white-nav-menu-section-list-item-dropdown-container {
+                    .white-nav-list-item-dropdown-container {
                         max-height: converter.rem(300px);
                     }
                 }
 
                 //menu 'Giochi'
                 &:first-child {
-                    .white-nav-menu-section-list-item-dropdown-container {
+                    .white-nav-list-item-dropdown-container {
                         &-content {
                             @extend %center-vertically;
                             justify-content: flex-start;
@@ -255,7 +255,7 @@ header {
                     order: 2;
                     margin-left: converter.rem(16px);
 
-                    .wh {
+                    .white-nav-logos-image{
                         width: converter.rem(109px);
                         height: converter.rem(53px);
                     }
@@ -268,7 +268,7 @@ header {
             }
 
             //nasconde i menu nella navbar
-            &-menu-section-list-item {
+            &-list-item {
                 display: none;
             }
         }
