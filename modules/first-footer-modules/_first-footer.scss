@@ -11,16 +11,16 @@
     min-height: converter.rem(160px);
 
     //contenuto del footer
-    &_content {
+    &__content {
         width: 77.5%;
         display: flex;
 
         //contenitore dei link che rimandano a sezioni del sito
-        &_link-container {
+        &__link-container {
             width: 77.5%;
 
             //links
-            &_element {
+            &__element {
                 display: inline-block;
                 margin: converter.rem(12px) converter.rem(40px) 0 0;
                 text-decoration: none;
@@ -38,7 +38,7 @@
         }
 
         //contenitore sezione social
-        &_social-container {
+        &__social-container {
             position: relative;
             width: 22.5%;
             display: flex;
@@ -47,7 +47,7 @@
             gap: 0.75rem;
 
             //testo 'Partecipa alla conversazione'
-            &_title {
+            &__title {
                 font-size: converter.rem(14px);
                 margin-top: converter.rem(12px);
                 font-weight: bold;
@@ -56,9 +56,9 @@
             }
 
             //icone social
-            &_icon-container {
+            &__icon-container {
 
-                &_element {
+                &__element {
                     display: block;
                     transition: transform 0.15s ease-in;
 
@@ -81,7 +81,7 @@
     .f-footer {
 
         //aumenta la grandezza del contenuto del footer se viene visualizzato su un dispositivo di risoluzione uguale o inferiore a 1200px
-        &_content {
+        &__content {
             width: 87.5%;
         }
     }
@@ -95,22 +95,22 @@
         min-height: 256px;
 
         //applica una disposizione a colonna agli elementi che compongono il contenuto del footer
-        &_content {
+        &__content {
             flex-direction: column;
             align-items: flex-start;
             justify-content: flex-start;
 
             //data la disposizione a colonna, i contenuti occupano il 100% della larghezza
-            &_link-container {
+            &__link-container {
                 width: 100%;
             }
 
-            &_social-container {
+            &__social-container {
                 align-items: flex-start;
                 width: 100%;
                 gap: 1rem;
 
-                &_title {
+                &__title {
                     margin-top: converter.rem(12px * 2);
                 }
             }
@@ -126,17 +126,17 @@
         min-height: 388px;
 
         //aumenta la grandezza del contenuto del footer se viene visualizzato su un dispositivo di risoluzione uguale o inferiore a 768px
-        &_content {
+        &__content {
             width: 90%;
 
             //applica una disposizione a griglia ai link del footer
-            &_link-container {
+            &__link-container {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 gap: 0.5rem;
                 border-bottom: 1px solid gray;
 
-                &_element {
+                &__element {
                     margin-right: 0;
 
                     &:last-child {
