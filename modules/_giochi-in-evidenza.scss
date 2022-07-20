@@ -34,7 +34,7 @@
     @extend %center-absolute-elements;
     transform: translate(-50%, -50%);
     height: auto;
-    transition: top 0.4s ease-in-out;
+    transition: top 0.23s ease-in-out;
   }
 
   // classi per diverse grandezze del logo
@@ -85,7 +85,7 @@
     //Link al sito relativo al gioco raffigurato (di base nascosto)
     a {
       @extend %center-absolute-elements;
-      font-size: 1rem;
+      font-size: 1.1rem;
       transform: translate(-50%, -50%);
       text-decoration: none;
       font-weight: 400;
@@ -141,7 +141,7 @@
 
     .logo_img,
     .logo_img_jpg {
-      top: 33%;
+      top: 29%;
     }
 
     a {

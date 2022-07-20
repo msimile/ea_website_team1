@@ -5,6 +5,7 @@
 @use 'modules/giochi-in-evidenza';
 @use 'modules/first-footer.scss';
 @use 'modules/banner-EA-Play';
+@use 'modules/login';
 
 // import del font
 @font-face {
@@ -37,6 +38,6 @@ $fs_values: variabili.$body, variabili.$title, variabili.$header; // valori per 
   padding: 0;
   box-sizing: border-box;
   font-family: "Electronic Arts Text";
-  color: variabili.$ea-dark-color;
+  // color: variabili.$ea-dark-color;
 }
 
