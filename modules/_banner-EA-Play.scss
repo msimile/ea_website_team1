@@ -59,7 +59,7 @@
 
     &:hover {
       padding: f.rem(19px) f.rem(25px);
-      margin: f.rem(-3px) f.rem(-3px);
+      margin: f.rem(-3px) f.rem(-7px);
     }
   }
 }
@@ -123,13 +123,13 @@
       position: unset;
     }
     h6 {
+      margin-bottom: 10px;
       position: unset;
       width: f.rem(312px);
       font-size: f.rem(16px);
       font-weight: 200;
     }
     .iscrivitiSubitoButton {
-      margin-top: 5%;
       position: unset;
       padding: f.rem(12.5px) f.rem(22px);
       font-size: f.rem(16px);
@@ -164,39 +164,64 @@
     }
   }
 }
+@media (max-width: 540px) {
+  .eaBanner {
+    .container-bgc-img {
+      .container-elements {
+        .iscrivitiSubitoButton {
+          padding: f.rem(12.5px) f.rem(80px);
+          white-space: nowrap;
+          top: 65%;
+          &:hover {
+            padding: f.rem(15.5px) f.rem(83px);
+            margin: f.rem(-3px) f.rem(-3px);
+          }
+        }
+      }
+    }
+  }
+}
 
 @media (max-width: 360px) {
   .blueBanner {
     height: f.rem(212px);
-    .scopri_di_piu {
-      padding: f.rem(12.5px) f.rem(200px);
+    .container-h2-button {
+      .container-h2-only {
+        width: 80%;
+      }
+      .scopri_di_piu {
+        padding: f.rem(12.5px) f.rem(105px);
 
-      &:hover {
-        padding: f.rem(15.5px) f.rem(123px);
-        margin: f.rem(-3px) f.rem(-3px);
+        &:hover {
+          padding: f.rem(15.5px) f.rem(108px);
+          margin: f.rem(-3px) f.rem(-3px);
+        }
       }
     }
   }
   .eaBanner {
     height: 600px;
     .container-bgc-img {
-      height: 600px;
+      background-image: url("https://media.contentapi.ea.com/content/dam/eacom/subscription/ea-play-platform-landing-page/images/2021/01/hero-medium-console-7x2-xl.jpg.adapt.crop3x5.320w.jpg");
+      height: f.rem(600px);
       .container-elements {
-        padding: 130px 30px;
-      }
-      .img_container {
-        top: 27%;
-      }
-      h6 {
-        top: 44%;
-      }
-      .iscrivitiSubitoButton {
-        padding: f.rem(12.5px) f.rem(100px);
-        white-space: nowrap;
-        top: 65%;
-        &:hover {
-          padding: f.rem(15.5px) f.rem(103px);
-          margin: f.rem(-3px) f.rem(-3px);
+        padding: f.rem(110px) f.rem(25px);
+
+        .img_container {
+          top: 27%;
+        }
+        h6 {
+          margin-bottom: 10px;
+          top: 44%;
+        }
+        .iscrivitiSubitoButton {
+          padding: f.rem(12.5px) f.rem(100px);
+          white-space: nowrap;
+          top: 65%;
+          &:hover {
+            padding: f.rem(15.5px) f.rem(103px);
+            margin: f.rem(-3px) f.rem(-3px);
+          }
         }
       }
     }
