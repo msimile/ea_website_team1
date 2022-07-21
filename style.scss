@@ -2,8 +2,9 @@
 @use 'modules/variabili';
 @use 'modules/navnera';
 @use 'modules/white-nav';
-@use 'modules/giochi-in-evidenza';
+@use 'modules/featured-games';
 @use 'modules/first-footer.scss';
+@use 'modules/aside';
 
 // import del font
 @font-face {

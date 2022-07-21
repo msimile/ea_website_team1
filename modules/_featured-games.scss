@@ -3,14 +3,14 @@
 
 // extend per centrare elementi ed assegnare absolute
 %center-absolute-elements {
+  transform: translate(-50%, -50%);
   position: absolute;
   left: 50%;
   top: 50%;
 }
 //intero contenitore della sezione Giochi in evidenza
 #giochi-in-evidenza {
-    
-    // titolo della sezione (segue le direttive generali per i titoli)
+  // titolo della sezione (segue le direttive generali per i titoli)
   h2 {
     font-size: c.rem(v.$header);
     font-weight: v.$header;
@@ -27,27 +27,6 @@
     width: 100%;
     max-width: 1100px;
     gap: 1.3rem;
-  }
-
-  // logo e animazione annessa
-  .logo_img {
-    @extend %center-absolute-elements;
-    transform: translate(-50%, -50%);
-    height: auto;
-    transition: top 0.4s ease-in-out;
-  }
-
-  // classi per diverse grandezze del logo
-  .logo_img_small {
-    width: 25%;
-  }
-
-  .logo_img_medium {
-    width: 35%;
-  }
-
-  .logo_img_big {
-    width: 45%;
   }
 
   //content e sizing dell'image content
@@ -150,7 +129,24 @@
     }
   }
 }
+// logo e animazione annessa
+.logo_img {
+  @extend %center-absolute-elements;
+  transition: top 0.4s ease-in-out;
+}
 
+// classi per diverse grandezze del logo
+.logo_img_small {
+  width: 25%;
+}
+
+.logo_img_medium {
+  width: 35%;
+}
+
+.logo_img_big {
+  width: 45%;
+}
 @media (max-width: 1023px) {
   //Giochi in evidenza
   #giochi-in-evidenza {
