@@ -1,9 +1,6 @@
 .nav-nera {
   display: flex;
   flex-direction: column;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0rem;
   transition: transform 0.3s ease-in-out;
   max-height: 2.5rem;
 }
@@ -529,7 +526,7 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
 }
 .eaBanner .iscrivitiSubitoButton:hover {
   padding: 1.1875rem 1.5625rem;
-  margin: -0.1875rem -0.1875rem;
+  margin: -0.1875rem -0.4375rem;
 }
 
 .blueBanner {
@@ -592,13 +589,13 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
     position: unset;
   }
   .eaBanner h6 {
+    margin-bottom: 10px;
     position: unset;
     width: 19.5rem;
     font-size: 1rem;
     font-weight: 200;
   }
   .eaBanner .iscrivitiSubitoButton {
-    margin-top: 5%;
     position: unset;
     padding: 0.78125rem 1.375rem;
     font-size: 1rem;
@@ -630,38 +627,54 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
     margin: -0.125rem -0.125rem;
   }
 }
+@media (max-width: 540px) {
+  .eaBanner .container-bgc-img .container-elements .iscrivitiSubitoButton {
+    padding: 0.78125rem 5rem;
+    white-space: nowrap;
+    top: 65%;
+  }
+  .eaBanner .container-bgc-img .container-elements .iscrivitiSubitoButton:hover {
+    padding: 0.96875rem 5.1875rem;
+    margin: -0.1875rem -0.1875rem;
+  }
+}
 @media (max-width: 360px) {
   .blueBanner {
     height: 13.25rem;
   }
-  .blueBanner .scopri_di_piu {
-    padding: 0.78125rem 12.5rem;
+  .blueBanner .container-h2-button .container-h2-only {
+    width: 80%;
   }
-  .blueBanner .scopri_di_piu:hover {
-    padding: 0.96875rem 7.6875rem;
+  .blueBanner .container-h2-button .scopri_di_piu {
+    padding: 0.78125rem 6.5625rem;
+  }
+  .blueBanner .container-h2-button .scopri_di_piu:hover {
+    padding: 0.96875rem 6.75rem;
     margin: -0.1875rem -0.1875rem;
   }
   .eaBanner {
     height: 600px;
   }
   .eaBanner .container-bgc-img {
-    height: 600px;
+    background-image: url("https://media.contentapi.ea.com/content/dam/eacom/subscription/ea-play-platform-landing-page/images/2021/01/hero-medium-console-7x2-xl.jpg.adapt.crop3x5.320w.jpg");
+    height: 37.5rem;
   }
   .eaBanner .container-bgc-img .container-elements {
-    padding: 130px 30px;
+    padding: 6.875rem 1.5625rem;
   }
-  .eaBanner .container-bgc-img .img_container {
+  .eaBanner .container-bgc-img .container-elements .img_container {
     top: 27%;
   }
-  .eaBanner .container-bgc-img h6 {
+  .eaBanner .container-bgc-img .container-elements h6 {
+    margin-bottom: 10px;
     top: 44%;
   }
-  .eaBanner .container-bgc-img .iscrivitiSubitoButton {
+  .eaBanner .container-bgc-img .container-elements .iscrivitiSubitoButton {
     padding: 0.78125rem 6.25rem;
     white-space: nowrap;
     top: 65%;
   }
-  .eaBanner .container-bgc-img .iscrivitiSubitoButton:hover {
+  .eaBanner .container-bgc-img .container-elements .iscrivitiSubitoButton:hover {
     padding: 0.96875rem 6.4375rem;
     margin: -0.1875rem -0.1875rem;
   }
