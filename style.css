@@ -349,6 +349,27 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
   color: white;
 }
 
+.container-featured-game-button {
+  height: 120px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-featured-game-button .featured-game-button {
+  transition: all 0.08s ease-in-out;
+  font-size: 1.125rem;
+  padding: 1rem 1.6875rem;
+  background-color: transparent;
+  border-radius: 0.1875rem;
+  border: 0.125rem solid rgb(22, 22, 22);
+  cursor: pointer;
+}
+.container-featured-game-button .featured-game-button:hover {
+  padding: 1.1875rem 1.875rem;
+  margin: -0.1875rem -0.1875rem;
+}
+
 @media (max-width: 1023px) {
   #giochi-in-evidenza h2 {
     font-size: 2.5rem;
@@ -367,6 +388,16 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
   #giochi-in-evidenza .game-card-img-content {
     width: 85vw;
     height: 85vw;
+  }
+}
+@media (max-width: 640px) {
+  #giochi-in-evidenza .container-featured-game-button .featured-game-button {
+    width: 85%;
+    padding: 0.75rem 1.5rem;
+  }
+  #giochi-in-evidenza .container-featured-game-button .featured-game-button:hover {
+    padding: 0.875rem 1.6875rem;
+    margin: -0.125rem -0.125rem;
   }
 }
 .f-footer {
@@ -627,7 +658,7 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
     margin: -0.125rem -0.125rem;
   }
 }
-@media (max-width: 540px) {
+@media (max-width: 640px) {
   .eaBanner .container-bgc-img .container-elements .iscrivitiSubitoButton {
     padding: 0.78125rem 5rem;
     white-space: nowrap;
@@ -894,9 +925,9 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
   align-items: center;
   row-gap: 2rem;
 }
-.section-news-title h2 {
-  font-size: 2.3rem;
-  font-weight: 600;
+.section-news-title h1 {
+  font-size: 2.75rem;
+  font-weight: bold;
 }
 .section-news-options {
   display: flex;
@@ -986,12 +1017,12 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
   font-size: 1.125rem;
   font-weight: 400;
   cursor: pointer;
-  height: 3.1875rem;
-  width: 8.8125rem;
-  transition: transform 0.3s ease-in-out;
+  padding: 1rem 2rem;
+  transition: all 0.08s ease-in-out;
 }
 .section-news-more #show-more:hover {
-  transform: scale(1.08);
+  padding: 1.1875rem 2.1875rem;
+  margin: -0.1875rem -0.1875rem;
 }
 .section-news-cards {
   display: flex;
@@ -1204,14 +1235,17 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
 }
 @media screen and (max-width: 40rem) {
   .section-news .section-news-more {
+    margin: 2rem;
     min-width: 90%;
   }
   .section-news .section-news-more #show-more {
     min-width: 100%;
+    padding: 0.75rem 1.5rem;
     width: 100%;
   }
   .section-news .section-news-more #show-more:hover {
-    transform: scale(1.01);
+    padding: 0.875rem 1.6875rem;
+    margin: -0.125rem -0.1875rem;
   }
 }
 @media screen and (max-width: 69.9375rem) {
