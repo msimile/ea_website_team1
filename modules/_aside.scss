@@ -29,7 +29,7 @@
 
 .aside-wrapper {
   background-color: white;
-  width: 22%;
+  width: 33%;
   max-width: c.rem(415px);
   min-width: c.rem(360px);
   height: 100vh;
@@ -38,7 +38,6 @@
   box-shadow: 0 0 20px rgb(0 0 0 / 30%);
   position: absolute;
   overflow: hidden;
-  padding: 2rem 0;
   z-index: 3;
   
   .aside-wrapper--scroll-bar{
@@ -51,11 +50,11 @@
 
   //dimensionamento della parte superiore dell'aside: Title e cross
   &-title {
-    width: 100%;
+    margin:auto;
+    width: 92%;
     display: flex;
     justify-content: space-between;
-    padding: 2rem;
-
+    padding: 3rem 0 1.8rem;
     a {
       text-decoration: none;
       font-weight: v.$header-w;
@@ -64,6 +63,7 @@
     }
     //Cross sign
     svg {
+      transform: translate(-100%);
       width: 1rem;
       height: 1rem;
       margin-right: 1rem;
@@ -80,9 +80,9 @@
     padding-right: 2rem;
 
     &-top-card-content {
-      width: 90%;
+      width: 92%;
       height: auto;
-      margin: 1rem 0;
+      margin: 1rem 0 1.3rem;
       position: relative;
 
       &-img {
@@ -115,11 +115,11 @@
 
     //gruppo di cards al di sotto della card principale
     &-cards {
-      width: 90%;
+      width: 92%;
       @extend %flex-center;
       flex-wrap: wrap;
       gap: v.$small-gap;
-      margin-bottom: 7rem;
+      margin-bottom: 4rem;
 
       &-content {
         @extend %flex-center;
@@ -146,6 +146,7 @@
     }
   }
 }
+
 
 @media (max-width: 767px) {
   .aside-wrapper {

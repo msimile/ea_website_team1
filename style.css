@@ -263,15 +263,10 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  max-width: 1100px;
+  max-width: 68.75rem;
   gap: 1.3rem;
 }
 #giochi-in-evidenza .game-card-img-content {
-  white-space: nowrap;
-  position: relative;
-  align-items: center;
-  background-position: center;
-  background-size: cover;
   min-width: 16.25rem;
   min-height: 16.25rem;
   width: 20vw;
@@ -279,6 +274,11 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
   max-height: 21.875rem;
   max-width: 21.875rem;
   padding: 0.875rem;
+  white-space: nowrap;
+  position: relative;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
   transition-duration: opacity 0.4s ease-in-out;
 }
 #giochi-in-evidenza .game-card-img-content::before {
@@ -293,7 +293,7 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
   opacity: 0;
 }
 #giochi-in-evidenza .game-card-img-content a {
-  font-size: 1rem;
+  font-size: 1.1rem;
   transform: translate(-50%, -50%);
   text-decoration: none;
   font-weight: 400;
@@ -330,9 +330,8 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
   background-position: center;
   opacity: 0.84;
 }
-#giochi-in-evidenza .game-card-img-content:hover .logo_img,
-#giochi-in-evidenza .game-card-img-content:hover .logo_img_jpg {
-  top: 33%;
+#giochi-in-evidenza .game-card-img-content:hover .logo_img {
+  top: 29%;
 }
 #giochi-in-evidenza .game-card-img-content:hover a {
   display: unset;
@@ -340,7 +339,8 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
 }
 
 .logo_img {
-  transition: top 0.4s ease-in-out;
+  height: auto;
+  transition: top 0.23s ease-in-out;
 }
 
 .logo_img_small {
@@ -499,7 +499,7 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
 
 .aside-wrapper {
   background-color: white;
-  width: 22%;
+  width: 33%;
   max-width: 25.9375rem;
   min-width: 22.5rem;
   height: 100vh;
@@ -507,7 +507,6 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   position: absolute;
   overflow: hidden;
-  padding: 2rem 0;
   z-index: 3;
 }
 .aside-wrapper .aside-wrapper--scroll-bar {
@@ -518,10 +517,11 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
   overflow: auto;
 }
 .aside-wrapper-title {
-  width: 100%;
+  margin: auto;
+  width: 92%;
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 3rem 0 1.8rem;
 }
 .aside-wrapper-title a {
   text-decoration: none;
@@ -530,6 +530,7 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
   letter-spacing: 0.015rem;
 }
 .aside-wrapper-title svg {
+  transform: translate(-100%);
   width: 1rem;
   height: 1rem;
   margin-right: 1rem;
@@ -542,9 +543,9 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
   padding-right: 2rem;
 }
 .aside-wrapper-main-top-card-content {
-  width: 90%;
+  width: 92%;
   height: auto;
-  margin: 1rem 0;
+  margin: 1rem 0 1.3rem;
   position: relative;
 }
 .aside-wrapper-main-top-card-content-img {
@@ -566,10 +567,10 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
   width: 40%;
 }
 .aside-wrapper-main-cards {
-  width: 90%;
+  width: 92%;
   flex-wrap: wrap;
   gap: 2rem;
-  margin-bottom: 7rem;
+  margin-bottom: 4rem;
 }
 .aside-wrapper-main-cards-content {
   position: relative;
@@ -600,6 +601,406 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
   }
   .aside-wrapper-main-cards-content {
     width: calc(50% - 1.25rem);
+  }
+}
+.eaBanner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-height: 37.5rem;
+  height: 34.3125rem;
+  position: relative;
+}
+.eaBanner .container-bgc-img {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("https://media.contentapi.ea.com/content/dam/eacom/subscription/ea-play-platform-landing-page/images/2021/01/hero-medium-console-7x2-xl.jpg.adapt.crop7x2.1920w.jpg 1456w");
+}
+.eaBanner .img_container {
+  position: absolute;
+  top: 25%;
+  left: 21%;
+}
+.eaBanner h6 {
+  width: 31.25rem;
+  position: absolute;
+  top: 43.7%;
+  left: 21%;
+  font-size: 1.125rem;
+  color: rgb(243, 243, 243);
+  font-weight: 100;
+  line-height: 1.7rem;
+}
+.eaBanner .iscrivitiSubitoButton {
+  position: absolute;
+  top: 62.7%;
+  left: 21%;
+  font-family: "Electronic Arts Text";
+  font-size: 1.125rem;
+  font-weight: 100;
+  padding: 1rem 1.125rem;
+  border-radius: 0.1875rem;
+  border: 0.125rem solid rgb(243, 243, 243);
+  transition: all 0.08s ease-in-out;
+  cursor: pointer;
+  border-radius: rem(3px);
+  background-color: transparent;
+  border: rem(2px) solid rgb(243, 243, 243);
+  color: rgb(243, 243, 243);
+}
+.eaBanner .iscrivitiSubitoButton a {
+  text-decoration: none;
+  color: rgb(243, 243, 243);
+}
+.eaBanner .iscrivitiSubitoButton:hover {
+  padding: 1.1875rem 1.5625rem;
+  margin: -0.1875rem -0.1875rem;
+}
+
+.blueBanner {
+  display: flex;
+  align-items: center;
+  height: 7rem;
+  background-image: url("https://media.contentapi.ea.com/content/dam/eacom/common/ea-section-bg-esrb-parents-blue-xl.jpg.adapt.320w.jpg");
+}
+.blueBanner .container-h2-button {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.blueBanner .container-h2-button .container-h2-only {
+  max-width: 37.5rem;
+  width: 100%;
+}
+.blueBanner .container-h2-button .container-h2-only h2 {
+  font-size: 1.625rem;
+}
+.blueBanner .container-h2-button .scopri_di_piu {
+  background-color: transparent;
+  font-family: "Electronic Arts Text";
+  font-size: 1.125rem;
+  font-weight: 100;
+  padding: 1rem 1.75rem;
+  border-radius: 0.1875rem;
+  border: 2px solid rgb(22, 22, 22);
+  transition: all 0.08s ease-in-out;
+  cursor: pointer;
+}
+.blueBanner .container-h2-button .scopri_di_piu:hover {
+  padding: 1.1875rem 1.9375rem;
+  margin: -0.1875rem -0.1875rem;
+}
+
+@media (max-width: 768px) {
+  .eaBanner {
+    height: 24rem;
+  }
+  .eaBanner .container-bgc-img {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 24rem;
+    background-repeat: no-repeat;
+    background-position: unset;
+    background-size: cover;
+    background-image: url("https://media.contentapi.ea.com/content/dam/eacom/subscription/ea-play-platform-landing-page/images/2021/01/hero-medium-console-7x2-xl.jpg.adapt.crop2x1.1023w.jpg");
+  }
+  .eaBanner .container-elements {
+    padding: 1rem 3.75rem;
+    height: 80%;
+    width: 50%;
+    background-color: transparent;
+  }
+  .eaBanner .img_container {
+    position: unset;
+  }
+  .eaBanner h6 {
+    position: unset;
+    width: 19.5rem;
+    font-size: 1rem;
+    font-weight: 200;
+  }
+  .eaBanner .iscrivitiSubitoButton {
+    margin-top: 5%;
+    position: unset;
+    padding: 0.78125rem 1.375rem;
+    font-size: 1rem;
+  }
+  .eaBanner .iscrivitiSubitoButton:hover {
+    padding: 0.90625rem 1.5rem;
+    margin: -0.125rem -0.125rem;
+  }
+}
+@media (max-width: 1100px) {
+  .blueBanner {
+    height: 10.1875rem;
+  }
+  .blueBanner .container-h2-button {
+    margin: auto;
+    height: 100%;
+    flex-direction: column;
+  }
+  .blueBanner .container-h2-button .container-h2-only h2 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .blueBanner .scopri_di_piu {
+    padding: 0.78125rem 1.375rem;
+    font-size: 1rem;
+  }
+  .blueBanner .scopri_di_piu:hover {
+    padding: 0.90625rem 1.5rem;
+    margin: -0.125rem -0.125rem;
+  }
+}
+@media (max-width: 360px) {
+  .blueBanner {
+    height: 13.25rem;
+  }
+  .blueBanner .scopri_di_piu {
+    padding: 0.78125rem 12.5rem;
+  }
+  .blueBanner .scopri_di_piu:hover {
+    padding: 0.96875rem 7.6875rem;
+    margin: -0.1875rem -0.1875rem;
+  }
+  .eaBanner {
+    height: 600px;
+  }
+  .eaBanner .container-bgc-img {
+    height: 600px;
+  }
+  .eaBanner .container-bgc-img .container-elements {
+    padding: 130px 30px;
+  }
+  .eaBanner .container-bgc-img .img_container {
+    top: 27%;
+  }
+  .eaBanner .container-bgc-img h6 {
+    top: 44%;
+  }
+  .eaBanner .container-bgc-img .iscrivitiSubitoButton {
+    padding: 0.78125rem 6.25rem;
+    white-space: nowrap;
+    top: 65%;
+  }
+  .eaBanner .container-bgc-img .iscrivitiSubitoButton:hover {
+    padding: 0.96875rem 6.4375rem;
+    margin: -0.1875rem -0.1875rem;
+  }
+}
+@font-face {
+  font-family: "Electronic Arts Text";
+  src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot");
+  src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff") format("woff"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.svg#Electronic Arts Text") format("svg");
+}
+.login-body {
+  background-color: #1d2033;
+  color: white;
+}
+.login-body .container-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.login-body .container-login .options-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+  max-width: 25rem;
+  width: 25rem;
+  margin-top: 4.5rem;
+}
+.login-body .container-login .options-login .text {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: center;
+}
+.login-body .container-login .options-login .icons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.login-body .container-login .options-login .icons span {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+.login-body .container-login .options-login .icons span:hover {
+  transform: scale(0.95);
+}
+.login-body .container-login .options-login .icons span:first-of-type, .login-body .container-login .options-login .icons span:nth-of-type(3) {
+  background-color: white;
+}
+.login-body .container-login .options-login .icons span:nth-of-type(2) {
+  background-color: rgb(24, 119, 242);
+}
+.login-body .container-login .options-login .icons span:nth-of-type(4) {
+  background-color: black;
+}
+.login-body .container-login .options-login .icons span:nth-of-type(5) {
+  background-color: rgb(16, 124, 16);
+}
+.login-body .container-login .options-login .icons span:nth-of-type(6) {
+  background-color: rgb(0, 73, 160);
+}
+.login-body .container-login .options-login .separate {
+  display: flex;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  width: 100%;
+}
+.login-body .container-login .options-login .separate .line {
+  border-bottom: 0.0625rem solid rgb(144, 142, 151);
+  width: calc((100% - 1.625rem) / 2);
+  transform: translateY(-0.625rem);
+}
+.login-body .container-login .options-login .separate .letter {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 1.2rem;
+  color: rgb(144, 142, 151);
+}
+.login-body .container-login .options-login .dati {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 0.8rem;
+}
+.login-body .container-login .options-login .dati .input {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  row-gap: 0.8rem;
+}
+.login-body .container-login .options-login .dati .input div {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1125rem;
+}
+.login-body .container-login .options-login .dati .input input {
+  width: 100%;
+  height: 3rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  padding-left: 0.75rem;
+  background-color: rgb(20, 23, 36);
+  border: 0.125rem solid rgb(98, 98, 111);
+}
+.login-body .container-login .options-login .dati .input input:hover {
+  border-color: rgb(147, 147, 153);
+}
+.login-body .container-login .options-login .dati .input input:focus {
+  border-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 1px 1px rgb(255, 255, 255), -1px 1px 1px 1px rgb(255, 255, 255), 1px -1px 1px 1px rgb(255, 255, 255);
+}
+.login-body .container-login .options-login .dati .input .show-pass {
+  display: flex;
+  justify-content: flex-end;
+}
+.login-body .container-login .options-login .dati .input .show-pass button {
+  background-color: rgb(52, 54, 71);
+  border-radius: 0.5rem;
+  width: 2.5rem;
+  height: 2rem;
+  border: none;
+  transform: translate(-0.5rem, -2.5rem);
+  cursor: pointer;
+}
+.login-body .container-login .options-login .dati .input .show-pass button:hover {
+  background-color: rgb(15, 18, 26);
+}
+.login-body .container-login .options-login .dati .input .show-pass button:focus {
+  border-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 1px 1px rgb(255, 255, 255), -1px 1px 1px 1px rgb(255, 255, 255), 1px -1px 1px 1px rgb(255, 255, 255);
+}
+.login-body .container-login .options-login .remember {
+  width: 100%;
+  transform: translateY(-2rem);
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+.login-body .container-login .options-login .remember input {
+  height: 1.5rem;
+  width: 1.5rem;
+  box-shadow: 1px 1px 1px 1px rgb(255, 255, 255), -1px 1px 1px 1px rgb(255, 255, 255), 1px -1px 1px 1px rgb(255, 255, 255);
+  font-size: 1.9375rem;
+  font-weight: 400;
+  cursor: pointer;
+  background-color: rgb(20, 23, 36);
+}
+.login-body .container-login .options-login .remember input:checked {
+  accent-color: #1B4AB0;
+}
+.login-body .container-login .options-login .remember label {
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+.login-body .container-login .options-login .accedi-button {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(-1.5rem);
+  row-gap: 1rem;
+}
+.login-body .container-login .options-login .accedi-button button {
+  border-radius: rem(3px);
+  background-color: rgb(35, 95, 227);
+  border: rem(0rem) none transparent;
+  color: white;
+  border-radius: 0.5rem;
+  height: 3rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.15rem;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+.login-body .container-login .options-login .accedi-button button:hover {
+  transform: scale(0.95);
+}
+.login-body .container-login .options-login .accedi-button .recupera-password, .login-body .container-login .options-login .accedi-button .nuovo-account {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+.login-body .container-login .options-login .accedi-button .recupera-password a, .login-body .container-login .options-login .accedi-button .nuovo-account a {
+  color: rgb(82, 136, 253);
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+@media (max-width: 26.875rem) {
+  .options-login {
+    max-width: 100%;
+    width: 100%;
+    padding: 1rem;
+    transform: translateY(-3.5rem);
   }
 }
 @font-face {
@@ -636,5 +1037,4 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
   padding: 0;
   box-sizing: border-box;
   font-family: "Electronic Arts Text";
-  color: rgb(22, 22, 22);
 }/*# sourceMappingURL=style.css.map */

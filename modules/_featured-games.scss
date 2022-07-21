@@ -25,17 +25,12 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 1100px;
+    max-width: c.rem(1100px);
     gap: 1.3rem;
   }
 
   //content e sizing dell'image content
   .game-card-img-content {
-    white-space: nowrap;
-    position: relative;
-    align-items: center;
-    background-position: center;
-    background-size: cover;
     min-width: c.rem(260px);
     min-height: c.rem(260px);
     width: 20vw;
@@ -43,6 +38,11 @@
     max-height: c.rem(350px);
     max-width: c.rem(350px);
     padding: c.rem(14px);
+    white-space: nowrap;
+    position: relative;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
     transition-duration: opacity 0.4s ease-in-out;
     //
     &::before {
@@ -64,7 +64,7 @@
     //Link al sito relativo al gioco raffigurato (di base nascosto)
     a {
       @extend %center-absolute-elements;
-      font-size: 1rem;
+      font-size: 1.1rem;
       transform: translate(-50%, -50%);
       text-decoration: none;
       font-weight: 400;
@@ -118,9 +118,8 @@
       opacity: 0.84;
     }
 
-    .logo_img,
-    .logo_img_jpg {
-      top: 33%;
+    .logo_img {
+      top: 29%;
     }
 
     a {
@@ -129,10 +128,12 @@
     }
   }
 }
-// logo e animazione annessa
-.logo_img {
+
+ // logo e animazione annessa
+ .logo_img {
   @extend %center-absolute-elements;
-  transition: top 0.4s ease-in-out;
+  height: auto;
+  transition: top 0.23s ease-in-out;
 }
 
 // classi per diverse grandezze del logo
@@ -147,8 +148,9 @@
 .logo_img_big {
   width: 45%;
 }
+
 @media (max-width: 1023px) {
-  //Giochi in evidenza
+
   #giochi-in-evidenza {
     h2 {
       font-size: 2.5rem;
@@ -160,11 +162,10 @@
       height: 40vw;
     }
   }
-  //
 }
 
 @media (max-width: 767px) {
-  //Giochi in evidenza
+
   #giochi-in-evidenza {
     h2 {
       font-size: 2rem;
@@ -174,5 +175,4 @@
       height: 85vw;
     }
   }
-  //
 }
