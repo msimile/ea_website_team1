@@ -8,7 +8,10 @@
     <title>Home Page Electronic Arts - Sito EA Ufficiale</title>
     <link rel="shortcut icon" href="/assets/favicon-EA.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <script src="header.js" defer></script>
+    <script src="scripts/header.js" defer></script>
+    <script src="scripts/cards.js" defer></script>
+    <script src="scripts/scroll.js" defer></script>
+    <script src="scripts/observer.js" defer></script>
     
     <meta property="og:title" content="Home Page Electronic Arts Team 1 Replica">
     <meta property="og:type" content="article">
@@ -245,6 +248,146 @@
         </div>
       </section>
       <!-- Fine sezione Giochi in evidenza -->
+
+       <!-- Inizio Sezione Ultime Novità -- Autore: Lorenzo Curreli -->
+    <div class="section-news">
+
+        <!-- titolo sezione -->
+        <div class="section-news-title">
+            <h2>Ultime Novità</h2>
+        </div>
+        <!-- menù di navigazione della sezione -->
+        <div class="section-news-options">
+            <!-- bottone per lo scroll verso sinistra -->
+            <div id="more-options">
+                <button>
+                    <svg viewBox="0 0 16 16" preserveAspectRatio="xMidYMid meet" focusable="false"><g><path d="M7.4,9.7l5.8-4.8c0.4-0.4,1-0.4,1.4,0l0,0c0.4,0.4,0.4,1,0,1.4l-5.8,4.8 c-0.4,0.4-1,0.4-1.4,0l0,0C7,10.7,7,10.1,7.4,9.7z"></path><path d="M7.2,11.1L1.4,6.3C1,5.9,1,5.3,1.4,4.9l0,0c0.4-0.4,1-0.4,1.4,0l5.8,4.8c0.4,0.4,0.4,1,0,1.4 l0,0C8.3,11.5,7.6,11.5,7.2,11.1z"></path></g></svg>
+                </button>
+            </div>
+            <!-- barra di navigazione -->
+            <div class="section-news-options-container">
+                <div id="notizie"><p><span class="underline"> Notizie EA</span></p></div>
+                <div id="ea-play"><p><span class="underline">EA Play</span></p></div>
+                <div id="fifa"><p><span class="underline">FIFA</span></p></div>
+                <div id="f1"><p><span class="underline">F1</span></p></div>
+                <div id="apex"><p><span class="underline">Apex Legends</span></p></div>
+                <div id="sims"><p><span class="underline">The Sims™ 4</span></p></div>
+                <div id="battlefield"><p><span class="underline">Battlefield</span></p></div>
+                <div id="inside"><p><span class="underline">Inside EA</span></p></div>
+            </div>
+            <!-- bottone per lo scroll verso destra -->
+            <div id="more-options1">
+                <button>
+                    <svg viewBox="0 0 16 16" preserveAspectRatio="xMidYMid meet" focusable="false"><g><path d="M7.4,9.7l5.8-4.8c0.4-0.4,1-0.4,1.4,0l0,0c0.4,0.4,0.4,1,0,1.4l-5.8,4.8 c-0.4,0.4-1,0.4-1.4,0l0,0C7,10.7,7,10.1,7.4,9.7z"></path><path d="M7.2,11.1L1.4,6.3C1,5.9,1,5.3,1.4,4.9l0,0c0.4-0.4,1-0.4,1.4,0l5.8,4.8c0.4,0.4,0.4,1,0,1.4 l0,0C8.3,11.5,7.6,11.5,7.2,11.1z"></path></g></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Contenitore delle card-->
+        <div class="section-news-cards">
+            <a href="" class="link-card">
+                <div class="section-news-cards-article">
+                    <div class="section-news-cards-article-image">
+                        <img class="section-news-cards-article-image-content" alt=" " src="">
+                    </div>
+                    <div class="section-news-cards-article-content">
+                        <div class="section-news-cards-article-content-info">
+                            <p class="section-news-cards-article-content-info-title"></p>
+                            <p class="section-news-cards-article-content-info-date"></p>
+                        </div>
+                        <div class="section-news-cards-article-content-title"><h3 class="section-news-cards-article-content-title-content"></h3></div>
+                        <div class="section-news-cards-article-content-text">                  
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="link-card">
+                <div class="section-news-cards-article">
+                    <div class="section-news-cards-article-image">
+                        <img class="section-news-cards-article-image-content" alt=" " src="">
+                    </div>
+                    <div class="section-news-cards-article-content">
+                        <div class="section-news-cards-article-content-info">
+                            <p class="section-news-cards-article-content-info-title"></p>
+                            <p class="section-news-cards-article-content-info-date"></p>
+                        </div>
+                        <div class="section-news-cards-article-content-title"><h3 class="section-news-cards-article-content-title-content"></h3></div>
+                        <div class="section-news-cards-article-content-text">                  
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="link-card">
+                <div class="section-news-cards-article">
+                    <div class="section-news-cards-article-image">
+                        <img class="section-news-cards-article-image-content" alt=" " src="">
+                    </div>
+                    <div class="section-news-cards-article-content">
+                        <div class="section-news-cards-article-content-info">
+                            <p class="section-news-cards-article-content-info-title"></p>
+                            <p class="section-news-cards-article-content-info-date"></p>
+                        </div>
+                        <div class="section-news-cards-article-content-title"><h3 class="section-news-cards-article-content-title-content"></h3></div>
+                        <div class="section-news-cards-article-content-text">                  
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="link-card">
+                <div class="section-news-cards-article">
+                    <div class="section-news-cards-article-image">
+                        <img class="section-news-cards-article-image-content" alt=" " src="">
+                    </div>
+                    <div class="section-news-cards-article-content">
+                        <div class="section-news-cards-article-content-info">
+                            <p class="section-news-cards-article-content-info-title"></p>
+                            <p class="section-news-cards-article-content-info-date"></p>
+                        </div>
+                        <div class="section-news-cards-article-content-title"><h3 class="section-news-cards-article-content-title-content"></h3></div>
+                        <div class="section-news-cards-article-content-text">                  
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="link-card">
+                <div class="section-news-cards-article">
+                    <div class="section-news-cards-article-image">
+                        <img class="section-news-cards-article-image-content" alt=" " src="">
+                    </div>
+                    <div class="section-news-cards-article-content">
+                        <div class="section-news-cards-article-content-info">
+                            <p class="section-news-cards-article-content-info-title"></p>
+                            <p class="section-news-cards-article-content-info-date"></p>
+                        </div>
+                        <div class="section-news-cards-article-content-title"><h3 class="section-news-cards-article-content-title-content"></h3></div>
+                        <div class="section-news-cards-article-content-text">                  
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="link-card">
+                <div class="section-news-cards-article">
+                    <div class="section-news-cards-article-image">
+                        <img class="section-news-cards-article-image-content" alt=" " src="">
+                    </div>
+                    <div class="section-news-cards-article-content">
+                        <div class="section-news-cards-article-content-info">
+                            <p class="section-news-cards-article-content-info-title"></p>
+                            <p class="section-news-cards-article-content-info-date"></p>
+                        </div>
+                        <div class="section-news-cards-article-content-title"><h3 class="section-news-cards-article-content-title-content"></h3></div>
+                        <div class="section-news-cards-article-content-text">                  
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- Bottone per ulteriori news -->
+        <div class="section-news-more">
+            <button id="show-more">Più dettagli</button>
+        </div>
+    </div>
+
+    <!-- Fine Seione Ultime Novità -- Autore: Lorenzo Curreli -->
 
       <!-- Banner Ea-Play -->
 
