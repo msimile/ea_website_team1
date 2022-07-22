@@ -1,5 +1,6 @@
 @use "px-to-rem" as c;
 @use "variabili" as v;
+@use "buttons";
 
 // extend per centrare elementi ed assegnare absolute
 %center-absolute-elements {
@@ -26,7 +27,7 @@
     flex-wrap: wrap;
     width: 100%;
     max-width: c.rem(1100px);
-    gap: 1.3rem;
+    gap: 1.4rem;
   }
 
   //content e sizing dell'image content

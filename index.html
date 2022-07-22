@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="style.css">
     <script src="scripts/aside.js" defer></script>
     <script src="scripts/header.js" defer></script>
+    <script src="scripts/cards.js" defer></script>
+    <script src="scripts/scroll.js" defer></script>
+    <script src="scripts/observer.js" defer></script>
+    <script src="scripts/aside-nav.js" defer></script>
+
     <meta property="og:title" content="Home Page Electronic Arts Team 1 Replica">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://github.com/msimile/ea_website_team1">
@@ -124,38 +129,189 @@
         </aside>
 
         <!-- Inizio aside Hamburger menù section-->
-        <aside class="aside-wrapper aside-wrapper--hidden">
+        <nav class="nav-wrapper">
 
-          <div class="aside-wrapper-container">
-            <div class="aside-wrapper-container-top">
-              <div class="aside-wrapper-container-top-logo"></div>
-              <div class="aside-wrapper-container-top-cross"></div>
+          <div class="nav-wrapper-container">
+            <div class="nav-wrapper-container-top">
+              <div class="nav-wrapper-container-top-logo">
+                <figure>
+                  <img src="https://media.contentapi.ea.com/content/dam/eacom/common/ea-wordmark-network-nav-coral.svg" alt="Cerchio con croce">
+                </figure>
+              </div>
+              <div class="nav-wrapper-container-top-cross">
+                <figure>
+                  <img src="assets/plus-svgrepo-com.svg" alt="Cerchio con croce">
+                </figure>
+              </div>
             </div>
-            <ul class="aside-wrapper-container-main">
-              <li class="aside-wrapper-container-main-element">
-                <p class="aside-wrapper-container-main-element-content">Giochi</p>
-                <div class="aside-wrapper-container-main-element-arrow"></div>
+            <ul class="nav-wrapper-container-main">
+              <!-- Giochi -->
+              <li class="nav-wrapper-container-main-element">
+                <div class="nav-wrapper-container-main-element-content">
+                  <p class="nav-wrapper-container-main-element-content-title">Giochi</p>
+                  <div class="nav-wrapper-container-main-element-content-arrow">
+                    <div class="nav-wrapper-container-main-element-content-arrow-left"></div>
+                    <div class="nav-wrapper-container-main-element-content-arrow-right"></div>
+                  </div>
+                </div>
+                <ul class="nav-wrapper-container-main-element-ul">
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <div class="nav-wrapper-container-main-element-ul-li-content">
+                      <p class="nav-wrapper-container-main-element-ul-li-content-title">ESPLORA I GIOCHI</p>
+                      <div class="nav-wrapper-container-main-element-ul-li-content-plus "></div>
+                    </div>
+                    <ul class="nav-wrapper-container-main-element-ul-li-content-list">
+                      <li class="nav-wrapper-container-main-element-ul-li-content-list-element">
+                        <a href="#">Ultimi giochi</a>
+                      </li>
+                      <li class="nav-wrapper-container-main-element-ul-li-content-list-element">
+                        <a href="#">Prossimamente</a>
+                      </li>
+                      <li class="nav-wrapper-container-main-element-ul-li-content-list-element">
+                        <a href="#">EA SPORTS</a>
+                        </li>
+                      <li class="nav-wrapper-container-main-element-ul-li-content-list-element">
+                        <a href="#">giochi gratuiti</a>
+                      </li>
+                      <li class="nav-wrapper-container-main-element-ul-li-content-list-element">
+                        <a href="#">Libreria dei giochi</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <div class="nav-wrapper-container-main-element-ul-li-content">
+                      <p class="nav-wrapper-container-main-element-ul-li-content-title">PIATTAFORME</p>
+                      <div class="nav-wrapper-container-main-element-ul-li-content-plus rotate"></div>
+                    </div>  
+                    <ul class="nav-wrapper-container-main-element-ul-li-content-list">
+                      <li class="nav-wrapper-container-main-element-ul-li-content-list-element">
+                        <a href="#">PC</a>
+                      </li>
+                      <li class="nav-wrapper-container-main-element-ul-li-content-list-element">
+                        <a href="#">PlayStation 5</a>
+                      </li>
+                      <li class="nav-wrapper-container-main-element-ul-li-content-list-element">
+                        <a href="#">Xbox Series X</a>
+                        </li>
+                      <li class="nav-wrapper-container-main-element-ul-li-content-list-element">
+                        <a href="#">Nintendo Switch</a>
+                      </li>
+                      <li class="nav-wrapper-container-main-element-ul-li-content-list-element">
+                        <a href="#">Cellulari</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
               </li>
-              <li class="aside-wrapper-container-main-element">
-                <p class="aside-wrapper-container-main-element-content">Altre esperienze</p>
-                <div class="aside-wrapper-container-main-element-arrow"></div>
+              <!-- Altre esperienze -->
+              <li class="nav-wrapper-container-main-element">
+                <div class="nav-wrapper-container-main-element-content">
+                  <p class="nav-wrapper-container-main-element-content-title">Altre esperienze</p>
+                  <div class="nav-wrapper-container-main-element-content-arrow rotate"></div>
+                </div>
+                <ul class="nav-wrapper-container-main-element-ul">
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">EA Play</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Origin</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Competizioni videoludiche</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Diretta di EA Play</a>
+                  </li>
+                </ul>
               </li>
-              <li class="aside-wrapper-container-main-element">
-                <p class="aside-wrapper-container-main-element-content">Informazioni</p>
-                <div class="aside-wrapper-container-main-element-arrow"></div>
+              <!-- Informazioni -->
+              <li class="nav-wrapper-container-main-element">
+                <div class="nav-wrapper-container-main-element-content">
+                  <p class="nav-wrapper-container-main-element-content-title">Informazioni</p>
+                  <div class="nav-wrapper-container-main-element-content-arrow rotate"></div>
+                </div>
+                <ul class="nav-wrapper-container-main-element-ul">
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Società</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">EA Studi</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Lavora con noi</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">La nostra tecnologia</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">EA Partners</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Notizie</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Inside EA</a>
+                  </li>
+                </ul>
               </li>
-              <li class="aside-wrapper-container-main-element">
-                <p class="aside-wrapper-container-main-element-content">Impegni</p>
-                <div class="aside-wrapper-container-main-element-arrow"></div>
+              <!-- Impegni -->
+              <li class="nav-wrapper-container-main-element">
+                <div class="nav-wrapper-container-main-element-content">
+                  <p class="nav-wrapper-container-main-element-content-title">Impegni</p>
+                  <div class="nav-wrapper-container-main-element-content-arrow rotate"></div>
+                </div>
+                <ul class="nav-wrapper-container-main-element-ul">
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Gioco positivo</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Diversità e inclusione</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Investire nella comunità</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Persone e cultura</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Ambiente</a>
+                  </li>
+                </ul>
               </li>
-              <li class="aside-wrapper-container-main-element">
-                <p class="aside-wrapper-container-main-element-content">Risorse</p>
-                <div class="aside-wrapper-container-main-element-arrow"></div>
+              <!-- Risorse -->
+              <li class="nav-wrapper-container-main-element">
+                <div class="nav-wrapper-container-main-element-content">
+                  <p class="nav-wrapper-container-main-element-content-title">Risorse</p>
+                  <div class="nav-wrapper-container-main-element-content-arrow "></div>
+                </div>
+                <ul class="nav-wrapper-container-main-element-ul">
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Aiuto</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Forum</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Filtro famiglia</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Accessibilità</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Stampa</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Investitori</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Test di gioco</a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
 
-        </aside>
+        </nav>
         <!-- Navbar bianca -->
         <nav class="white-nav">
             <!--Menu icon-->
@@ -364,8 +520,149 @@
             </div>
           </div>
         </div>
+
     </section>
       <!-- Fine sezione Giochi in evidenza -->
+
+       <!-- Inizio Sezione Ultime Novità -- Autore: Lorenzo Curreli -->
+    <div class="section-news">
+
+        <!-- titolo sezione -->
+        <div class="section-news-title">
+            <h2>Ultime Novità</h2>
+        </div>
+        <!-- menù di navigazione della sezione -->
+        <div class="section-news-options">
+            <!-- bottone per lo scroll verso sinistra -->
+            <div id="more-options">
+                <button>
+                    <svg viewBox="0 0 16 16" preserveAspectRatio="xMidYMid meet" focusable="false"><g><path d="M7.4,9.7l5.8-4.8c0.4-0.4,1-0.4,1.4,0l0,0c0.4,0.4,0.4,1,0,1.4l-5.8,4.8 c-0.4,0.4-1,0.4-1.4,0l0,0C7,10.7,7,10.1,7.4,9.7z"></path><path d="M7.2,11.1L1.4,6.3C1,5.9,1,5.3,1.4,4.9l0,0c0.4-0.4,1-0.4,1.4,0l5.8,4.8c0.4,0.4,0.4,1,0,1.4 l0,0C8.3,11.5,7.6,11.5,7.2,11.1z"></path></g></svg>
+                </button>
+            </div>
+            <!-- barra di navigazione -->
+            <div class="section-news-options-container">
+                <div id="notizie"><p><span class="underline"> Notizie EA</span></p></div>
+                <div id="ea-play"><p><span class="underline">EA Play</span></p></div>
+                <div id="fifa"><p><span class="underline">FIFA</span></p></div>
+                <div id="f1"><p><span class="underline">F1</span></p></div>
+                <div id="apex"><p><span class="underline">Apex Legends</span></p></div>
+                <div id="sims"><p><span class="underline">The Sims™ 4</span></p></div>
+                <div id="battlefield"><p><span class="underline">Battlefield</span></p></div>
+                <div id="inside"><p><span class="underline">Inside EA</span></p></div>
+            </div>
+            <!-- bottone per lo scroll verso destra -->
+            <div id="more-options1">
+                <button>
+                    <svg viewBox="0 0 16 16" preserveAspectRatio="xMidYMid meet" focusable="false"><g><path d="M7.4,9.7l5.8-4.8c0.4-0.4,1-0.4,1.4,0l0,0c0.4,0.4,0.4,1,0,1.4l-5.8,4.8 c-0.4,0.4-1,0.4-1.4,0l0,0C7,10.7,7,10.1,7.4,9.7z"></path><path d="M7.2,11.1L1.4,6.3C1,5.9,1,5.3,1.4,4.9l0,0c0.4-0.4,1-0.4,1.4,0l5.8,4.8c0.4,0.4,0.4,1,0,1.4 l0,0C8.3,11.5,7.6,11.5,7.2,11.1z"></path></g></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Contenitore delle card-->
+        <div class="section-news-cards">
+            <a href="" class="link-card">
+                <div class="section-news-cards-article">
+                    <div class="section-news-cards-article-image">
+                        <img class="section-news-cards-article-image-content" alt=" " src="">
+                    </div>
+                    <div class="section-news-cards-article-content">
+                        <div class="section-news-cards-article-content-info">
+                            <p class="section-news-cards-article-content-info-title"></p>
+                            <p class="section-news-cards-article-content-info-date"></p>
+                        </div>
+                        <div class="section-news-cards-article-content-title"><h3 class="section-news-cards-article-content-title-content"></h3></div>
+                        <div class="section-news-cards-article-content-text">                  
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="link-card">
+                <div class="section-news-cards-article">
+                    <div class="section-news-cards-article-image">
+                        <img class="section-news-cards-article-image-content" alt=" " src="">
+                    </div>
+                    <div class="section-news-cards-article-content">
+                        <div class="section-news-cards-article-content-info">
+                            <p class="section-news-cards-article-content-info-title"></p>
+                            <p class="section-news-cards-article-content-info-date"></p>
+                        </div>
+                        <div class="section-news-cards-article-content-title"><h3 class="section-news-cards-article-content-title-content"></h3></div>
+                        <div class="section-news-cards-article-content-text">                  
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="link-card">
+                <div class="section-news-cards-article">
+                    <div class="section-news-cards-article-image">
+                        <img class="section-news-cards-article-image-content" alt=" " src="">
+                    </div>
+                    <div class="section-news-cards-article-content">
+                        <div class="section-news-cards-article-content-info">
+                            <p class="section-news-cards-article-content-info-title"></p>
+                            <p class="section-news-cards-article-content-info-date"></p>
+                        </div>
+                        <div class="section-news-cards-article-content-title"><h3 class="section-news-cards-article-content-title-content"></h3></div>
+                        <div class="section-news-cards-article-content-text">                  
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="link-card">
+                <div class="section-news-cards-article">
+                    <div class="section-news-cards-article-image">
+                        <img class="section-news-cards-article-image-content" alt=" " src="">
+                    </div>
+                    <div class="section-news-cards-article-content">
+                        <div class="section-news-cards-article-content-info">
+                            <p class="section-news-cards-article-content-info-title"></p>
+                            <p class="section-news-cards-article-content-info-date"></p>
+                        </div>
+                        <div class="section-news-cards-article-content-title"><h3 class="section-news-cards-article-content-title-content"></h3></div>
+                        <div class="section-news-cards-article-content-text">                  
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="link-card">
+                <div class="section-news-cards-article">
+                    <div class="section-news-cards-article-image">
+                        <img class="section-news-cards-article-image-content" alt=" " src="">
+                    </div>
+                    <div class="section-news-cards-article-content">
+                        <div class="section-news-cards-article-content-info">
+                            <p class="section-news-cards-article-content-info-title"></p>
+                            <p class="section-news-cards-article-content-info-date"></p>
+                        </div>
+                        <div class="section-news-cards-article-content-title"><h3 class="section-news-cards-article-content-title-content"></h3></div>
+                        <div class="section-news-cards-article-content-text">                  
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="link-card">
+                <div class="section-news-cards-article">
+                    <div class="section-news-cards-article-image">
+                        <img class="section-news-cards-article-image-content" alt=" " src="">
+                    </div>
+                    <div class="section-news-cards-article-content">
+                        <div class="section-news-cards-article-content-info">
+                            <p class="section-news-cards-article-content-info-title"></p>
+                            <p class="section-news-cards-article-content-info-date"></p>
+                        </div>
+                        <div class="section-news-cards-article-content-title"><h3 class="section-news-cards-article-content-title-content"></h3></div>
+                        <div class="section-news-cards-article-content-text">                  
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- Bottone per ulteriori news -->
+        <div class="section-news-more">
+            <button id="show-more">Più dettagli</button>
+        </div>
+    </div>
+
+    <!-- Fine Seione Ultime Novità -- Autore: Lorenzo Curreli -->
 
       <!-- Banner Ea-Play -->
 

@@ -1,0 +1,205 @@
+@use "variabili" as v;
+@use "px-to-rem" as c;
+
+//questo modulo ha lo scopo di delineare le caratteristiche della nav-bar laterale
+
+@font-face {
+  font-family: "Electronic Arts Text";
+  src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot");
+  src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.svg#Electronic Arts Text")
+      format("svg");
+}
+
+%flex-center-sb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-wrapper {
+  width: c.rem(375px);
+  height: 100vh;
+  background-color: white;
+  position: absolute;
+  z-index: 3;
+  overflow: auto;
+  font-family: "Electronic Arts Text";
+  &-container {
+    background-color: v.$ea-light-color;
+    padding: 0 1rem;
+
+    //parte alta della nav, contiene logo e cross icon per chiudere
+    &-top {
+      @extend %flex-center-sb;
+      padding: 1rem 0;
+      width: 100%;
+      height: c.rem(53px);
+
+      &-logo {
+        height: 95%;
+
+        img {
+          height: c.rem(40px);
+          transform: translateY(-25%);
+        }
+      }
+
+      &-cross {
+        width: 2.5rem;
+        height: 90%;
+        transform: rotate(45deg) translate(-25%);
+      }
+    }
+
+    &-main {
+      padding: 0 1rem;
+      list-style: none;
+
+      &-element {
+        max-height: 3.4rem;
+        overflow-y: hidden;
+        transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
+        &-content {
+          @extend %flex-center-sb;
+          padding: 1rem 0;
+          border-bottom: 1px solid v.$ea-dark-color;
+
+          //parte che gestisce l'animazione della freccia sulla destra delle varie voci
+          &-arrow{
+            width: c.rem(23px);
+            height: c.rem(28px);
+            display: flex;
+            position: relative;
+            margin-right: .5rem;
+
+            &-left{
+              position: absolute;
+              left:0%;
+              top:50%;
+              border-bottom: 2px solid black;
+              width:calc(50%);
+              height: c.rem(1px);
+              transform: rotate(45deg);
+              transition: transform 0.3s ease-in-out;
+            }
+
+            &-right{
+              right: 0%;
+              top:50%;
+              position: absolute;
+              border-bottom: 2px solid black;
+              width:calc(50%);
+              transform: rotate(-45deg);
+              height: c.rem(1px);
+              transition: transform 0.3s ease-in-out;
+            }
+
+            .arrow-left--slide-up{
+              transform: rotate(-45deg);
+            }
+            .arrow-right--slide-up{
+              transform: rotate(45deg);
+            }
+          }
+          &:hover {
+            p {
+              color: v.$origin-brand-color;
+            }
+          }
+        }
+
+        .rotate {
+          width: 1em;
+          height: 0.5em;
+          position: relative;
+          margin-right: 1rem;
+        }
+
+        &-ul {
+          list-style: none;
+          opacity: 0;
+          transition: opacity 0.5s ease-in-out;
+
+          &-li {
+            font-size: c.rem(14px);
+            border-bottom: 1px solid v.$ea-grey-color;
+            padding: c.rem(14px);
+            max-height: 3.4rem;
+            overflow-y: hidden;
+            transition: max-height 1s ease-in-out;
+
+            &-content {
+              @extend %flex-center-sb;
+              padding: 0.5rem 0;
+
+              &-title {
+                color: v.$ea-grey-color;
+              }
+              .rotate::after {
+                transform: rotate(0deg);
+                right: 0;
+              }
+              .rotate::before {
+                transform: rotate(90deg);
+                right: 0;
+                top: 13%;
+              }
+
+              &-list {
+                list-style: none;
+
+                &-element {
+                  padding: c.rem(7px) 1.8rem;
+                  a {
+                    text-decoration: none;
+                    color: v.$ea-dark-color;
+                  }
+
+                  &:hover {
+                    cursor: pointer;
+
+                    a {
+                      color: v.$origin-brand-color;
+                    }
+                  }
+                }
+              }
+            }
+
+            &-link {
+              color: v.$ea-grey-color;
+              text-decoration: none;
+            }
+
+            &:hover {
+              .nav-wrapper-container-main-element-ul-li-content {
+                .nav-wrapper-container-main-element-ul-li-content-title {
+                  color: v.$origin-brand-color;
+                }
+              }
+
+              .nav-wrapper-container-main-element-ul-li-link {
+                color: v.$origin-brand-color;
+              }
+            }
+          }
+        }
+        .opacity-up {
+          opacity: 1;
+        }
+      }
+    }
+    .nav-content--open {
+      overflow-y: unset;
+    }
+  }
+}
