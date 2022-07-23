@@ -4,9 +4,12 @@
 @use 'modules/white-nav';
 @use 'modules/featured-games';
 @use 'modules/first-footer.scss';
+@use 'modules/aside';
 @use 'modules/banner-EA-Play';
 @use 'modules/login';
 @use 'modules/latest-news';
+@use 'modules/aside-nav';
+@use 'modules/darken-bg';
 
 // import del font
 @font-face {

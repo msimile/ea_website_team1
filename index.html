@@ -8,11 +8,13 @@
     <title>Home Page Electronic Arts - Sito EA Ufficiale</title>
     <link rel="shortcut icon" href="/assets/favicon-EA.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <script src="scripts/aside.js" defer></script>
     <script src="scripts/header.js" defer></script>
     <script src="scripts/cards.js" defer></script>
     <script src="scripts/scroll.js" defer></script>
     <script src="scripts/observer.js" defer></script>
-    
+    <script src="scripts/aside-nav.js" defer></script>
+
     <meta property="og:title" content="Home Page Electronic Arts Team 1 Replica">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://github.com/msimile/ea_website_team1">
@@ -24,21 +26,325 @@
 </head>
 
 <body>
-    <!-- Navbar bianca -->
-    <header>
-        <nav class="nav-nera">
-            <ul class="nav-icons">
-                <li class="square-icon"><svg height="26" width="26" viewBox="0 0 18 18" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; padding: 4px"><g><path d="M7.5,9A4.5,4.5,0,1,0,3,4.5,4.5,4.5,0,0,0,7.5,9Zm0-7A2.5,2.5,0,1,1,5,4.5,2.5,2.5,0,0,1,7.5,2Z"></path><path d="M8,10.028s-0.254-.007-0.506-0.007S7,10.023,7,10.028c-7.033.283-7,3.558-7,6.972H15C15,13.586,14.985,10.312,8,10.028ZM8,15H2.056c0.2-1.946,1.077-2.815,5.024-2.974l0.1,0H7.494l0.326,0,0.1,0c3.928,0.16,4.819,1.03,5.022,2.974H8Z"></path></g></svg></div>
-                <li class="square-icon"><svg height="26" width="26" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 17" style="pointer-events: none; display: block;  padding: 4px"><path d="M5.193,0C0.538,0,0,2.673,0,4.684a0.978,0.978,0,0,0,1.955,0c0-1.648.225-2.729,3.238-2.729,2.852,0,2.852,1.45,2.852,2.729a1.951,1.951,0,0,1-1.29,1.675l-0.216.083C4.8,7.108,3.809,7.531,3.809,8.472v3.5a0.978,0.978,0,1,0,1.955,0V8.887c0.4-.209,1.152-0.5,1.474-0.62l0.224-.085A3.831,3.831,0,0,0,10,4.684C10,3.526,10,0,5.193,0Z"></path><path d="M5.366,14.943H3.982a1.029,1.029,0,0,0,0,2.057H5.366A1.029,1.029,0,1,0,5.366,14.943Z"></path></svg></div>
-                <li class="square-icon ea"><svg height="40" width="40" viewBox="0 0 32 32" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block;   padding: 0px"><g><path d="M19.766,8.372L6.927,8.392l-2.093,3.337l12.818-0.004L19.766,8.372 M14.221,20.518c-0.151,0-7.604,0.016-8.114,0.016 c0.249-0.393,1.665-2.611,1.738-2.733c0.163,0,5.014,0,5.271,0l2.122-3.354L3.117,14.467l-2.114,3.342l2.827-0.005L0,23.874h16.151 c0.286-0.453,5.654-9.017,5.904-9.412c0.219,0.334,1.664,2.623,1.9,3.002c-0.363,0-1.682,0-1.682,0l-2.101,3.337 c0,0,0.009,0,0.029,0c0.428,0,5.719,0,5.875,0c0.085,0.135,1.827,2.876,1.921,3.023H32L22.038,8.127 C21.646,8.738,14.311,20.374,14.221,20.518"></path></g></svg></div>
-            <g transform="translate(0.000000,2048.000000) scale(0.100000,-0.100000)"  stroke="none">
-            <path d="M10050 20474 c-19 -2 -80 -9 -135 -15 -219 -23 -485 -89 -705 -176 -1020 -403 -1720 -1375 -1768 -2458 -33 -718 172 -1353 614 -1909 248 -312 577 -574 949 -757 279 -136 550 -220 860 -266 183 -27 591 -24 780 5 500 78 970 283 1355 593 618 496 1003 1251 1038 2034 17 376 -26 698 -139 1037 -240 723 -761 1313 -1452 1643 -269 129 -539 209 -837 250 -110 15 -486 28 -560 19z"/>
-            <path d="M10085 13039 c-652 -29 -1310 -316 -1793 -783 -480 -464 -773 -1067 -843 -1734 -7 -71 -10 -202 -6 -355 4 -202 9 -267 31 -395 156 -891 712 -1638 1516 -2041 403 -201 790 -291 1250 -291 460 0 857 93 1259 294 766 385 1323 1114 1490 1951 69 346 70 753 1 1110 -81 416 -295 872 -570 1210 -415 512 -1017 872 -1655 990 -230 42 -422 55 -680 44z"/>
-            <path d="M10020 5604 c-830 -78 -1548 -476 -2033 -1129 -301 -406 -482 -869 -537 -1379 -15 -143 -13 -469 5 -617 110 -941 684 -1757 1536 -2184 762 -383 1680 -391 2456 -20 847 405 1426 1190 1568 2125 34 221 34 588 1 808 -92 607 -361 1145 -786 1572 -434 436 -972 708 -1582 801 -129 20 -512 34 -628 23z"/>
-            </g>
+  <header>
+    <!-- black Navbar-->
+    <nav class="nav-nera">
+      <ul class="nav-icons">
+        <li class="square-icon"><svg height="26" width="26" viewBox="0 0 18 18" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; padding: 4px"><g><path d="M7.5,9A4.5,4.5,0,1,0,3,4.5,4.5,4.5,0,0,0,7.5,9Zm0-7A2.5,2.5,0,1,1,5,4.5,2.5,2.5,0,0,1,7.5,2Z"></path><path d="M8,10.028s-0.254-.007-0.506-0.007S7,10.023,7,10.028c-7.033.283-7,3.558-7,6.972H15C15,13.586,14.985,10.312,8,10.028ZM8,15H2.056c0.2-1.946,1.077-2.815,5.024-2.974l0.1,0H7.494l0.326,0,0.1,0c3.928,0.16,4.819,1.03,5.022,2.974H8Z"></path></g></svg></div>
+          <li class="square-icon"><svg height="26" width="26" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 17" style="pointer-events: none; display: block;  padding: 4px"><path d="M5.193,0C0.538,0,0,2.673,0,4.684a0.978,0.978,0,0,0,1.955,0c0-1.648.225-2.729,3.238-2.729,2.852,0,2.852,1.45,2.852,2.729a1.951,1.951,0,0,1-1.29,1.675l-0.216.083C4.8,7.108,3.809,7.531,3.809,8.472v3.5a0.978,0.978,0,1,0,1.955,0V8.887c0.4-.209,1.152-0.5,1.474-0.62l0.224-.085A3.831,3.831,0,0,0,10,4.684C10,3.526,10,0,5.193,0Z"></path><path d="M5.366,14.943H3.982a1.029,1.029,0,0,0,0,2.057H5.366A1.029,1.029,0,1,0,5.366,14.943Z"></path></svg></div>
+            <li class="square-icon ea"><svg height="40" width="40" viewBox="0 0 32 32" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block;   padding: 0px"><g><path d="M19.766,8.372L6.927,8.392l-2.093,3.337l12.818-0.004L19.766,8.372 M14.221,20.518c-0.151,0-7.604,0.016-8.114,0.016 c0.249-0.393,1.665-2.611,1.738-2.733c0.163,0,5.014,0,5.271,0l2.122-3.354L3.117,14.467l-2.114,3.342l2.827-0.005L0,23.874h16.151 c0.286-0.453,5.654-9.017,5.904-9.412c0.219,0.334,1.664,2.623,1.9,3.002c-0.363,0-1.682,0-1.682,0l-2.101,3.337 c0,0,0.009,0,0.029,0c0.428,0,5.719,0,5.875,0c0.085,0.135,1.827,2.876,1.921,3.023H32L22.038,8.127 C21.646,8.738,14.311,20.374,14.221,20.518"></path></g></svg></div>
+              <g transform="translate(0.000000,2048.000000) scale(0.100000,-0.100000)"  stroke="none">
+                <path d="M10050 20474 c-19 -2 -80 -9 -135 -15 -219 -23 -485 -89 -705 -176 -1020 -403 -1720 -1375 -1768 -2458 -33 -718 172 -1353 614 -1909 248 -312 577 -574 949 -757 279 -136 550 -220 860 -266 183 -27 591 -24 780 5 500 78 970 283 1355 593 618 496 1003 1251 1038 2034 17 376 -26 698 -139 1037 -240 723 -761 1313 -1452 1643 -269 129 -539 209 -837 250 -110 15 -486 28 -560 19z"/>
+                <path d="M10085 13039 c-652 -29 -1310 -316 -1793 -783 -480 -464 -773 -1067 -843 -1734 -7 -71 -10 -202 -6 -355 4 -202 9 -267 31 -395 156 -891 712 -1638 1516 -2041 403 -201 790 -291 1250 -291 460 0 857 93 1259 294 766 385 1323 1114 1490 1951 69 346 70 753 1 1110 -81 416 -295 872 -570 1210 -415 512 -1017 872 -1655 990 -230 42 -422 55 -680 44z"/>
+                <path d="M10020 5604 c-830 -78 -1548 -476 -2033 -1129 -301 -406 -482 -869 -537 -1379 -15 -143 -13 -469 5 -617 110 -941 684 -1757 1536 -2184 762 -383 1680 -391 2456 -20 847 405 1426 1190 1568 2125 34 221 34 588 1 808 -92 607 -361 1145 -786 1572 -434 436 -972 708 -1582 801 -129 20 -512 34 -628 23z"/>
+              </g>
             </svg></ul>
+          </div>
+        </nav>
+
+        <!-- effetto scuro pagina -->
+        <div class="darken-bg"></div>
+
+        <!-- Inizio aside Triple dot section-->
+        <aside class="aside-wrapper aside-wrapper--hidden">
+          <!-- Title -->
+          <div class="aside-wrapper--scroll-bar">
+          <div class="aside-wrapper-title">
+              <a href="#">Tutti i giochi</a>
+              <svg class="eapl-local-nav__close-icon" title="Chiudi "x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16">
+                  <path d="M13.4,11.9l-4-4l3.9-3.9c0.6-0.6,0.7-1.3,0.3-1.7c-0.4-0.4-1.2-0.3-1.7,
+                  0.3L8,6.6l-4-4 C3.5,2.1,2.7,1.9,2.3,2.3C1.9,2.7,2.1,3.5,2.6,4.1l4,
+                  4l-3.9,3.9c-0.6,0.6-0.7,1.3-0.3,1.7c0.4,0.4,1.2,0.3,1.7-0.3L8,9.4l4,
+                  4 c0.6,0.6,1.3,0.7,1.7,0.3C14.1,13.3,13.9,12.5,13.4,11.9z"></path>
+              </svg>
+          </div>
+            <!-- Top image -->
+          <div class="aside-wrapper-main">
+              
+              <div class="aside-wrapper-main-top-card-content">
+                  <img class="aside-wrapper-main-top-card-content-img" src="assets\aside-sfondo-main-square.767w_" alt="sfondo viola">
+                  <img
+                    class="logo_img logo_img_ea"
+                    src="assets\ea-play-mono-logo-svg.svg"
+                    alt="EA play logo"
+                    />
+              </div>
+          <!-- Group of images -->
+              <div class="aside-wrapper-main-cards">
+
+                  <div class="aside-wrapper-main-cards-content">
+                  <img class="aside-wrapper-main-cards-content-img" src="assets\Fifa-Mbappe.jpg" alt="Mbappè fifa 2022">
+                    <img
+                      class="logo_img logo_img_cards--small"
+                      src="assets\fifa22-mono-logo.svg"
+                      alt="Fifa 2022 logo"
+                    />
+                  </div>
+
+                  <div class="aside-wrapper-main-cards-content">
+                      <img class="aside-wrapper-main-cards-content-img" src="assets\F1-card.png" alt="3 famosi piloti di F1 in posa">
+                      <img
+                        class="logo_img logo_img_cards"
+                        src="assets\f122-gamebox-logo.png"
+                        alt="F1 2022 logo"
+                      />
+                  </div>
+
+                  <div class="aside-wrapper-main-cards-content">
+                      <img class="aside-wrapper-main-cards-content-img" src="assets\aside-sfondo-big-dude.jpg" alt="Uomo con la mano alzata">
+                      <img
+                        class="logo_img logo_img_cards"
+                        src="assets\m23-gamebox-logo.svg"
+                        alt="M23 logo"
+                      />
+                  </div>
+
+                  <div class="aside-wrapper-main-cards-content">
+                      <img class="aside-wrapper-main-cards-content-img" src="assets\apex-legends-desktop.jpg" alt="3 protagonisti di Apex Legends in posa">
+                      <img
+                        class="logo_img logo_img_cards--small"
+                        src="assets\apex-legends-desktop.png"
+                        alt="Apex Legends logo"
+                      />
+                  </div>
+
+                  <div class="aside-wrapper-main-cards-content">
+                      <img class="aside-wrapper-main-cards-content-img" src="assets\battlefield-2042.jpg" alt="Soldato di spalle con sfondo di guerra">
+                      <img
+                        class="logo_img logo_img_cards"
+                        src="assets\battlefield-2042-mono-logo-svg.svg"
+                        alt="Battlefield 2042 logo"
+                      />
+                  </div>
+
+                  <div class="aside-wrapper-main-cards-content">
+                      <img class="aside-wrapper-main-cards-content-img" src="assets\the-sims-4-.jpg" alt="4 personaggi di The Sims 4">
+                      <img
+                        class="logo_img logo_img_cards"
+                        src="assets\game-box-logo-thesims4-refresh.svg"
+                        alt="The Sims 4 logo"
+                      />
+                  </div>
+
+              </div>
             </div>
-            </nav>
+          </div>
+        </aside>
+
+        <!-- Inizio aside Hamburger menù section-->
+        <nav class="nav-wrapper aside-wrapper--hidden">
+
+          <div class="nav-wrapper-container">
+            <div class="nav-wrapper-container-top">
+              <div class="nav-wrapper-container-top-logo">
+                <figure>
+                  <img src="https://media.contentapi.ea.com/content/dam/eacom/common/ea-wordmark-network-nav-coral.svg" alt="Cerchio con croce">
+                </figure>
+              </div>
+              <div id="nav-cross-icon" class="nav-wrapper-container-top-cross">
+                <svg class="eapl-local-nav__close-icon eapl-local-nav_drawer-close-icon" x="0px" y="0px" viewBox="0 0 40 40">
+                  <g viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" style="stroke:currentColor" fill="none" clip-rule="evenodd" 
+                    d="M20.2019 36.5256C30.433 36.5256 38.7269 28.4553 38.7269 18.5C38.7269 8.54472 30.433 0.474365 20.2019 0.474365C9.9708 
+                    0.474365 1.67688 8.54472 1.67688 18.5C1.67688 28.4553 9.9708 36.5256 20.2019 36.5256Z" stroke-width="0.95">
+                    </path>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1566 13.1711C15.7806 12.8052 15.1709 12.8052 14.7949 13.1711C14.4189 
+                    13.537 14.4189 14.1302 14.7949 14.4961L18.8392 18.4314L14.6543 22.5035C14.2783 22.8694 14.2783 23.4626 14.6543 23.8285C15.0304 
+                    24.1944 15.64 24.1944 16.0161 23.8285L20.201 19.7564L24.3857 23.8284C24.7618 24.1943 25.3714 24.1943 25.7475 23.8284C26.1235 
+                    23.4625 26.1235 22.8693 25.7475 22.5034L21.5627 18.4314L25.6069 14.4962C25.9829 14.1303 25.9829 13.5371 25.6069 13.1712C25.2309 
+                    12.8053 24.6212 12.8053 24.2452 13.1712L20.201 17.1064L16.1566 13.1711Z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <ul class="nav-wrapper-container-main">
+              <!-- Giochi -->
+              <li class="nav-wrapper-container-main-element">
+                <div class="nav-wrapper-container-main-element-content">
+                  <p class="nav-wrapper-container-main-element-content-title">Giochi</p>
+                  <div class="nav-wrapper-container-main-element-content-arrow">
+                    <div class="nav-wrapper-container-main-element-content-arrow-left"></div>
+                    <div class="nav-wrapper-container-main-element-content-arrow-right"></div>
+                  </div>
+                </div>
+                <ul class="nav-wrapper-container-main-element-ul">
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <div class="nav-wrapper-container-main-element-ul-li-content">
+                      <p class="nav-wrapper-container-main-element-ul-li-content-title">ESPLORA I GIOCHI</p>
+                      <div class="nav-wrapper-container-main-element-ul-li-content-plus ">
+                        <div class="nav-wrapper-container-main-element-ul-li-content-plus-left"></div>
+                        <div class="nav-wrapper-container-main-element-ul-li-content-plus-right"></div>
+                      </div>
+                    </div>
+                    <ul class="nav-wrapper-container-main-element-ul-li-content-list">
+                      <li class="nav-wrapper-container-main-element-ul-li-content-list-element">
+                        <a href="#">Ultimi giochi</a>
+                      </li>
+                      <li class="nav-wrapper-container-main-element-ul-li-content-list-element">
+                        <a href="#">Prossimamente</a>
+                      </li>
+                      <li class="nav-wrapper-container-main-element-ul-li-content-list-element">
+                        <a href="#">EA SPORTS</a>
+                        </li>
+                      <li class="nav-wrapper-container-main-element-ul-li-content-list-element">
+                        <a href="#">giochi gratuiti</a>
+                      </li>
+                      <li class="nav-wrapper-container-main-element-ul-li-content-list-element">
+                        <a href="#">Libreria dei giochi</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <div class="nav-wrapper-container-main-element-ul-li-content">
+                      <p class="nav-wrapper-container-main-element-ul-li-content-title">PIATTAFORME</p>
+                      <div class="nav-wrapper-container-main-element-ul-li-content-plus">
+                        <div class="nav-wrapper-container-main-element-ul-li-content-plus-left"></div>
+                        <div class="nav-wrapper-container-main-element-ul-li-content-plus-right"></div>
+                      </div>
+                    </div>  
+                    <ul class="nav-wrapper-container-main-element-ul-li-content-list">
+                      <li class="nav-wrapper-container-main-element-ul-li-content-list-element">
+                        <a href="#">PC</a>
+                      </li>
+                      <li class="nav-wrapper-container-main-element-ul-li-content-list-element">
+                        <a href="#">PlayStation 5</a>
+                      </li>
+                      <li class="nav-wrapper-container-main-element-ul-li-content-list-element">
+                        <a href="#">Xbox Series X</a>
+                        </li>
+                      <li class="nav-wrapper-container-main-element-ul-li-content-list-element">
+                        <a href="#">Nintendo Switch</a>
+                      </li>
+                      <li class="nav-wrapper-container-main-element-ul-li-content-list-element">
+                        <a href="#">Cellulari</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- Altre esperienze -->
+              <li class="nav-wrapper-container-main-element">
+                <div class="nav-wrapper-container-main-element-content">
+                  <p class="nav-wrapper-container-main-element-content-title">Altre esperienze</p>
+                  <div class="nav-wrapper-container-main-element-content-arrow">
+                    <div class="nav-wrapper-container-main-element-content-arrow-left"></div>
+                    <div class="nav-wrapper-container-main-element-content-arrow-right"></div>
+                  </div>
+                </div>
+                <ul class="nav-wrapper-container-main-element-ul">
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">EA Play</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Origin</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Competizioni videoludiche</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Diretta di EA Play</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- Informazioni -->
+              <li class="nav-wrapper-container-main-element">
+                <div class="nav-wrapper-container-main-element-content">
+                  <p class="nav-wrapper-container-main-element-content-title">Informazioni</p>
+                  <div class="nav-wrapper-container-main-element-content-arrow">
+                    <div class="nav-wrapper-container-main-element-content-arrow-left"></div>
+                    <div class="nav-wrapper-container-main-element-content-arrow-right"></div>
+                  </div>
+                </div>
+                <ul class="nav-wrapper-container-main-element-ul">
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Società</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">EA Studi</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Lavora con noi</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">La nostra tecnologia</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">EA Partners</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Notizie</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Inside EA</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- Impegni -->
+              <li class="nav-wrapper-container-main-element">
+                <div class="nav-wrapper-container-main-element-content">
+                  <p class="nav-wrapper-container-main-element-content-title">Impegni</p>
+                  <div class="nav-wrapper-container-main-element-content-arrow">
+                    <div class="nav-wrapper-container-main-element-content-arrow-left"></div>
+                    <div class="nav-wrapper-container-main-element-content-arrow-right"></div>
+                  </div>
+                </div>
+                <ul class="nav-wrapper-container-main-element-ul">
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Gioco positivo</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Diversità e inclusione</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Investire nella comunità</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Persone e cultura</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Ambiente</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- Risorse -->
+              <li class="nav-wrapper-container-main-element">
+                <div class="nav-wrapper-container-main-element-content">
+                  <p class="nav-wrapper-container-main-element-content-title">Risorse</p>
+                  <div class="nav-wrapper-container-main-element-content-arrow">
+                    <div class="nav-wrapper-container-main-element-content-arrow-left"></div>
+                    <div class="nav-wrapper-container-main-element-content-arrow-right"></div>
+                  </div>
+                </div>
+                <ul class="nav-wrapper-container-main-element-ul">
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Aiuto</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Forum</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Filtro famiglia</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Accessibilità</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Stampa</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Investitori</a>
+                  </li>
+                  <li class="nav-wrapper-container-main-element-ul-li">
+                    <a href="#" class="nav-wrapper-container-main-element-ul-li-link">Test di gioco</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+        </nav>
+        <!-- Navbar bianca -->
         <nav class="white-nav">
             <!--Menu icon-->
             <div class="nav-logos">
@@ -179,9 +485,9 @@
         </nav>
     </header>
 
-       <!-- Inizio sezione Giochi in evidenza -->
+       <!-- Inizio sezione Featured Games -->
 
-       <section id="giochi-in-evidenza">
+    <section id="giochi-in-evidenza">
         <h2>Giochi in evidenza</h2>
         <div class="giochi-in-evidenza">
           <div class="game-card-wrapper">
