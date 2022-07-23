@@ -24,17 +24,29 @@
   align-items: center;
 }
 
+%arrow-position-animation{
+  position: absolute;
+  border-bottom: 2px solid black;
+  top:50%;
+  width:c.rem(10px);
+  height: c.rem(1px);
+  transition: transform 0.3s ease-in-out;
+  
+}
+
 .nav-wrapper {
   width: c.rem(375px);
   height: 100vh;
+  padding-bottom: 5rem;
   background-color: white;
   position: absolute;
+  box-shadow: 0 0 20px rgb(0 0 0 / 30%);
   z-index: 3;
   overflow: auto;
   font-family: "Electronic Arts Text";
+  transition: transform 0.5s ease-in-out;
+  
   &-container {
-    background-color: v.$ea-light-color;
-    padding: 0 1rem;
 
     //parte alta della nav, contiene logo e cross icon per chiudere
     &-top {
@@ -42,29 +54,34 @@
       padding: 1rem 0;
       width: 100%;
       height: c.rem(53px);
-
+      background-color: v.$ea-light-color;
       &-logo {
         height: 95%;
 
         img {
-          height: c.rem(40px);
+          padding-left: 1rem;
+          height: c.rem(32px);
           transform: translateY(-25%);
         }
       }
 
       &-cross {
-        width: 2.5rem;
+        width: 2.3rem;
         height: 90%;
-        transform: rotate(45deg) translate(-25%);
+        transform: translate(-50%, -50%);
+
+        &:hover{
+          cursor: pointer;
+        }
       }
     }
 
     &-main {
-      padding: 0 1rem;
+      padding: 2rem 1.1rem;
       list-style: none;
 
       &-element {
-        max-height: 3.4rem;
+        max-height: v.$aside-module-height;
         overflow-y: hidden;
         transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
 
@@ -72,49 +89,55 @@
           @extend %flex-center-sb;
           padding: 1rem 0;
           border-bottom: 1px solid v.$ea-dark-color;
-
+          transition: border-color 0.5s ease-in-out;
+          
           //parte che gestisce l'animazione della freccia sulla destra delle varie voci
           &-arrow{
-            width: c.rem(23px);
-            height: c.rem(28px);
+            width: c.rem(16px);
+            height: c.rem(10px);
             display: flex;
             position: relative;
-            margin-right: .5rem;
+            margin-right: 1.1rem;
 
             &-left{
-              position: absolute;
+              @extend %arrow-position-animation;
               left:0%;
-              top:50%;
-              border-bottom: 2px solid black;
-              width:calc(50%);
-              height: c.rem(1px);
               transform: rotate(45deg);
-              transition: transform 0.3s ease-in-out;
+
             }
 
             &-right{
+              @extend %arrow-position-animation;
               right: 0%;
-              top:50%;
-              position: absolute;
-              border-bottom: 2px solid black;
-              width:calc(50%);
               transform: rotate(-45deg);
-              height: c.rem(1px);
-              transition: transform 0.3s ease-in-out;
             }
 
             .arrow-left--slide-up{
+              border-color: red;
               transform: rotate(-45deg);
             }
             .arrow-right--slide-up{
+              border-color: red;
               transform: rotate(45deg);
             }
           }
+
           &:hover {
+            cursor: pointer;
+
             p {
               color: v.$origin-brand-color;
             }
+
+            div{
+              border-color: red;
+            }
           }
+          
+        }
+        .font--red-color{
+          border-color: v.$origin-brand-color;
+          color: v.$origin-brand-color;
         }
 
         .rotate {
@@ -130,35 +153,59 @@
           transition: opacity 0.5s ease-in-out;
 
           &-li {
-            font-size: c.rem(14px);
+            font-size: c.rem(15px);
+            font-weight: v.$title-w;
             border-bottom: 1px solid v.$ea-grey-color;
-            padding: c.rem(14px);
-            max-height: 3.4rem;
+            padding: c.rem(16px) c.rem(14px) c.rem(16px);
+            max-height: v.$aside-module-height;
             overflow-y: hidden;
-            transition: max-height 1s ease-in-out;
+            transition: border-color 0.5s ease-in-out, max-height 0.5s ease-in-out;
 
             &-content {
               @extend %flex-center-sb;
-              padding: 0.5rem 0;
-
+              padding: 0.2rem 0 0.40rem;
+              margin-bottom: 0.2rem;
               &-title {
                 color: v.$ea-grey-color;
               }
-              .rotate::after {
-                transform: rotate(0deg);
-                right: 0;
+              
+              .title-pressed--dark{
+                color: v.$ea-dark-color;
               }
-              .rotate::before {
-                transform: rotate(90deg);
-                right: 0;
-                top: 13%;
+              &-plus{
+                width: c.rem(20px);
+                height: c.rem(20px);
+                display: flex;
+                position: relative;
+                transition: transform 0.5s ease-in-out;
+                transform-origin: center;
+                &-left{
+                  @extend %arrow-position-animation;
+                  border-color: v.$ea-grey-color;
+                  right: c.rem(5px);
+                  top:c.rem(9px);
+                }
+                &-right{
+                  @extend %arrow-position-animation;
+                  transform: rotate(90deg);
+                  border-color: v.$ea-grey-color;
+                  right: c.rem(5px);
+                  top: c.rem(9px);
+                }
+
+                .plus-pressed--dark{
+                  border-color: v.$ea-dark-color;
+                }
+              }
+              .rotate-45{
+                transform: rotate(45deg);
               }
 
               &-list {
                 list-style: none;
 
                 &-element {
-                  padding: c.rem(7px) 1.8rem;
+                  padding: c.rem(7px) 1.6rem;
                   a {
                     text-decoration: none;
                     color: v.$ea-dark-color;
@@ -170,7 +217,24 @@
                     a {
                       color: v.$origin-brand-color;
                     }
+
                   }
+                }
+              }
+              &:hover{
+
+                .nav-wrapper-container-main-element-ul-li-content-plus{
+                  &-left{
+                    border-color: v.$origin-brand-color;
+                  }
+
+                  &-right{
+                    border-color: v.$origin-brand-color;
+                  }
+                }
+
+                .nav-wrapper-container-main-element-ul-li-content-title {
+                  color: v.$origin-brand-color;
                 }
               }
             }
@@ -181,25 +245,40 @@
             }
 
             &:hover {
-              .nav-wrapper-container-main-element-ul-li-content {
-                .nav-wrapper-container-main-element-ul-li-content-title {
-                  color: v.$origin-brand-color;
-                }
-              }
+              cursor: pointer;
 
               .nav-wrapper-container-main-element-ul-li-link {
                 color: v.$origin-brand-color;
               }
             }
+            &:last-child{
+              border-bottom: none;
+            }
           }
+        }
+        .border-color--red{
+          border-bottom: 1px solid v.$origin-brand-color;
         }
         .opacity-up {
           opacity: 1;
+        }
+        .nav-content-giochi--open {
         }
       }
     }
     .nav-content--open {
       overflow-y: unset;
+    }
+  }
+}
+
+
+@media (max-width: 1023px) {
+  .nav-wrapper {
+    &-container {
+      &-main{
+        padding-top: 0;
+      }
     }
   }
 }

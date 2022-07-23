@@ -42,6 +42,9 @@
           </div>
         </nav>
 
+        <!-- effetto scuro pagina -->
+        <div class="darken-bg"></div>
+
         <!-- Inizio aside Triple dot section-->
         <aside class="aside-wrapper aside-wrapper--hidden">
           <!-- Title -->
@@ -129,7 +132,7 @@
         </aside>
 
         <!-- Inizio aside Hamburger menù section-->
-        <nav class="nav-wrapper">
+        <nav class="nav-wrapper aside-wrapper--hidden">
 
           <div class="nav-wrapper-container">
             <div class="nav-wrapper-container-top">
@@ -138,10 +141,21 @@
                   <img src="https://media.contentapi.ea.com/content/dam/eacom/common/ea-wordmark-network-nav-coral.svg" alt="Cerchio con croce">
                 </figure>
               </div>
-              <div class="nav-wrapper-container-top-cross">
-                <figure>
-                  <img src="assets/plus-svgrepo-com.svg" alt="Cerchio con croce">
-                </figure>
+              <div id="nav-cross-icon" class="nav-wrapper-container-top-cross">
+                <svg class="eapl-local-nav__close-icon eapl-local-nav_drawer-close-icon" x="0px" y="0px" viewBox="0 0 40 40">
+                  <g viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" style="stroke:currentColor" fill="none" clip-rule="evenodd" 
+                    d="M20.2019 36.5256C30.433 36.5256 38.7269 28.4553 38.7269 18.5C38.7269 8.54472 30.433 0.474365 20.2019 0.474365C9.9708 
+                    0.474365 1.67688 8.54472 1.67688 18.5C1.67688 28.4553 9.9708 36.5256 20.2019 36.5256Z" stroke-width="0.95">
+                    </path>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1566 13.1711C15.7806 12.8052 15.1709 12.8052 14.7949 13.1711C14.4189 
+                    13.537 14.4189 14.1302 14.7949 14.4961L18.8392 18.4314L14.6543 22.5035C14.2783 22.8694 14.2783 23.4626 14.6543 23.8285C15.0304 
+                    24.1944 15.64 24.1944 16.0161 23.8285L20.201 19.7564L24.3857 23.8284C24.7618 24.1943 25.3714 24.1943 25.7475 23.8284C26.1235 
+                    23.4625 26.1235 22.8693 25.7475 22.5034L21.5627 18.4314L25.6069 14.4962C25.9829 14.1303 25.9829 13.5371 25.6069 13.1712C25.2309 
+                    12.8053 24.6212 12.8053 24.2452 13.1712L20.201 17.1064L16.1566 13.1711Z">
+                    </path>
+                  </g>
+                </svg>
               </div>
             </div>
             <ul class="nav-wrapper-container-main">
@@ -158,7 +172,10 @@
                   <li class="nav-wrapper-container-main-element-ul-li">
                     <div class="nav-wrapper-container-main-element-ul-li-content">
                       <p class="nav-wrapper-container-main-element-ul-li-content-title">ESPLORA I GIOCHI</p>
-                      <div class="nav-wrapper-container-main-element-ul-li-content-plus "></div>
+                      <div class="nav-wrapper-container-main-element-ul-li-content-plus ">
+                        <div class="nav-wrapper-container-main-element-ul-li-content-plus-left"></div>
+                        <div class="nav-wrapper-container-main-element-ul-li-content-plus-right"></div>
+                      </div>
                     </div>
                     <ul class="nav-wrapper-container-main-element-ul-li-content-list">
                       <li class="nav-wrapper-container-main-element-ul-li-content-list-element">
@@ -181,7 +198,10 @@
                   <li class="nav-wrapper-container-main-element-ul-li">
                     <div class="nav-wrapper-container-main-element-ul-li-content">
                       <p class="nav-wrapper-container-main-element-ul-li-content-title">PIATTAFORME</p>
-                      <div class="nav-wrapper-container-main-element-ul-li-content-plus rotate"></div>
+                      <div class="nav-wrapper-container-main-element-ul-li-content-plus">
+                        <div class="nav-wrapper-container-main-element-ul-li-content-plus-left"></div>
+                        <div class="nav-wrapper-container-main-element-ul-li-content-plus-right"></div>
+                      </div>
                     </div>  
                     <ul class="nav-wrapper-container-main-element-ul-li-content-list">
                       <li class="nav-wrapper-container-main-element-ul-li-content-list-element">
@@ -207,7 +227,10 @@
               <li class="nav-wrapper-container-main-element">
                 <div class="nav-wrapper-container-main-element-content">
                   <p class="nav-wrapper-container-main-element-content-title">Altre esperienze</p>
-                  <div class="nav-wrapper-container-main-element-content-arrow rotate"></div>
+                  <div class="nav-wrapper-container-main-element-content-arrow">
+                    <div class="nav-wrapper-container-main-element-content-arrow-left"></div>
+                    <div class="nav-wrapper-container-main-element-content-arrow-right"></div>
+                  </div>
                 </div>
                 <ul class="nav-wrapper-container-main-element-ul">
                   <li class="nav-wrapper-container-main-element-ul-li">
@@ -228,7 +251,10 @@
               <li class="nav-wrapper-container-main-element">
                 <div class="nav-wrapper-container-main-element-content">
                   <p class="nav-wrapper-container-main-element-content-title">Informazioni</p>
-                  <div class="nav-wrapper-container-main-element-content-arrow rotate"></div>
+                  <div class="nav-wrapper-container-main-element-content-arrow">
+                    <div class="nav-wrapper-container-main-element-content-arrow-left"></div>
+                    <div class="nav-wrapper-container-main-element-content-arrow-right"></div>
+                  </div>
                 </div>
                 <ul class="nav-wrapper-container-main-element-ul">
                   <li class="nav-wrapper-container-main-element-ul-li">
@@ -258,7 +284,10 @@
               <li class="nav-wrapper-container-main-element">
                 <div class="nav-wrapper-container-main-element-content">
                   <p class="nav-wrapper-container-main-element-content-title">Impegni</p>
-                  <div class="nav-wrapper-container-main-element-content-arrow rotate"></div>
+                  <div class="nav-wrapper-container-main-element-content-arrow">
+                    <div class="nav-wrapper-container-main-element-content-arrow-left"></div>
+                    <div class="nav-wrapper-container-main-element-content-arrow-right"></div>
+                  </div>
                 </div>
                 <ul class="nav-wrapper-container-main-element-ul">
                   <li class="nav-wrapper-container-main-element-ul-li">
@@ -282,7 +311,10 @@
               <li class="nav-wrapper-container-main-element">
                 <div class="nav-wrapper-container-main-element-content">
                   <p class="nav-wrapper-container-main-element-content-title">Risorse</p>
-                  <div class="nav-wrapper-container-main-element-content-arrow "></div>
+                  <div class="nav-wrapper-container-main-element-content-arrow">
+                    <div class="nav-wrapper-container-main-element-content-arrow-left"></div>
+                    <div class="nav-wrapper-container-main-element-content-arrow-right"></div>
+                  </div>
                 </div>
                 <ul class="nav-wrapper-container-main-element-ul">
                   <li class="nav-wrapper-container-main-element-ul-li">
