@@ -74,6 +74,7 @@
     }
   }
 
+  
   //immagini background game-card-content
   .game-card-img-content-1 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
@@ -145,6 +146,27 @@
 .logo_img_big {
   width: 45%;
 }
+//button di fine sezione
+  .container-featured-game-button {
+    height: 120px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .featured-game-button {
+      transition: all 0.08s ease-in-out;
+      font-size: c.rem(18px);
+      padding: c.rem(16px) c.rem(27px);
+      background-color: transparent;
+      border-radius: c.rem(3px);
+      border: c.rem(2px) solid v.$ea-dark-color;
+      cursor: pointer;
+      &:hover {
+        padding: c.rem(19px) c.rem(30px);
+        margin: c.rem(-3px) c.rem(-3px);
+      }
+    }
+  }
 
 @media (max-width: 1023px) {
 
@@ -170,6 +192,21 @@
     .game-card-img-content {
       width: 85vw;
       height: 85vw;
+    }
+  }
+}
+// media query del button di fine sezione
+@media (max-width: 640px) {
+  #giochi-in-evidenza {
+    .container-featured-game-button {
+      .featured-game-button {
+        width: 85%;
+        padding: c.rem(12px) c.rem(24px);
+        &:hover {
+          padding: c.rem(14px) c.rem(27px);
+          margin: c.rem(-2px) c.rem(-2px);
+        }
+      }
     }
   }
 }
