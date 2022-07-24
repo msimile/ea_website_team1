@@ -1,21 +1,31 @@
-@use 'modules/px-to-rem';
-@use 'modules/variabili';
-@use 'modules/black-nav';
-@use 'modules/white-nav';
-@use 'modules/featured-games';
-@use 'modules/first-footer.scss';
-@use 'modules/aside';
-@use 'modules/banner-EA-Play';
-@use 'modules/login';
-@use 'modules/latest-news';
-@use 'modules/aside-nav';
-@use 'modules/darken-bg';
+@use "modules/px-to-rem";
+@use "modules/variabili";
+@use "modules/black-nav";
+@use "modules/white-nav";
+@use "modules/featured-games";
+@use "modules/first-footer.scss";
+@use "modules/bottom-footer.scss";
+@use "modules/aside";
+@use "modules/banner-EA-Play";
+@use "modules/login";
+@use "modules/latest-news";
+@use "modules/aside-nav";
+@use "modules/darken-bg";
 
 // import del font
 @font-face {
   font-family: "Electronic Arts Text";
   src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot");
-  src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff") format("woff"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.svg#Electronic Arts Text") format("svg");
+  src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.svg#Electronic Arts Text")
+      format("svg");
 }
 
 // typography
@@ -44,4 +54,3 @@ $fs_values: variabili.$body, variabili.$title, variabili.$header; // valori per 
   font-family: "Electronic Arts Text";
   // color: variabili.$ea-dark-color;
 }
-
