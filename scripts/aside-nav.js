@@ -100,3 +100,5 @@ function arrowSlideDown(elem) {
     elem.lastElementChild.firstElementChild.classList.remove("arrow-left--slide-up");
     elem.lastElementChild.lastElementChild.classList.remove("arrow-right--slide-up");
 }
+
+darkenBg.addEventListener("click", (e)=> closeAsideMenu(document.querySelector(".nav-wrapper")))
