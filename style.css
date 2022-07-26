@@ -1908,6 +1908,20 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
   visibility: visible;
 }
 
+.banner-top {
+  width: 100%;
+  height: 34.3125rem;
+  position: relative;
+}
+.banner-top__bg-image {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../assets/f11-banner.png);
+}
+
 @font-face {
   font-family: "Electronic Arts Text";
   src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot");

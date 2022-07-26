@@ -1,1 +1,19 @@
+@use "buttons" as b;
+@use "variabili" as v;
+@use "px-to-rem" as r;
 
+.banner-top {
+    width: 100%;
+    //max-height: r.rem(600px);
+    height: r.rem(549px);
+    position: relative;
+
+    &__bg-image {
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(../assets/f11-banner.png)
+    }
+}
