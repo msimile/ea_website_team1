@@ -255,13 +255,41 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
 }
 .banner-top__bg-image .banner-top__contents {
   height: 30%;
+  width: 30%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  gap: 1.25rem;
+  justify-content: space-around;
+  text-align: center;
   position: absolute;
-  bottom: 25%;
-  right: 25%;
+  bottom: 42%;
+  right: 20%;
+}
+.banner-top__bg-image .banner-top__contents__title {
+  font-size: 54px;
+  font-weight: 600;
+  font-family: "Electronic Arts Text";
+}
+.banner-top__bg-image .banner-top__contents__button {
+  margin-top: 2.5rem;
+  font-family: "Electronic Arts Text";
+  font-size: 1.125rem;
+  font-weight: 100;
+  padding: 1rem 1.125rem;
+  border-radius: 0.1875rem;
+  transition: all 0.08s ease-in-out;
+  cursor: pointer;
+  border-radius: rem(3px);
+  background-color: rgb(22, 22, 22);
+  border: rem(0px) none none;
+  color: rgb(243, 243, 243);
+}
+.banner-top__bg-image .banner-top__contents__button a {
+  text-decoration: none;
+  color: rgb(243, 243, 243);
+}
+.banner-top__bg-image .banner-top__contents__button:hover {
+  padding: 1.1875rem 1.5625rem;
+  margin: -0.1875rem -0.4375rem;
 }
 
 .logo_img, #giochi-in-evidenza .game-card-img-content a {

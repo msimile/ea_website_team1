@@ -18,15 +18,49 @@
 
         .banner-top__contents {
             height: 30%;
+            width: 30%;
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
-            gap: r.rem(20px);
+            justify-content: space-around;
+            text-align: center;
             position: absolute;
-            bottom: 25%;
-            right: 25%;
-           // background-color: red ;
+            bottom: 42%;
+            right: 20%;
 
+            &__title {
+                font-size: v.$header;
+                font-weight: v.$header-w;
+                font-family: "Electronic Arts Text";
+            }
+
+            &__button {
+                margin-top: r.rem(40px);
+                font-family: "Electronic Arts Text";
+                font-size: r.rem(18px);
+                font-weight: 100;
+                padding: r.rem(16px) r.rem(18px);
+                border-radius: r.rem(3px);
+                //border: r.rem(2px) solid v.$ea-light-color;
+                transition: all 0.08s ease-in-out;
+                cursor: pointer;
+                a {
+                text-decoration: none;
+                color: v.$ea-light-color;
+                }
+
+                @include b.buttons(
+                v.$ea-dark-color,
+                v.$ea-light-color,
+                0px,
+                none,
+                none,
+                );
+
+                &:hover {
+                padding: r.rem(19px) r.rem(25px);
+                margin: r.rem(-3px) r.rem(-7px);
+                }
+            }
         }
     }
 }
