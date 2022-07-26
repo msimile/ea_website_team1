@@ -239,6 +239,31 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
   }
 }
 
+.banner-top {
+  width: 100%;
+  max-height: 37.5rem;
+  height: 34.3125rem;
+  position: relative;
+}
+.banner-top__bg-image {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../assets/f11-banner.png);
+}
+.banner-top__bg-image .banner-top__contents {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 1.25rem;
+  position: absolute;
+  bottom: 25%;
+  right: 25%;
+}
+
 .logo_img, #giochi-in-evidenza .game-card-img-content a {
   transform: translate(-50%, -50%);
   position: absolute;
@@ -1906,20 +1931,6 @@ header .white-nav .menu-section-list .menu-section-item:first-child .dropdown-co
   background-color: rgb(22, 22, 22);
   opacity: 0.8;
   visibility: visible;
-}
-
-.banner-top {
-  width: 100%;
-  height: 34.3125rem;
-  position: relative;
-}
-.banner-top__bg-image {
-  height: 100%;
-  width: 100%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url(../assets/f11-banner.png);
 }
 
 @font-face {

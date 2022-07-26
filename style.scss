@@ -2,6 +2,7 @@
 @use "modules/variabili";
 @use "modules/black-nav";
 @use "modules/white-nav";
+@use "modules/banner-top";
 @use "modules/featured-games";
 @use "modules/first-footer.scss";
 @use "modules/bottom-footer.scss";
@@ -11,7 +12,6 @@
 @use "modules/latest-news";
 @use "modules/aside-nav";
 @use "modules/darken-bg";
-@use "modules/banner-top";
 
 // import del font
 @font-face {
