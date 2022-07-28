@@ -348,136 +348,141 @@
         <!-- Navbar bianca -->
         <nav class="white-nav">
             <!--Menu icon-->
-            <div class="nav-logos">
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.0" height="25" width="25"
-                    viewBox="0 0 2048.000000 2048.000000" preserveAspectRatio="xMidYMid meet">
+            <div class="white-nav__logos">
+                <svg class="white-nav__desktop-menu" xmlns="http://www.w3.org/2000/svg" version="1.0" height="25" width="25" viewBox="0 0 2048.000000 2048.000000" preserveAspectRatio="xMidYMid meet">
                     <g transform="translate(0.000000,2048.000000) scale(0.100000,-0.100000)" stroke="none">
-                        <path
-                            d="M10050 20474 c-19 -2 -80 -9 -135 -15 -219 -23 -485 -89 -705 -176 -1020 -403 -1720 -1375 -1768 -2458 -33 -718 172 -1353 614 -1909 248 -312 577 -574 949 -757 279 -136 550 -220 860 -266 183 -27 591 -24 780 5 500 78 970 283 1355 593 618 496 1003 1251 1038 2034 17 376 -26 698 -139 1037 -240 723 -761 1313 -1452 1643 -269 129 -539 209 -837 250 -110 15 -486 28 -560 19z" />
-                        <path
-                            d="M10085 13039 c-652 -29 -1310 -316 -1793 -783 -480 -464 -773 -1067 -843 -1734 -7 -71 -10 -202 -6 -355 4 -202 9 -267 31 -395 156 -891 712 -1638 1516 -2041 403 -201 790 -291 1250 -291 460 0 857 93 1259 294 766 385 1323 1114 1490 1951 69 346 70 753 1 1110 -81 416 -295 872 -570 1210 -415 512 -1017 872 -1655 990 -230 42 -422 55 -680 44z" />
-                        <path
-                            d="M10020 5604 c-830 -78 -1548 -476 -2033 -1129 -301 -406 -482 -869 -537 -1379 -15 -143 -13 -469 5 -617 110 -941 684 -1757 1536 -2184 762 -383 1680 -391 2456 -20 847 405 1426 1190 1568 2125 34 221 34 588 1 808 -92 607 -361 1145 -786 1572 -434 436 -972 708 -1582 801 -129 20 -512 34 -628 23z" />
+                        <path d="M10050 20474 c-19 -2 -80 -9 -135 -15 -219 -23 -485 -89 -705 -176 -1020 -403 -1720 -1375 -1768 -2458 -33 -718 172 -1353 614 -1909 248 -312 577 -574 949 -757 279 -136 550 -220 860 -266 183 -27 591 -24 780 5 500 78 970 283 1355 593 618 496 1003 1251 1038 2034 17 376 -26 698 -139 1037 -240 723 -761 1313 -1452 1643 -269 129 -539 209 -837 250 -110 15 -486 28 -560 19z" />
+                        <path d="M10085 13039 c-652 -29 -1310 -316 -1793 -783 -480 -464 -773 -1067 -843 -1734 -7 -71 -10 -202 -6 -355 4 -202 9 -267 31 -395 156 -891 712 -1638 1516 -2041 403 -201 790 -291 1250 -291 460 0 857 93 1259 294 766 385 1323 1114 1490 1951 69 346 70 753 1 1110 -81 416 -295 872 -570 1210 -415 512 -1017 872 -1655 990 -230 42 -422 55 -680 44z" />
+                        <path d="M10020 5604 c-830 -78 -1548 -476 -2033 -1129 -301 -406 -482 -869 -537 -1379 -15 -143 -13 -469 5 -617 110 -941 684 -1757 1536 -2184 762 -383 1680 -391 2456 -20 847 405 1426 1190 1568 2125 34 221 34 588 1 808 -92 607 -361 1145 -786 1572 -434 436 -972 708 -1582 801 -129 20 -512 34 -628 23z" />
                     </g>
                 </svg>
             </div>
             <!--Logo-->
-            <div class="nav-logos">
-                <img src="https://media.contentapi.ea.com/content/dam/eacom/common/ea-wordmark-network-nav-coral.svg"
+            <div class="white-nav__logos">
+                <img class="white-nav__main-logo" src="https://media.contentapi.ea.com/content/dam/eacom/common/ea-wordmark-network-nav-coral.svg"
                     alt="Electronics Arts Home">
             </div>
             <!--Hamburger menu-->
-            <div class="nav-logos">
-                <div class="hamburger-icon">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
+            <div class="white-nav__logos">
+              <div class="white-nav__mobile-menu-container">
+                    <div class="white-nav__mobile-menu"></div>
+                    <div class="white-nav__mobile-menu"></div>
+                    <div class="white-nav__mobile-menu"></div>
+                  </div>
             </div>
-            <ul class="menu-section-list">
+            <ul class="white-nav__list">
                 <!--Voce 'Giochi'-->
-                <li class="menu-section-item">
-                    <div class="menu-section-title">
-                        <p>Giochi</p>
-                        <a></a>
+                <li class="white-nav__item">
+                    <div class="white-nav__title-container">
+                      <div class="title-content">
+                        <p class="title-content__text">Giochi</p>
+                        <a class="title-content__arrow"></a>
+                      </div>
                     </div>
-                    <div class="dropdown-container">
-                        <div class="dropdown-content">
-                            <ul>
-                                <li><a>ESPLORA I GIOCHI</a>
+                    <div class="white-nav__dropdown-container">
+                        <div class="dropdown-content dropdown-content--large">
+                            <ul class="dropdown-content__list">
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">ESPLORA I GIOCHI</a>
                                     <hr>
                                 </li>
-                                <li><a>Ultimi giochi</a></li>
-                                <li><a>Prossimamente</a></li>
-                                <li><a>EA SPORTS</a></li>
-                                <li><a>Giochi gratuiti</a></li>
-                                <li><a>Libreria dei giochi</a></li>
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">Ultimi giochi</a></li>
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">Prossimamente</a></li>
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">EA SPORTS</a></li>
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">Giochi gratuiti</a></li>
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">Libreria dei giochi</a></li>
                             </ul>
-                            <ul>
-                                <li><a>PIATTAFORME</a>
+                            <ul class="dropdown-content__list">
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">PIATTAFORME</a>
                                     <hr>
                                 </li>
-                                <li><a>PC</a></li>
-                                <li><a>PlayStation 5</a></li>
-                                <li><a>Xbox Series X</a></li>
-                                <li><a>Nintendo Switch</a></li>
-                                <li><a>Cellulari</a></li>
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">PC</a></li>
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">PlayStation 5</a></li>
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">Xbox Series X</a></li>
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">Nintendo Switch</a></li>
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">Cellulari</a></li>
                             </ul>
                         </div>
                     </div>
                 </li>
                 <!--Voce 'Altre esperienze'-->
-                <li class="menu-section-item">
-                    <div class="menu-section-title">
-                        <p>Altre esperienze</p>
-                        <a></a>
+                <li class="white-nav__item">
+                    <div class="white-nav__title-container">
+                      <div class="title-content">
+                        <p class="title-content__text">Altre esperienze</p>
+                        <a class="title-content__arrow"></a>
+                      </div>
                     </div>
-                    <div class="dropdown-container">
+                    <div class="white-nav__dropdown-container">
                         <div class="dropdown-content">
-                            <ul>
-                                <li><a>EA Play</a></li>
-                                <li><a>Origin</a></li>
-                                <li><a>Competizioni videoludiche</a></li>
-                                <li><a>Diretta di EA Play</a></li>
+                            <ul class="dropdown-content__list">
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">EA Play</a></li>
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">Origin</a></li>
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">Competizioni videoludiche</a></li>
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">Diretta di EA Play</a></li>
                             </ul>
                         </div>
                     </div>
                 </li>
                 <!--Voce 'Informazioni'-->
-                <li class="menu-section-item">
-                    <div class="menu-section-title">
-                        <p>Informazioni</p>
-                        <a></a>
+                <li class="white-nav__item">
+                    <div class="white-nav__title-container">
+                      <div class="title-content">
+                        <p class="title-content__text">Informazioni</p>
+                        <a class="title-content__arrow"></a>
+                      </div>
                     </div>
-                    <div class="dropdown-container">
+                    <div class="white-nav__dropdown-container">
                         <div class="dropdown-content">
-                            <ul>
-                                <li><a>Società</a></li>
-                                <li><a>EA Studi</a></li>
-                                <li><a>Lavora con noi</a></li>
-                                <li><a>La nostra tecnologia</a></li>
-                                <li><a>EA Partners</a></li>
-                                <li><a>Notizie</a></li>
-                                <li><a>Inside EA</a></li>
+                            <ul class="dropdown-content__list">
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">Società</a></li>
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">EA Studi</a></li>
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">Lavora con noi</a></li>
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">La nostra tecnologia</a></li>
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">EA Partners</a></li>
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">Notizie</a></li>
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">Inside EA</a></li>
                             </ul>
                         </div>
                     </div>
                 </li>
                 <!--Voce 'Impegni'-->
-                <li class="menu-section-item">
-                    <div class="menu-section-title">
-                        <p>Impegni</p>
-                        <a></a>
+                <li class="white-nav__item">
+                    <div class="white-nav__title-container">
+                      <div class="title-content">
+                        <p class="title-content__text">Impegni</p>
+                        <a class="title-content__arrow"></a>
+                      </div>
                     </div>
-                    <div class="dropdown-container">
+                    <div class="white-nav__dropdown-container">
                         <div class="dropdown-content">
-                            <ul>
-                                <li><a>Gioco positivo</a></li>
-                                <li><a>Diversità e inclusione</a></li>
-                                <li><a>Investire nella comunità</a></li>
-                                <li><a>Persone e cultura</a></li>
-                                <li><a>Ambiente</a></li>
+                            <ul class="dropdown-content__list">
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">Gioco positivo</a></li>
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">Diversità e inclusione</a></li>
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">Investire nella comunità</a></li>
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">Persone e cultura</a></li>
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">Ambiente</a></li>
                             </ul>
                         </div>
                     </div>
                 </li>
                 <!--Voce 'Risorse'-->
-                <li class="menu-section-item">
-                    <div class="menu-section-title">
-                        <p>Risorse</p>
-                        <a></a>
+                <li class="white-nav__item">
+                    <div class="white-nav__title-container">
+                      <div class="title-content">
+                        <p class="title-content__text">Risorse</p>
+                        <a class="title-content__arrow"></a>
+                      </div>
                     </div>
-                    </div>
-                    <div class="dropdown-container">
+                    <div class="white-nav__dropdown-container">
                         <div class="dropdown-content">
-                            <ul>
-                                <li><a>Aiuto</a></li>
-                                <li><a>Forum</a></li>
-                                <li><a>Filtro famiglia</a></li>
-                                <li><a>Accessibilità</a></li>
-                                <li><a>Stampa</a></li>
-                                <li><a>Investitori</a></li>
-                                <li><a>Test di gioco</a></li>
+                            <ul class="dropdown-content__list">
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">Aiuto</a></li>
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">Forum</a></li>
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">Filtro famiglia</a></li>
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">Accessibilità</a></li>
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">Stampa</a></li>
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">Investitori</a></li>
+                                <li class="dropdown-content__item"><a class="dropdown-content__link">Test di gioco</a></li>
                             </ul>
                         </div>
                     </div>

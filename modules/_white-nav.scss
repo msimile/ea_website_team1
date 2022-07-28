@@ -18,301 +18,241 @@
     align-items: center;
 }
 
-%dropdown-link {
-    li {
-        list-style: none;
-        font-size: c.rem(16px);
-        font-weight: 100;
-        width: max-content;
-        margin: c.rem(16px) 0;
-
-        a:hover {
-            cursor: pointer;
-            color: variabili.$origin-brand-color;
-        }
-    }
-}
-
-%dropdown-window {
-    .dropdown-container {
-        .dropdown-content {
-            ul {
-                padding: c.rem(8px) c.rem(32px);
-                padding-right: c.rem(40px);
-                @extend %dropdown-link;
-            }
-        }
-    }
-}
-
-//Assegniamo il valore 'sticky' alla proprietà 'position' dell'elemento 'header'
 header {
     position: sticky;
     top: 0;
     z-index: 1;
     transition: transform 0.4s ease-in-out;
+}
 
-    //Navbar bianca
-    .white-nav {
-        
-        background-color: #FFFFFF;
-        display: flex;
-        padding-left: c.rem(16px);
-        width: 100%;
+//Navbar bianca
+.white-nav {
+    background-color: #FFFFFF;
+    display: flex;
+    padding-left: c.rem(16px);
+    width: 100%;
 
-        //Classe assegnata ai div contenenti i due svg
-        .nav-logos {
-            @extend %center-vertically;
-            height: c.rem(56px);
-            width: fit-content;
+    &__logos {
+        @extend %center-vertically;
+        height: c.rem(56px);
+        width: fit-content;
 
-            //Menu icon
-            &:first-child {
-                position: relative;
-
-                svg {
-                    height: c.rem(20px);
-                    width: c.rem(24px);
-                    display: block;
-                    position: absolute;
-                    transition: all 0.25s ease;
-
-                    //Animazione sull'hover
-                    &:hover {
-                        transform: scale(1.40);
-                        fill: variabili.$origin-brand-color;
-                        cursor: pointer;
-                    }
-                }
-
-                margin-left: 0;
-            }
-
-            //Logo Electronic Arts
-            &:nth-child(2) {
-                img {
-                    height: c.rem(32px);
-                    width: c.rem(145px);
-                    display: block;
-                }
-
-                margin-left: c.rem(48px);
-                margin-right: c.rem(36px);
-            }
-
-            //Hamburger menu icon 
-            .hamburger-icon {
-                display: none;
-                transform: scale(0.70);
-
-                div {
-                    width: c.rem(30px);
-                    height: c.rem(2.5px);
-                    background-color: variabili.$ea-dark-color;
-                    margin: c.rem(7px) 0;
-                }
-
-                &:hover {
-                    cursor: pointer;
-
-                    div {
-                        background-color: variabili.$origin-brand-color;
-                    }
-                }
-            }
+        &:first-child {
+            position: relative;
+            margin-left: 0;
         }
 
-        //Lista dei menu presenti nella navbar
-        .menu-section-list {
-            display: flex;
-            color: variabili.$ea-dark-color;
-            list-style-type: none;
+        &:nth-child(2) {
+            margin-left: c.rem(48px);
+            margin-right: c.rem(36px);
+        }
 
-            //Classe assegnata ad ogni menu presente nella navbar
-            .menu-section-item {
-                position: relative;
-                margin-left: c.rem(20px);
+        &:nth-child(3) {
+            display: none;
+        }
+    }
 
-                //Nome del menu
-                .menu-section-title {
-                    @extend %center-vertically;
-                    width: fit-content;
-                    height: c.rem(56px);
-                    font-size: c.rem(18px);
+    &__desktop-menu {
+        height: c.rem(20px);
+        width: c.rem(24px);
+        display: block;
+        position: absolute;
+        transition: all 0.25s ease;
 
-                    //Freccia accanto al nome del menu
-                    a {
-                        margin-left: c.rem(4px);
-                        display: inline-block;
-                        margin-top: c.rem(4px);
-                        height: c.rem(56px);
+        &:hover {
+            transform: scale(1.40);
+            fill: variabili.$origin-brand-color;
+            cursor: pointer;
+        }
+    }
 
-                        //Da sostituire con l'utility class %center-vertically
-                        display: flex;
-                        align-items: center;
+    &__main-logo {
+        height: c.rem(32px);
+        width: c.rem(145px);
+        display: block;
+    }
 
-                        &::before {
-                            content: "";
-                            display: inline-block;
-                            border: c.rem(1px) solid variabili.$ea-dark-color;
-                            border-radius: 5%;
-                            height: 0px;
-                            width: c.rem(8px);
-                            transform: rotate(45deg);
-                            margin-right: c.rem(-3.5px);
-                            transition: transform 0.20s ease-in;
-                        }
+    &__mobile-menu-container {
+        transform: scale(0.70);
+    }
 
-                        &::after {
-                            content: "";
-                            border: c.rem(1px) solid variabili.$ea-dark-color;
-                            border-radius: 5%;
-                            display: inline-block;
-                            height: 0px;
-                            width: c.rem(8px);
-                            transform: rotate(-45deg);
-                            transition: transform 0.20s ease-in;
-                        }
-                    }
+    &__mobile-menu {
+        width: c.rem(30px);
+        height: c.rem(2.5px);
+        background-color: variabili.$ea-dark-color;
+        margin: c.rem(7px) 0;
+    }
 
-                    //Animazione della freccia sull'hover di .menu-section-title
-                    &:hover {
-                        cursor: pointer;
+    &__list {
+        display: flex;
+        color: variabili.$ea-dark-color;
+        list-style-type: none;
+    }
 
-                        p {
-                            color: variabili.$origin-brand-color;
-                        }
+    &__item {
+        position: relative;
+        margin-left: c.rem(20px);
 
-                        a::after {
-                            transform: rotate(45deg);
-                            border-color: variabili.$origin-brand-color;
-                        }
-
-                        a::before {
-                            transform: rotate(-45deg);
-                            border-color: variabili.$origin-brand-color;
-                        }
-                    }
-                }
-
-                //Classe assegnata ad ogni container dei dropdown menu
-                .dropdown-container {
-                    background-color: transparent;
-                    position: absolute;
-                    top: c.rem(56px);
-                    max-height: 0px;
-                    overflow: hidden;
-                    transition: max-height 0.3s ease-in-out;
-                    opacity: 0.9;
-
-                    //Classe assegnata ad ogni dropdown menu
-                    .dropdown-content {
-                        background-color: #FFFFFF;
-                        margin-top: 0.5rem;
-                        border-radius: c.rem(4px);
-
-                        a {
-                            text-decoration: none;
-                        }
-                    }
-                }
-
-                //Animazione dei dropdown menu sull'hover
-                &:hover {
-                    .dropdown-container {
-                        max-height: c.rem(300px);
-                    }
-                }
-
-                //Menu 'Giochi'
-                &:first-child {
-                    .dropdown-container {
-                        .dropdown-content {
-                            @extend %center-vertically;
-                            justify-content: flex-start;
-                            padding: c.rem(16px) c.rem(32px);
-                            padding-right: 0;
-                            gap: c.rem(64px);
-
-                            ul {
-                                @extend %dropdown-link;
-
-                                li {
-                                    &:first-child {
-                                        font-weight: 900;
-                                        line-height: c.rem(32px);
-                                    }
-
-                                    &:first-child:hover {
-                                        a {
-                                            color: variabili.$ea-dark-color;
-                                        }
-                                    }
-                                }
-
-                                &:nth-child(2) {
-                                    margin-right: c.rem(48px);
-                                }
-                            }
-                        }
-                    }
-                }
-
-                //Menu 'Altre esperienze'
-                &:nth-child(2) {
-                    @extend %dropdown-window;
-                }
-
-                //Menu 'Informazioni'
-                &:nth-child(3) {
-                    @extend %dropdown-window;
-                }
-
-                //Menu 'Impegni'
-                &:nth-child(4) {
-                    @extend %dropdown-window;
-                }
-
-                //Menu 'Container'
-                &:last-child {
-                    @extend %dropdown-window;
-                }
+        &:hover {
+            .white-nav__dropdown-container {
+                max-height: c.rem(300px);
             }
         }
     }
 
-    // Media query
-    @media screen and (max-width: 1032px) {
-        .white-nav {
-            justify-content: flex-start;
+    &__title-container {
+        width: fit-content;
+    }
 
-            //Nasconde l'icona da mostrare solo in modalità desktop
-            .nav-logos {
-                &:first-child {
-                    display: none;
-                }
+    &__dropdown-container {
+        background-color: transparent;
+        position: absolute;
+        top: c.rem(56px);
+        left: c.rem(-32px);
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        opacity: 0.9;
+    }
+}
 
-                //Modifica la dimensione del logo
-                &:nth-child(2) {
-                    order: 2;
-                    margin-left: c.rem(16px);
+.title-content {
+    height: c.rem(56px);
+    font-size: c.rem(18px);
+    @extend %center-vertically;
 
-                    img {
-                        width: c.rem(109px);
-                        height: c.rem(53px);
-                    }
-                }
+    &__arrow {
+        margin-left: c.rem(4px);
+        margin-top: c.rem(4px);
+        height: c.rem(56px);
+        @extend %center-vertically;
 
-                //Mostra l'icona mobile
-                .hamburger-icon {
-                    display: block;
+        &::before {
+            content: "";
+            display: inline-block;
+            border: c.rem(1px) solid variabili.$ea-dark-color;
+            border-radius: 5%;
+            height: 0px;
+            width: c.rem(8px);
+            transform: rotate(45deg);
+            margin-right: c.rem(-3.5px);
+            transition: transform 0.20s ease-in;
+        }
+
+        &::after {
+            content: "";
+            border: c.rem(1px) solid variabili.$ea-dark-color;
+            border-radius: 5%;
+            display: inline-block;
+            height: 0px;
+            width: c.rem(8px);
+            transform: rotate(-45deg);
+            transition: transform 0.20s ease-in;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        .title-content__text {
+            color: variabili.$origin-brand-color;
+        }
+
+        .title-content__arrow::after {
+            transform: rotate(45deg);
+            border-color: variabili.$origin-brand-color;
+        }
+
+        .title-content__arrow::before {
+            transform: rotate(-45deg);
+            border-color: variabili.$origin-brand-color;
+        }
+    }
+}
+
+.dropdown-content {
+    background-color: #FFFFFF;
+    margin-top: 0.5rem;
+    border-radius: c.rem(4px);
+
+    &__link {
+        text-decoration: none;
+
+        &:hover {
+            cursor: pointer;
+            color: variabili.$origin-brand-color;
+        }
+    }
+
+    &__list {
+        padding: c.rem(8px) c.rem(32px);
+        padding-right: c.rem(40px);
+    }
+
+    &__item {
+        list-style: none;
+        font-size: c.rem(16px);
+        font-weight: 100;
+        width: max-content;
+        margin: c.rem(16px) 0;
+    }
+
+    &--large {
+        @extend %center-vertically;
+        justify-content: flex-start;
+        padding: c.rem(16px) c.rem(32px);
+        padding-right: 0;
+        gap: c.rem(64px);
+
+        .dropdown-content__item:first-child {
+            font-weight: 900;
+            line-height: c.rem(32px);
+
+            &:hover {
+                .dropdown-content__link:first-child {
+                    color: variabili.$ea-dark-color;
                 }
             }
+        }
 
-            //Nasconde i menu nella navbar
-            li {
+        .dropdown-content__list {
+            padding: 0;
+            padding-right: 0;
+
+            &:last-child {
+                margin-right: 48px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1032px) {
+    .white-nav {
+        justify-content: flex-start;
+
+        &__logos {
+            &:first-child {
                 display: none;
             }
+
+            &:nth-child(2) {
+                order: 2;
+                margin-left: c.rem(16px);
+            }
+
+            &:nth-child(3) {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        &__main-logo {
+            width: c.rem(109px);
+            height: c.rem(53px);
+        }
+
+        &__item {
+            display: none;
         }
     }
 }
