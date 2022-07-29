@@ -12,7 +12,7 @@ function closeAsideMenu(asideMenu){
 
     // rimuovo la classe per riportare la pagina a poter scrollare 
     document.querySelector("body").classList.remove("aside-wrapper--overflow-hidden")
-    document.querySelector(".darken-bg").classList.toggle("darken-bg--visible");
+    document.querySelector(".darken-bg").classList.remove("darken-bg--visible");
 }
 
 
@@ -24,6 +24,9 @@ tripleDotMenu.addEventListener("click", (e)=> openAsideMenu());
 
 tripleDotMenu.addEventListener("click", (e)=> openAsideMenu(document.querySelector(".aside-wrapper")));
 
+const darkenBg = document.querySelector(".darken-bg");
+darkenBg.addEventListener("click", (e)=> closeAsideMenu(document.querySelector(".aside-wrapper")))
+
 function openAsideMenu(asideMenu){
     const navIcons = document.querySelector("header");
 
@@ -32,5 +35,5 @@ function openAsideMenu(asideMenu){
 
 // assegno la classe per evitare che tutta la pagina eccetto l'aside possa scrollare
     document.querySelector("body").classList.add("aside-wrapper--overflow-hidden")
-    document.querySelector(".darken-bg").classList.toggle("darken-bg--visible");
+    document.querySelector(".darken-bg").classList.add("darken-bg--visible");
 }
