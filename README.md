@@ -30,3 +30,5 @@ es: " _first-footer.scss ", " _white-nav.scss " , " _black-nav.scss " , " _banne
 • Nomenclatura per le classi degli elementi annidati tra loro (div > div > div) ----> in lingua inglese, con i trattini ( - ) tra un termine e l'altro, e specificando passo per passo l'annidamento, andando dal molecolare all'atomico, per una maggior leggibilità e ordine tematico.
 
 es: " footer1 " > " footer1-main " >  " footer1-main-socialicons " > " footer1-main-socialicons-instagram "
+
+• Organizzazione del lavoro tramite Kanban Board su Trello
