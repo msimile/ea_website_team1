@@ -1,7 +1,9 @@
 const heightModules = 3.5;
 const offset = 7;
 const greyTopParList = document.querySelectorAll(".nav-wrapper-container-main-element-ul-li");
-const hamburgerMenu = document.querySelector(".white-nav .nav-logos .hamburger-icon")
+const hamburgerMenu = document.querySelector(
+  ".white-nav__mobile-menu-container"
+);
 const listNest = document.querySelectorAll(".nav-wrapper-container-main-element-content");
 //variabili per il controllo della prima voce per garantirne la giusta grandezza
 let maxHeightFirstLastValue = 3.5 * heightModules * listNest.length;
