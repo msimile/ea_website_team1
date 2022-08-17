@@ -27,11 +27,23 @@
   align-items: center;
   padding: 0.3125rem;
 }
+.nav-nera .nav-icons .square-icon a {
+  fill: grey;
+  height: 2.5rem;
+  width: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+.nav-nera .nav-icons .square-icon a:hover {
+  fill: #a3a3a3;
+  cursor: pointer;
+}
 .nav-nera .nav-icons .nav-icons-active {
   fill: rgb(243, 243, 243);
 }
 .nav-nera .nav-icons .ea {
   margin-right: 2rem;
+  fill: grey;
 }
 .nav-nera .nav-icons .square-icon:hover {
   fill: rgb(243, 243, 243);
@@ -218,7 +230,8 @@
     width: 100%;
     padding: 20px;
   }
-  .nav-nera-extension .nav-nera-extension-icons-top, .nav-nera-extension .nav-nera-extension-icons-bot {
+  .nav-nera-extension .nav-nera-extension-icons-top,
+.nav-nera-extension .nav-nera-extension-icons-bot {
     width: 100%;
   }
 }

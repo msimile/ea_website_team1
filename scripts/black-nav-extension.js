@@ -81,8 +81,7 @@ shiftedBody.shift();
 shiftedBody.forEach((elem) => {
   elem.addEventListener("click", () => {
     if (
-      !navNeraExtension.classList.contains("toggle") ||
-      !navNeraExtention2.classList.contains("toggle")
+      !navNeraExtension.classList.contains("toggle")
     ) {
       navNeraExtension.classList.add("toggle");
       document.querySelector("body").classList.remove("body-block");

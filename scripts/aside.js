@@ -5,9 +5,6 @@ const crossIcon = document.querySelector(".eapl-local-nav__close-icon");
 crossIcon.addEventListener("click", (e)=> closeAsideMenu(document.querySelector(".aside-wrapper")) )
 
 function closeAsideMenu(asideMenu){
-    const navIcons = document.querySelector("header");
-
-    navIcons.classList.add("header-invisible");
     asideMenu.classList.add("aside-wrapper--hidden");
 
     // rimuovo la classe per riportare la pagina a poter scrollare 
