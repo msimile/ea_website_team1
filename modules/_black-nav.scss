@@ -27,12 +27,24 @@
       margin-right: f.rem(20px);
       align-items: center;
       padding: f.rem(5px);
+      a {
+        fill: grey;
+        height: f.rem(40px);
+        width: f.rem(40px);
+        display: flex;
+        align-items: center;
+        &:hover {
+          fill: #a3a3a3;
+          cursor: pointer;
+        }
+      }
     }
     .nav-icons-active {
       fill: variabili.$ea-light-color;
     }
     .ea {
       margin-right: f.rem(32px);
+      fill: grey;
     }
     .square-icon:hover {
       fill: variabili.$ea-light-color;
@@ -228,7 +240,8 @@
       width: 100%;
       padding: 20px;
     }
-    .nav-nera-extension-icons-top, .nav-nera-extension-icons-bot{
+    .nav-nera-extension-icons-top,
+    .nav-nera-extension-icons-bot {
       width: 100%;
     }
   }
