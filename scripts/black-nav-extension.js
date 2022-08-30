@@ -1,7 +1,6 @@
 const accediButton = document.querySelector("#accediBtn");
 const navNeraExtension = document.querySelector(".nav-nera-extension");
 const crossButton = document.querySelector(".nav-nera-extension-cross");
-const crossButton2 = document.querySelector(".two");
 const infoButton = document.querySelector("#infoBtn");
 const bodyToShift = document.querySelector("body");
 
@@ -68,7 +67,14 @@ infoButton.addEventListener("click", () => {
   } else document.querySelector("body").classList.toggle("body-block");
 });
 
-crossButton.addEventListener("click", () => {
+crossButton.addEventListener("click", (e) => {
+  navNeraExtension.classList.add("toggle");
+  accediButton.classList.remove("nav-icons-active");
+  infoButton.classList.remove("nav-icons-active");
+  document.querySelector("body").classList.remove("body-block");
+});
+
+document.querySelector(".wholeCross").addEventListener("click", () => {
   navNeraExtension.classList.add("toggle");
   accediButton.classList.remove("nav-icons-active");
   infoButton.classList.remove("nav-icons-active");
@@ -80,9 +86,7 @@ shiftedBody.shift();
 
 shiftedBody.forEach((elem) => {
   elem.addEventListener("click", () => {
-    if (
-      !navNeraExtension.classList.contains("toggle")
-    ) {
+    if (!navNeraExtension.classList.contains("toggle")) {
       navNeraExtension.classList.add("toggle");
       document.querySelector("body").classList.remove("body-block");
       accediButton.classList.remove("nav-icons-active");
@@ -90,3 +94,4 @@ shiftedBody.forEach((elem) => {
     }
   });
 });
+window.addEventListener("click", (e) => console.log(e.target));
