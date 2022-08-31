@@ -5,14 +5,17 @@ const crossIcon = document.querySelector(".eapl-local-nav__close-icon");
 crossIcon.addEventListener("click", (e)=> closeAsideMenu(document.querySelector(".aside-wrapper")) )
 
 function closeAsideMenu(asideMenu){
-    const navIcons = document.querySelector("header");
-
-    navIcons.classList.add("header-invisible");
     asideMenu.classList.add("aside-wrapper--hidden");
 
     // rimuovo la classe per riportare la pagina a poter scrollare 
     document.querySelector("body").classList.remove("aside-wrapper--overflow-hidden")
     document.querySelector(".darken-bg").classList.remove("darken-bg--visible");
+    // condizione per far si che se anche l'estenzione della nav nera sia aperta venga chiusa al click del darken-bg
+    if(!navNeraExtension.classList.contains("toggle")){
+        navNeraExtension.classList.add("toggle")
+        accediButton.classList.remove("nav-icons-active")
+        infoButton.classList.remove("nav-icons-active")
+    }
 }
 
 
