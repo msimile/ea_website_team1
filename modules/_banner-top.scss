@@ -43,14 +43,11 @@
     }
 
     &__button {
-      //width: 30%;
-      //margin-top: r.rem(40px);
       font-family: "Electronic Arts Text";
       font-size: r.rem(18px);
       font-weight: 100;
       padding: r.rem(16px) r.rem(18px);
       border-radius: r.rem(3px);
-      //transition: all 0.08s ease-in-out;
       cursor: pointer;
 
       a {
@@ -88,22 +85,14 @@
         width: 100%;
         position: initial;
         flex-direction: column;
-        // flex-wrap: wrap;
         justify-content: flex-start;
-        // color:v.$ea-light-color  ;
         transform: scale(0.85);
-
-        // &__svg {
-        //   // transform: scale(0.75);
-        // }
       }
 
       &__mobile-contents{
-        // background-color: v.$ea-dark-color ;
         height: 50%;
         max-height: 50%;
         overflow-x: hidden;
-        //display: none;
       }
   }
 }
