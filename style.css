@@ -322,11 +322,37 @@ header {
 }
 @media (max-width: 768px) {
   .banner-top__contents {
-    transform: scale(0.7);
+    transform: scale(1);
     width: 100%;
   }
+  .banner-top__contents__svg {
+    height: 87px;
+    transform: translateY(-25px);
+  }
   .banner-top__contents__title {
+    font-size: 2.375rem;
     width: 100%;
+  }
+}
+@media (max-width: 375px) {
+  .banner-top__bg-image {
+    height: 40%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../assets/banner-top-photo-ea.png);
+  }
+  .banner-top__contents {
+    transform: scale(0.85);
+  }
+  .banner-top__mobile-contents {
+    display: flex;
+    justify-content: center;
+    height: 60%;
+    max-height: 60%;
+    overflow-x: hidden;
+    transform: translateX(5px);
   }
 }
 .logo_img, #giochi-in-evidenza .game-card-img-content a {

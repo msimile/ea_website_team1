@@ -43,7 +43,7 @@ const bgImageChild = `<div class="banner-top__contents">
 </div>
 <h1 class="banner-top__contents__title">Entra nella nuova era della Formula 1®</h1>
 <p class="banner-top__contents__p">Mettiti al volante per una nuova stagione con auto ridisegnate che ridefiniscono ogni gara</p>
-<button class="banner-top__contents__button"><a href="#">Acquista subito</a></button>  
+<button class="banner-top__contents__button"><a href="https://www.ea.com/it-it/games/f1/f1-22">Acquista subito</a></button>  
 </div>`
 
 function switchLayout(event) {
