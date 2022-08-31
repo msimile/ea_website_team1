@@ -14,88 +14,114 @@
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-image: url(../assets/f11-banner.png);
+  }
 
-    .banner-top__contents {
-      height: 30%;
-      width: 30%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      text-align: center;
-      align-items: center;
-      position: absolute;
-      bottom: 40%;
-      right: 20%;
+  &__contents {
+    height: 30%;
+    width: 30%;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    bottom: 40%;
+    right: 20%;
 
-      &__title {
-        font-size: v.$header;
-        font-weight: v.$header-w;
-        font-family: "Electronic Arts Text";
+    &__title {
+      font-size: v.$header;
+      font-weight: v.$header-w;
+      font-family: "Electronic Arts Text";
+    }
+
+    &__p {
+      margin-bottom: 40px;
+      font-size: r.rem(18px);
+    }
+
+    &__button {
+      //width: 30%;
+      //margin-top: r.rem(40px);
+      font-family: "Electronic Arts Text";
+      font-size: r.rem(18px);
+      font-weight: 100;
+      padding: r.rem(16px) r.rem(18px);
+      border-radius: r.rem(3px);
+      //transition: all 0.08s ease-in-out;
+      cursor: pointer;
+
+      a {
+        text-decoration: none;
+        color: v.$ea-light-color;
       }
 
-      &__p {
-        margin-bottom: 40px;
-        font-size: r.rem(18px);
-      }
+      @include b.buttons(
+        v.$ea-dark-color,
+        v.$ea-light-color,
+        0px,
+        none,
+        none
+      );
 
-      /////////////////////////////////////////////////////////
-      /// 
-    //   .banner-top__contents__container-b{
-    //     height: 120px;
-    //     width: 100%;
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-
-    //     .banner-top__contents__container-b__button {
-    //       transition: all 0.08s ease-in-out;
-    //       font-size: c.rem(18px);
-    //       padding: c.rem(16px) c.rem(27px);
-    //       background-color: transparent;
-    //       border-radius: c.rem(3px);
-    //       border: c.rem(2px) solid v.$ea-dark-color;
-    //       cursor: pointer;
-
-    //       &:hover {
-    //         padding: c.rem(19px) c.rem(30px);
-    //         margin: c.rem(-3px) c.rem(-3px);
-    //       }
-    //     }
-    //   }
-
-      ////////////////////////////////////////////////////////////////
-
-      &__button {
-          //width: 30%;
-          //margin-top: r.rem(40px);
-          font-family: "Electronic Arts Text";
-          font-size: r.rem(18px);
-          font-weight: 100;
-          padding: r.rem(16px) r.rem(18px);
-          border-radius: r.rem(3px);
-          //transition: all 0.08s ease-in-out;
-          cursor: pointer;
-
-          a {
-          text-decoration: none;
-          color: v.$ea-light-color;
-          }
-
-          @include b.buttons(
-          v.$ea-dark-color,
-          v.$ea-light-color,
-          0px,
-          none,
-          none,
-          );
-
-          &:hover {
-              padding: r.rem(18px) r.rem(22px);
-              margin: r.rem(-2px) r.rem(-4px);
-          }
+      &:hover {
+        padding: r.rem(18px) r.rem(22px);
+        margin: r.rem(-2px) r.rem(-4px);
       }
     }
   }
+}
+
+@media (max-width: 1024px) {
+  .banner-top {
+    display: flex;
+    flex-direction: column;
+
+      &__bg-image {
+        height: 50%;
+        
+      }
+
+      &__contents {
+        width: 100%;
+        position: initial;
+        flex-direction: column;
+        // flex-wrap: wrap;
+        justify-content: flex-start;
+        // color:v.$ea-light-color  ;
+        transform: scale(0.85);
+
+        // &__svg {
+        //   // transform: scale(0.75);
+        // }
+      }
+
+      &__mobile-contents{
+        // background-color: v.$ea-dark-color ;
+        height: 50%;
+        max-height: 50%;
+        overflow-x: hidden;
+        //display: none;
+      }
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-top {
+    &__contents {
+      transform: scale(0.70);
+      width: 100%;
+
+
+      &__title {
+        width: 100%;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 375px) {
 }

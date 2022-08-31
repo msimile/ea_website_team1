@@ -253,12 +253,13 @@ header {
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-image: url(../assets/f11-banner.png);
 }
-.banner-top__bg-image .banner-top__contents {
+.banner-top__contents {
   height: 30%;
   width: 30%;
+  min-width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -268,16 +269,16 @@ header {
   bottom: 40%;
   right: 20%;
 }
-.banner-top__bg-image .banner-top__contents__title {
+.banner-top__contents__title {
   font-size: 54px;
   font-weight: 600;
   font-family: "Electronic Arts Text";
 }
-.banner-top__bg-image .banner-top__contents__p {
+.banner-top__contents__p {
   margin-bottom: 40px;
   font-size: 1.125rem;
 }
-.banner-top__bg-image .banner-top__contents__button {
+.banner-top__contents__button {
   font-family: "Electronic Arts Text";
   font-size: 1.125rem;
   font-weight: 100;
@@ -289,15 +290,45 @@ header {
   border: rem(0px) none none;
   color: rgb(243, 243, 243);
 }
-.banner-top__bg-image .banner-top__contents__button a {
+.banner-top__contents__button a {
   text-decoration: none;
   color: rgb(243, 243, 243);
 }
-.banner-top__bg-image .banner-top__contents__button:hover {
+.banner-top__contents__button:hover {
   padding: 1.125rem 1.375rem;
   margin: -0.125rem -0.25rem;
 }
 
+@media (max-width: 1024px) {
+  .banner-top {
+    display: flex;
+    flex-direction: column;
+  }
+  .banner-top__bg-image {
+    height: 50%;
+  }
+  .banner-top__contents {
+    width: 100%;
+    position: initial;
+    flex-direction: column;
+    justify-content: flex-start;
+    transform: scale(0.85);
+  }
+  .banner-top__mobile-contents {
+    height: 50%;
+    max-height: 50%;
+    overflow-x: hidden;
+  }
+}
+@media (max-width: 768px) {
+  .banner-top__contents {
+    transform: scale(0.7);
+    width: 100%;
+  }
+  .banner-top__contents__title {
+    width: 100%;
+  }
+}
 .logo_img, #giochi-in-evidenza .game-card-img-content a {
   transform: translate(-50%, -50%);
   position: absolute;
