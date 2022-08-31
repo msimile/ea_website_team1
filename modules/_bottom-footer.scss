@@ -46,6 +46,11 @@
       display: flex;
       border-radius: 3px;
       padding: 0.4rem 0.4rem 0.4rem 0.8rem;
+      transition: all 0.1s ease-in-out;
+      &:hover{
+        padding: 0.6rem 0.6rem 0.6rem 0.9rem;
+        margin: -0.2rem -0.2rem -0.2rem -0.1rem;
+      }
 
       p {
         width: 128px;
@@ -93,12 +98,13 @@
       }
     }
     :hover {
-      .f-b-rs-prices-btn,
-      .f-b-rs-language-btn {
-        margin: -0.1rem;
-      }
+      // .f-b-rs-prices-btn,
+      // .f-b-rs-language-btn {
+      //   margin: -0.1rem;
+      //   padding: 0.1rem 0.1rem 0.1rem 0.1rem;
+      // }
       p {
-        padding: 0.1rem 0.1rem 0.1rem 0.1rem;
+        
       }
       .rs-btn-arrow {
         transform: rotate(-90deg);
@@ -298,6 +304,26 @@
       }
       .rs-btn-arrow {
         margin-left: 19rem;
+      }
+    }
+  }
+}
+
+@media(max-width : 400px){
+    
+  .f-b-regionalselectors-container {
+        display: flex;
+    flex-direction: column;
+       
+    .f-b-rs-prices-btn,
+    .f-b-rs-language-btn {
+         margin: 0px;
+
+      .f-b-rs-btn-title2 {
+        
+      }
+      .rs-btn-arrow {
+        margin-left: 16rem;
       }
     }
   }
