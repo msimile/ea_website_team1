@@ -287,7 +287,8 @@
   .f-b-regionalselectors-container {
     width: 100%;
     margin-left: 0;
-    display: block;
+       display: flex;
+    flex-direction: column;
     gap: c.rem(10px);
 
     .f-b-rs-prices-btn,
@@ -297,7 +298,6 @@
       height: fit-content;
       border-radius: 3px;
       padding: 0.4rem 0.4rem 0.4rem 0.8rem;
-      margin-bottom: 1rem;
 
       .f-b-rs-btn-title2 {
         margin-top: 0.2rem;

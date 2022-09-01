@@ -1099,7 +1099,8 @@ header {
   .f-b-regionalselectors-container {
     width: 100%;
     margin-left: 0;
-    display: block;
+    display: flex;
+    flex-direction: column;
     gap: 0.625rem;
   }
   .f-b-regionalselectors-container .f-b-rs-prices-btn,
@@ -1111,7 +1112,6 @@ header {
     height: fit-content;
     border-radius: 3px;
     padding: 0.4rem 0.4rem 0.4rem 0.8rem;
-    margin-bottom: 1rem;
   }
   .f-b-regionalselectors-container .f-b-rs-prices-btn .f-b-rs-btn-title2,
 .f-b-regionalselectors-container .f-b-rs-language-btn .f-b-rs-btn-title2 {
