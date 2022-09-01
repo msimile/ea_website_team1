@@ -65,7 +65,7 @@
 }
 
 .toggle {
-  transform: translateY(-120%);
+  transform: translateY(-100%);
 }
 
 .nav-nera-extension {
@@ -461,7 +461,6 @@ header {
   max-height: 37.5rem;
   height: 34.3125rem;
   position: relative;
-  margin-bottom: 1.25rem;
 }
 .banner-top__bg-image {
   height: 100%;
@@ -530,6 +529,7 @@ header {
     transform: scale(0.85);
   }
   .banner-top__mobile-contents {
+    background-color: rgb(243, 243, 243);
     height: 50%;
     max-height: 50%;
     overflow-x: hidden;
@@ -567,7 +567,6 @@ header {
     height: 60%;
     max-height: 60%;
     overflow-x: hidden;
-    transform: translateX(5px);
   }
 }
 .logo_img, #giochi-in-evidenza .game-card-img-content a {
@@ -577,6 +576,10 @@ header {
   top: 50%;
 }
 
+#giochi-in-evidenza {
+  background-color: rgb(243, 243, 243);
+  padding-top: 1.25rem;
+}
 #giochi-in-evidenza h2 {
   font-size: 3.375rem;
   font-weight: 54px;
@@ -1679,11 +1682,12 @@ header {
   }
 }
 .section-news {
-  margin-top: 3rem;
+  padding-top: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 2rem;
+  background-color: rgb(243, 243, 243);
 }
 .section-news-title h1 {
   font-size: 2.75rem;
