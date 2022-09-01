@@ -11,6 +11,8 @@
 }
 //intero contenitore della sezione Giochi in evidenza
 #giochi-in-evidenza {
+  background-color: v.$ea-light-color;
+  padding-top: c.rem(20px);
   // titolo della sezione (segue le direttive generali per i titoli)
   h2 {
     font-size: c.rem(v.$header);
