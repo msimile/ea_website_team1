@@ -470,6 +470,10 @@ header {
   background-repeat: no-repeat;
   background-size: contain;
   background-image: url(./assets/f11-banner.png);
+  background-color: darkblue;
+}
+.banner-top__bg-image svg {
+  display: none;
 }
 .banner-top__container {
   height: 100%;
@@ -521,6 +525,96 @@ header {
   margin: -0.125rem -0.25rem;
 }
 
+@media (max-width: 1024px) {
+  .banner-top {
+    display: flex;
+    flex-direction: column;
+    position: initial;
+  }
+  .banner-top__bg-image {
+    height: 60%;
+    background-color: #0c273b;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .banner-top__bg-image svg {
+    display: block;
+    margin-right: 136px;
+    height: 208px;
+    width: 400px;
+  }
+  .banner-top__container {
+    height: 40%;
+    position: initial;
+    background-color: none;
+  }
+  .banner-top__contents {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+  }
+  .banner-top__contents__title {
+    font-size: 40px;
+  }
+  .banner-top__contents svg {
+    display: none;
+  }
+  .banner-top__contents__p {
+    margin: 0.75rem;
+  }
+}
+@media (max-width: 920px) {
+  .banner-top__bg-image {
+    height: 50%;
+  }
+  .banner-top__bg-image svg {
+    display: none;
+  }
+  .banner-top__container {
+    height: 50%;
+    padding: 0.5rem 0rem;
+  }
+  .banner-top__contents {
+    justify-content: space-between;
+  }
+  .banner-top__contents svg {
+    display: block;
+  }
+}
+@media (max-width: 750px) {
+  .banner-top__contents svg {
+    height: 96px;
+    width: 300px;
+  }
+  .banner-top__contents__title {
+    font-size: 32px;
+  }
+  .banner-top__contents__p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 575px) {
+  .banner-top__bg-image {
+    height: 50%;
+    background-image: url(./assets/banner-top-photo-ea.png);
+    background-color: rgb(22, 22, 22);
+  }
+  .banner-top__container {
+    margin-top: 0;
+    height: 50%;
+  }
+  .banner-top__contents__title {
+    font-size: 22px;
+  }
+  .banner-top__contents svg {
+    height: 96px;
+    width: 300px;
+  }
+  .banner-top__contents__p {
+    font-size: 1rem;
+  }
+}
 .logo_img, #giochi-in-evidenza .game-card-img-content a {
   transform: translate(-50%, -50%);
   position: absolute;
