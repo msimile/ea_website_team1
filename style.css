@@ -570,6 +570,30 @@ header {
   .banner-top__contents__p {
     margin: 0.75rem;
   }
+  .banner-top__contents__button {
+    padding: 1rem 25rem;
+    border-radius: rem(3px);
+    background-color: rgb(22, 22, 22);
+    border: rem(0px) none none;
+    color: rgb(243, 243, 243);
+  }
+  .banner-top__contents__button:hover {
+    padding: 1.125rem 25.625rem;
+    margin: -0.125rem -0.25rem;
+  }
+}
+@media (max-width: 988px) {
+  .banner-top__contents__button {
+    padding: 1rem 22.5rem;
+    border-radius: rem(3px);
+    background-color: rgb(22, 22, 22);
+    border: rem(0px) none none;
+    color: rgb(243, 243, 243);
+  }
+  .banner-top__contents__button:hover {
+    padding: 1.125rem 23.125rem;
+    margin: -0.125rem -0.25rem;
+  }
 }
 @media (max-width: 920px) {
   .banner-top__bg-image {
@@ -587,6 +611,17 @@ header {
   }
   .banner-top__contents svg {
     display: block;
+  }
+  .banner-top__contents__button {
+    padding: 1rem 18.75rem;
+    border-radius: rem(3px);
+    background-color: rgb(22, 22, 22);
+    border: rem(0px) none none;
+    color: rgb(243, 243, 243);
+  }
+  .banner-top__contents__button:hover {
+    padding: 1.125rem 19.375rem;
+    margin: -0.125rem -0.25rem;
   }
 }
 @media (max-width: 750px) {
@@ -607,6 +642,30 @@ header {
   }
   .banner-top__contents__p {
     font-size: 1rem;
+  }
+  .banner-top__contents__button {
+    padding: 1rem 16.25rem;
+    border-radius: rem(3px);
+    background-color: rgb(22, 22, 22);
+    border: rem(0px) none none;
+    color: rgb(243, 243, 243);
+  }
+  .banner-top__contents__button:hover {
+    padding: 1.125rem 16.875rem;
+    margin: -0.125rem -0.25rem;
+  }
+}
+@media (max-width: 680px) {
+  .banner-top__contents__button {
+    padding: 1rem 13.125rem;
+    border-radius: rem(3px);
+    background-color: rgb(22, 22, 22);
+    border: rem(0px) none none;
+    color: rgb(243, 243, 243);
+  }
+  .banner-top__contents__button:hover {
+    padding: 1.125rem 13.75rem;
+    margin: -0.125rem -0.25rem;
   }
 }
 @media (max-width: 575px) {
@@ -629,10 +688,45 @@ header {
   .banner-top__contents__p {
     font-size: 1rem;
   }
+  .banner-top__contents__button {
+    padding: 1rem 10rem;
+    border-radius: rem(3px);
+    background-color: rgb(22, 22, 22);
+    border: rem(0px) none none;
+    color: rgb(243, 243, 243);
+  }
+  .banner-top__contents__button:hover {
+    padding: 1.125rem 10.625rem;
+    margin: -0.125rem -0.25rem;
+  }
+}
+@media (max-width: 460px) {
+  .banner-top__contents__button {
+    padding: 1rem 6.25rem;
+    border-radius: rem(3px);
+    background-color: rgb(22, 22, 22);
+    border: rem(0px) none none;
+    color: rgb(243, 243, 243);
+  }
+  .banner-top__contents__button:hover {
+    padding: 1.125rem 6.875rem;
+    margin: -0.125rem -0.25rem;
+  }
 }
 @media (max-width: 375px) {
   .banner-top__contents__title {
     font-size: 28px;
+  }
+  .banner-top__contents__button {
+    padding: 1rem 5.625rem;
+    border-radius: rem(3px);
+    background-color: rgb(22, 22, 22);
+    border: rem(0px) none none;
+    color: rgb(243, 243, 243);
+  }
+  .banner-top__contents__button:hover {
+    padding: 1.125rem 6.25rem;
+    margin: -0.125rem -0.25rem;
   }
 }
 .logo_img, #giochi-in-evidenza .game-card-img-content a {

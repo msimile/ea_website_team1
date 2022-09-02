@@ -99,10 +99,6 @@
       &__title {
         font-size: 50px;
       }
-
-      // &__p {
-      //   font-size: ;
-      // }
     }
   }
 }
@@ -151,6 +147,44 @@
       &__p {
         margin: 0.75rem;
       }
+
+      &__button {
+        padding: r.rem(16px) r.rem(400px);
+
+        @include b.buttons(v.$ea-dark-color,
+        v.$ea-light-color,
+        0px,
+        none,
+        none);
+
+        &:hover {
+          padding: r.rem(18px) r.rem(410px); // era 22 
+          margin: r.rem(-2px) r.rem(-4px);
+        }
+
+      }
+    }
+  }
+}
+
+@media (max-width:988px) {
+  .banner-top {
+    &__contents {
+      &__button {
+        padding: r.rem(16px) r.rem(360px);
+
+        @include b.buttons(v.$ea-dark-color,
+        v.$ea-light-color,
+        0px,
+        none,
+        none);
+
+        &:hover {
+          padding: r.rem(18px) r.rem(370px); // era 22 
+          margin: r.rem(-2px) r.rem(-4px);
+        }
+
+      }
     }
   }
 }
@@ -175,6 +209,23 @@
       svg {
         display: block;
       }
+
+      &__button {
+        padding: r.rem(16px) r.rem(300px);
+
+        @include b.buttons(v.$ea-dark-color,
+        v.$ea-light-color,
+        0px,
+        none,
+        none);
+
+        &:hover {
+          padding: r.rem(18px) r.rem(310px); // era 22 
+          margin: r.rem(-2px) r.rem(-4px);
+        }
+
+      }
+      
     }
   }
 }
@@ -202,13 +253,52 @@
       &__p{
         font-size: 1rem;
       }
+
+      &__button {
+        padding: r.rem(16px) r.rem(260px);
+
+        @include b.buttons(v.$ea-dark-color,
+        v.$ea-light-color,
+        0px,
+        none,
+        none);
+
+        &:hover {
+          padding: r.rem(18px) r.rem(270px); // era 22 
+          margin: r.rem(-2px) r.rem(-4px);
+        }
+
+      }
+
     }
   }
   
 }
 
+@media (max-width: 680px) {
+  .banner-top {
+    &__contents {
+      &__button {
+        padding: r.rem(16px) r.rem(210px);
+
+        @include b.buttons(v.$ea-dark-color,
+        v.$ea-light-color,
+        0px,
+        none,
+        none);
+
+        &:hover {
+          padding: r.rem(18px) r.rem(220px); // era 22 
+          margin: r.rem(-2px) r.rem(-4px);
+        }
+
+      }
+    }
+  }
+}
+
 @media (max-width: 575px) {
-  .banner-top{
+  .banner-top {
     &__bg-image{
       height: 50%;
       background-image: url(./assets/banner-top-photo-ea.png);
@@ -229,9 +319,48 @@
       &__p{
         font-size: 1rem;
       }
+
+      &__button {
+        padding: r.rem(16px) r.rem(160px);
+
+        @include b.buttons(v.$ea-dark-color,
+        v.$ea-light-color,
+        0px,
+        none,
+        none);
+
+        &:hover {
+          padding: r.rem(18px) r.rem(170px); // era 22 
+          margin: r.rem(-2px) r.rem(-4px);
+        }
+
+      }
+
     }
   }
   
+}
+
+@media (max-width: 460px) {
+  .banner-top {
+    &__contents {
+      &__button {
+        padding: r.rem(16px) r.rem(100px);
+
+        @include b.buttons(v.$ea-dark-color,
+        v.$ea-light-color,
+        0px,
+        none,
+        none);
+
+        &:hover {
+          padding: r.rem(18px) r.rem(110px); // era 22 
+          margin: r.rem(-2px) r.rem(-4px);
+        }
+
+      }
+    }
+  }
 }
 
 @media (max-width: 375px) {
@@ -240,6 +369,23 @@
       &__title {
         font-size: 28px;
       }
+
+      &__button {
+        padding: r.rem(16px) r.rem(90px);
+
+        @include b.buttons(v.$ea-dark-color,
+        v.$ea-light-color,
+        0px,
+        none,
+        none);
+
+        &:hover {
+          padding: r.rem(18px) r.rem(100px); // era 22 
+          margin: r.rem(-2px) r.rem(-4px);
+        }
+
+      }
+
     }
   }
 }
