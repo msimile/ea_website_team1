@@ -469,8 +469,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url(./assets/f11-banner.png);
-  background-color: darkblue;
+  background-image: url(./assets/f1-banner-top.png);
 }
 .banner-top__bg-image svg {
   display: none;
@@ -525,7 +524,15 @@ header {
   margin: -0.125rem -0.25rem;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1920px) {
+  .banner-top__container {
+    top: 8rem;
+  }
+  .banner-top__contents__title {
+    font-size: 50px;
+  }
+}
+@media (max-width: 1400px) {
   .banner-top {
     display: flex;
     flex-direction: column;
@@ -533,7 +540,7 @@ header {
   }
   .banner-top__bg-image {
     height: 60%;
-    background-color: #0c273b;
+    background-size: cover;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -583,6 +590,14 @@ header {
   }
 }
 @media (max-width: 750px) {
+  .banner-top__bg-image {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(./assets/f1-banner-top-resize-750.png);
+  }
   .banner-top__contents svg {
     height: 96px;
     width: 300px;
@@ -613,6 +628,11 @@ header {
   }
   .banner-top__contents__p {
     font-size: 1rem;
+  }
+}
+@media (max-width: 375px) {
+  .banner-top__contents__title {
+    font-size: 22px;
   }
 }
 .logo_img, #giochi-in-evidenza .game-card-img-content a {
