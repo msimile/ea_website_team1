@@ -197,7 +197,7 @@
         width: 300px;
       }
       &__title{
-        font-size: 32px;
+        font-size: 32px; // era 32
       }
       &__p{
         font-size: 1rem;
@@ -216,11 +216,11 @@
     }
     &__container{
       margin-top: 0;
-      height: 50%;
+      height: 60%; // era 50
     }
     &__contents{
       &__title{
-        font-size: 22px; // prima era 22
+        font-size: 32px; // prima era 22
       }
       svg{
         height: 96px;
@@ -238,7 +238,7 @@
   .banner-top {
     &__contents {
       &__title {
-        font-size: 22px;
+        font-size: 28px;
       }
     }
   }

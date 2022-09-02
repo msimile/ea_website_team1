@@ -617,10 +617,10 @@ header {
   }
   .banner-top__container {
     margin-top: 0;
-    height: 50%;
+    height: 60%;
   }
   .banner-top__contents__title {
-    font-size: 22px;
+    font-size: 32px;
   }
   .banner-top__contents svg {
     height: 96px;
@@ -632,7 +632,7 @@ header {
 }
 @media (max-width: 375px) {
   .banner-top__contents__title {
-    font-size: 22px;
+    font-size: 28px;
   }
 }
 .logo_img, #giochi-in-evidenza .game-card-img-content a {
