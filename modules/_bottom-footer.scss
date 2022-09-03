@@ -13,7 +13,8 @@
   max-width: 66%;
   display: flex;
   margin: auto;
-
+  margin-top: 1rem;
+  
   .f-bottom-linkwrapper {
     flex-grow: 1;
     a {
@@ -136,6 +137,7 @@
 
 @media screen and (min-width: 1024px) {
   #footer-bottom {
+    margin-top: 1rem;
     margin-bottom: 4rem;
   }
   .f-bottom-logowrapper {
@@ -193,6 +195,7 @@
 
 @media screen and (max-width: 1024px) {
   #footer-bottom {
+    margin-top: 1rem;
     margin-bottom: 2rem;
   }
 
