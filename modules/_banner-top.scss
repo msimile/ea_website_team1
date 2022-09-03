@@ -1,3 +1,5 @@
+/* MARCO SIMILE = BANNER TOP F1 22 */
+
 @use "buttons" as b;
 @use "variabili" as v;
 @use "px-to-rem" as r;
@@ -67,11 +69,7 @@
         color: v.$ea-light-color;
       }
 
-      @include b.buttons(v.$ea-dark-color,
-        v.$ea-light-color,
-        0px,
-        none,
-        none);
+      @include b.buttons(v.$ea-dark-color, v.$ea-light-color, 0px, none, none);
 
       &:hover {
         padding: r.rem(18px) r.rem(22px);
@@ -81,16 +79,15 @@
   }
 }
 
+/* RESPONSIVITY AND MEDIA QUERIES */
 
 @media (max-width: 1920px) {
   .banner-top {
-
     &__container {
       top: r.rem(128px);
     }
 
     &__contents {
-
       &__title {
         font-size: 50px;
       }
@@ -114,8 +111,8 @@
       svg {
         display: block;
         margin-right: 136px;
-        height: 208px; 
-        width: 400px; 
+        height: 208px;
+        width: 400px;
       }
     }
 
@@ -145,17 +142,18 @@
       &__button {
         padding: r.rem(16px) r.rem(310px);
 
-        @include b.buttons(v.$ea-dark-color,
-        v.$ea-light-color,
-        0px,
-        none,
-        none);
+        @include b.buttons(
+          v.$ea-dark-color,
+          v.$ea-light-color,
+          0px,
+          none,
+          none
+        );
 
         &:hover {
-          padding: r.rem(18px) r.rem(320px); 
+          padding: r.rem(18px) r.rem(320px);
           margin: r.rem(-2px) r.rem(-4px);
         }
-
       }
     }
   }
@@ -170,7 +168,7 @@
       }
     }
 
-    &__container{
+    &__container {
       height: 50%;
       padding: 0.5rem 0rem;
     }
@@ -184,66 +182,64 @@
       &__button {
         padding: r.rem(16px) r.rem(300px);
 
-        @include b.buttons(v.$ea-dark-color,
-        v.$ea-light-color,
-        0px,
-        none,
-        none);
+        @include b.buttons(
+          v.$ea-dark-color,
+          v.$ea-light-color,
+          0px,
+          none,
+          none
+        );
 
         &:hover {
           padding: r.rem(18px) r.rem(310px);
           margin: r.rem(-2px) r.rem(-4px);
         }
-
       }
-      
     }
   }
 }
 
 @media (max-width: 750px) {
-  .banner-top{
-
+  .banner-top {
     &__bg-image {
-    height: 100%;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(./assets/f1-banner-top-resize-750.png);
+      height: 100%;
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url(./assets/f1-banner-top-resize-750.png);
     }
 
-    &__contents{
-      svg{
+    &__contents {
+      svg {
         height: 96px;
         width: 300px;
       }
-      &__title{
+      &__title {
         font-size: 32px;
       }
-      &__p{
+      &__p {
         font-size: 1rem;
       }
 
       &__button {
         padding: r.rem(16px) r.rem(250px);
 
-        @include b.buttons(v.$ea-dark-color,
-        v.$ea-light-color,
-        0px,
-        none,
-        none);
+        @include b.buttons(
+          v.$ea-dark-color,
+          v.$ea-light-color,
+          0px,
+          none,
+          none
+        );
 
         &:hover {
           padding: r.rem(18px) r.rem(260px);
           margin: r.rem(-2px) r.rem(-4px);
         }
-
       }
-
     }
   }
-  
 }
 
 @media (max-width: 680px) {
@@ -252,17 +248,18 @@
       &__button {
         padding: r.rem(16px) r.rem(220px);
 
-        @include b.buttons(v.$ea-dark-color,
-        v.$ea-light-color,
-        0px,
-        none,
-        none);
+        @include b.buttons(
+          v.$ea-dark-color,
+          v.$ea-light-color,
+          0px,
+          none,
+          none
+        );
 
         &:hover {
-          padding: r.rem(18px) r.rem(230px); 
+          padding: r.rem(18px) r.rem(230px);
           margin: r.rem(-2px) r.rem(-4px);
         }
-
       }
     }
   }
@@ -270,46 +267,45 @@
 
 @media (max-width: 575px) {
   .banner-top {
-    &__bg-image{
+    &__bg-image {
       height: 50%;
       background-image: url(./assets/banner-top-photo-ea.png);
       background-color: v.$ea-dark-color;
     }
-    &__container{
+    &__container {
       margin-top: 0;
-      height: 60%; 
+      height: 60%;
     }
-    &__contents{
-      &__title{
-        font-size: 32px; 
+    &__contents {
+      &__title {
+        font-size: 32px;
       }
-      svg{
+      svg {
         height: 96px;
         width: 300px;
       }
-      &__p{
+      &__p {
         font-size: 1rem;
       }
 
       &__button {
         padding: r.rem(16px) r.rem(160px);
 
-        @include b.buttons(v.$ea-dark-color,
-        v.$ea-light-color,
-        0px,
-        none,
-        none);
+        @include b.buttons(
+          v.$ea-dark-color,
+          v.$ea-light-color,
+          0px,
+          none,
+          none
+        );
 
         &:hover {
-          padding: r.rem(18px) r.rem(170px); 
+          padding: r.rem(18px) r.rem(170px);
           margin: r.rem(-2px) r.rem(-4px);
         }
-
       }
-
     }
   }
-  
 }
 
 @media (max-width: 460px) {
@@ -318,17 +314,18 @@
       &__button {
         padding: r.rem(16px) r.rem(120px);
 
-        @include b.buttons(v.$ea-dark-color,
-        v.$ea-light-color,
-        0px,
-        none,
-        none);
+        @include b.buttons(
+          v.$ea-dark-color,
+          v.$ea-light-color,
+          0px,
+          none,
+          none
+        );
 
         &:hover {
-          padding: r.rem(18px) r.rem(130px);  
+          padding: r.rem(18px) r.rem(130px);
           margin: r.rem(-2px) r.rem(-4px);
         }
-
       }
     }
   }
@@ -344,19 +341,19 @@
       &__button {
         padding: r.rem(16px) r.rem(90px);
 
-        @include b.buttons(v.$ea-dark-color,
-        v.$ea-light-color,
-        0px,
-        none,
-        none);
+        @include b.buttons(
+          v.$ea-dark-color,
+          v.$ea-light-color,
+          0px,
+          none,
+          none
+        );
 
         &:hover {
-          padding: r.rem(18px) r.rem(100px); 
+          padding: r.rem(18px) r.rem(100px);
           margin: r.rem(-2px) r.rem(-4px);
         }
-
       }
-
     }
   }
 }

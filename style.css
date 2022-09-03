@@ -456,6 +456,7 @@ header {
     display: none;
   }
 }
+/* MARCO SIMILE = BANNER TOP F1 22 */
 .banner-top {
   width: 100%;
   max-height: 37.5rem;
@@ -524,6 +525,7 @@ header {
   margin: -0.125rem -0.25rem;
 }
 
+/* RESPONSIVITY AND MEDIA QUERIES */
 @media (max-width: 1920px) {
   .banner-top__container {
     top: 8rem;
