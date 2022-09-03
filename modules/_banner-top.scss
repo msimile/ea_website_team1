@@ -18,6 +18,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(./assets/f1-banner-top.png);
+    background-color: v.$ea-light-color ;
 
     svg {
       display: none;
@@ -52,7 +53,7 @@
     }
 
     &__p {
-      margin-bottom: 40px;
+      margin-bottom: r.rem(40px);
       font-size: r.rem(18px);
     }
 
@@ -89,7 +90,7 @@
 
     &__contents {
       &__title {
-        font-size: 50px;
+        font-size: r.rem(50px);
       }
     }
   }
@@ -110,9 +111,9 @@
 
       svg {
         display: block;
-        margin-right: 136px;
-        height: 208px;
-        width: 400px;
+        margin-right: r.rem(136px);
+        height: r.rem(208px);
+        width: r.rem(400px);
       }
     }
 
@@ -128,7 +129,7 @@
       justify-content: center;
 
       &__title {
-        font-size: 40px;
+        font-size: r.rem(40px);
       }
 
       svg {
@@ -212,11 +213,11 @@
 
     &__contents {
       svg {
-        height: 96px;
-        width: 300px;
+        height: r.rem(96px);
+        width: r.rem(300px);
       }
       &__title {
-        font-size: 32px;
+        font-size: r.rem(32px);
       }
       &__p {
         font-size: 1rem;
@@ -278,11 +279,11 @@
     }
     &__contents {
       &__title {
-        font-size: 32px;
+        font-size: r.rem(32px);
       }
       svg {
-        height: 96px;
-        width: 300px;
+        height: r.rem(96px);
+        width: r.rem(300px);
       }
       &__p {
         font-size: 1rem;
@@ -335,7 +336,7 @@
   .banner-top {
     &__contents {
       &__title {
-        font-size: 28px;
+        font-size: r.rem(28px);
       }
 
       &__button {

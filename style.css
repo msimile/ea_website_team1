@@ -471,6 +471,7 @@ header {
   background-repeat: no-repeat;
   background-size: contain;
   background-image: url(./assets/f1-banner-top.png);
+  background-color: rgb(243, 243, 243);
 }
 .banner-top__bg-image svg {
   display: none;
@@ -501,7 +502,7 @@ header {
   font-family: "Electronic Arts Text";
 }
 .banner-top__contents__p {
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
   font-size: 1.125rem;
 }
 .banner-top__contents__button {
@@ -531,7 +532,7 @@ header {
     top: 8rem;
   }
   .banner-top__contents__title {
-    font-size: 50px;
+    font-size: 3.125rem;
   }
 }
 @media (max-width: 1400px) {
@@ -549,9 +550,9 @@ header {
   }
   .banner-top__bg-image svg {
     display: block;
-    margin-right: 136px;
-    height: 208px;
-    width: 400px;
+    margin-right: 8.5rem;
+    height: 13rem;
+    width: 25rem;
   }
   .banner-top__container {
     height: 40%;
@@ -564,7 +565,7 @@ header {
     justify-content: center;
   }
   .banner-top__contents__title {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
   .banner-top__contents svg {
     display: none;
@@ -623,11 +624,11 @@ header {
     background-image: url(./assets/f1-banner-top-resize-750.png);
   }
   .banner-top__contents svg {
-    height: 96px;
-    width: 300px;
+    height: 6rem;
+    width: 18.75rem;
   }
   .banner-top__contents__title {
-    font-size: 32px;
+    font-size: 2rem;
   }
   .banner-top__contents__p {
     font-size: 1rem;
@@ -668,11 +669,11 @@ header {
     height: 60%;
   }
   .banner-top__contents__title {
-    font-size: 32px;
+    font-size: 2rem;
   }
   .banner-top__contents svg {
-    height: 96px;
-    width: 300px;
+    height: 6rem;
+    width: 18.75rem;
   }
   .banner-top__contents__p {
     font-size: 1rem;
@@ -704,7 +705,7 @@ header {
 }
 @media (max-width: 375px) {
   .banner-top__contents__title {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
   .banner-top__contents__button {
     padding: 1rem 5.625rem;
