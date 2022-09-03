@@ -571,27 +571,14 @@ header {
     margin: 0.75rem;
   }
   .banner-top__contents__button {
-    padding: 1rem 25rem;
+    padding: 1rem 19.375rem;
     border-radius: rem(3px);
     background-color: rgb(22, 22, 22);
     border: rem(0px) none none;
     color: rgb(243, 243, 243);
   }
   .banner-top__contents__button:hover {
-    padding: 1.125rem 25.625rem;
-    margin: -0.125rem -0.25rem;
-  }
-}
-@media (max-width: 988px) {
-  .banner-top__contents__button {
-    padding: 1rem 22.5rem;
-    border-radius: rem(3px);
-    background-color: rgb(22, 22, 22);
-    border: rem(0px) none none;
-    color: rgb(243, 243, 243);
-  }
-  .banner-top__contents__button:hover {
-    padding: 1.125rem 23.125rem;
+    padding: 1.125rem 20rem;
     margin: -0.125rem -0.25rem;
   }
 }
@@ -644,27 +631,27 @@ header {
     font-size: 1rem;
   }
   .banner-top__contents__button {
-    padding: 1rem 16.25rem;
+    padding: 1rem 15.625rem;
     border-radius: rem(3px);
     background-color: rgb(22, 22, 22);
     border: rem(0px) none none;
     color: rgb(243, 243, 243);
   }
   .banner-top__contents__button:hover {
-    padding: 1.125rem 16.875rem;
+    padding: 1.125rem 16.25rem;
     margin: -0.125rem -0.25rem;
   }
 }
 @media (max-width: 680px) {
   .banner-top__contents__button {
-    padding: 1rem 13.125rem;
+    padding: 1rem 13.75rem;
     border-radius: rem(3px);
     background-color: rgb(22, 22, 22);
     border: rem(0px) none none;
     color: rgb(243, 243, 243);
   }
   .banner-top__contents__button:hover {
-    padding: 1.125rem 13.75rem;
+    padding: 1.125rem 14.375rem;
     margin: -0.125rem -0.25rem;
   }
 }
@@ -702,14 +689,14 @@ header {
 }
 @media (max-width: 460px) {
   .banner-top__contents__button {
-    padding: 1rem 6.25rem;
+    padding: 1rem 7.5rem;
     border-radius: rem(3px);
     background-color: rgb(22, 22, 22);
     border: rem(0px) none none;
     color: rgb(243, 243, 243);
   }
   .banner-top__contents__button:hover {
-    padding: 1.125rem 6.875rem;
+    padding: 1.125rem 8.125rem;
     margin: -0.125rem -0.25rem;
   }
 }
