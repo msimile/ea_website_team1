@@ -456,10 +456,12 @@ header {
     display: none;
   }
 }
+/* MARCO SIMILE = BANNER TOP F1 22 */
 .banner-top {
   width: 100%;
   max-height: 37.5rem;
   height: 34.3125rem;
+  position: relative;
   position: relative;
 }
 .banner-top__bg-image {
@@ -468,20 +470,31 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url(../assets/f11-banner.png);
+  background-image: url(./assets/f1-banner-top.png);
+  background-color: rgb(243, 243, 243);
+}
+.banner-top__bg-image svg {
+  display: none;
+}
+.banner-top__container {
+  height: 100%;
+  width: 100%;
+  background-color: none;
+  position: absolute;
+  left: -18rem;
+  top: 6rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 .banner-top__contents {
-  height: 30%;
-  width: 30%;
-  min-width: 400px;
+  height: 50%;
+  width: 33%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
   align-items: center;
-  position: absolute;
-  bottom: 40%;
-  right: 20%;
 }
 .banner-top__contents__title {
   font-size: 54px;
@@ -489,7 +502,7 @@ header {
   font-family: "Electronic Arts Text";
 }
 .banner-top__contents__p {
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
   font-size: 1.125rem;
 }
 .banner-top__contents__button {
@@ -513,60 +526,197 @@ header {
   margin: -0.125rem -0.25rem;
 }
 
-@media (max-width: 1024px) {
+/* RESPONSIVITY AND MEDIA QUERIES */
+@media (max-width: 1920px) {
+  .banner-top__container {
+    top: 8rem;
+  }
+  .banner-top__contents__title {
+    font-size: 3.125rem;
+  }
+}
+@media (max-width: 1400px) {
   .banner-top {
     display: flex;
     flex-direction: column;
+    position: initial;
   }
   .banner-top__bg-image {
-    height: 50%;
+    height: 60%;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
-  .banner-top__contents {
-    width: 100%;
+  .banner-top__bg-image svg {
+    display: block;
+    margin-right: 8.5rem;
+    height: 13rem;
+    width: 25rem;
+  }
+  .banner-top__container {
+    height: 40%;
     position: initial;
-    flex-direction: column;
-    justify-content: flex-start;
-    transform: scale(0.85);
+    background-color: none;
   }
-  .banner-top__mobile-contents {
-    background-color: rgb(243, 243, 243);
-    height: 50%;
-    max-height: 50%;
-    overflow-x: hidden;
-  }
-}
-@media (max-width: 768px) {
   .banner-top__contents {
-    transform: scale(1);
+    height: 100%;
     width: 100%;
-  }
-  .banner-top__contents__svg {
-    height: 87px;
-    transform: translateY(-25px);
+    justify-content: center;
   }
   .banner-top__contents__title {
-    font-size: 2.375rem;
-    width: 100%;
+    font-size: 2.5rem;
+  }
+  .banner-top__contents svg {
+    display: none;
+  }
+  .banner-top__contents__p {
+    margin: 0.75rem;
+  }
+  .banner-top__contents__button {
+    padding: 1rem 19.375rem;
+    border-radius: rem(3px);
+    background-color: rgb(22, 22, 22);
+    border: rem(0px) none none;
+    color: rgb(243, 243, 243);
+  }
+  .banner-top__contents__button:hover {
+    padding: 1.125rem 20rem;
+    margin: -0.125rem -0.25rem;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 920px) {
   .banner-top__bg-image {
-    height: 40%;
+    height: 50%;
+  }
+  .banner-top__bg-image svg {
+    display: none;
+  }
+  .banner-top__container {
+    height: 50%;
+    padding: 0.5rem 0rem;
+  }
+  .banner-top__contents {
+    justify-content: space-between;
+  }
+  .banner-top__contents svg {
+    display: block;
+  }
+  .banner-top__contents__button {
+    padding: 1rem 18.75rem;
+    border-radius: rem(3px);
+    background-color: rgb(22, 22, 22);
+    border: rem(0px) none none;
+    color: rgb(243, 243, 243);
+  }
+  .banner-top__contents__button:hover {
+    padding: 1.125rem 19.375rem;
+    margin: -0.125rem -0.25rem;
+  }
+}
+@media (max-width: 750px) {
+  .banner-top__bg-image {
+    height: 100%;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url(../assets/banner-top-photo-ea.png);
+    background-size: cover;
+    background-image: url(./assets/f1-banner-top-resize-750.png);
   }
-  .banner-top__contents {
-    transform: scale(0.85);
+  .banner-top__contents svg {
+    height: 6rem;
+    width: 18.75rem;
   }
-  .banner-top__mobile-contents {
-    display: flex;
-    justify-content: center;
+  .banner-top__contents__title {
+    font-size: 2rem;
+  }
+  .banner-top__contents__p {
+    font-size: 1rem;
+  }
+  .banner-top__contents__button {
+    padding: 1rem 15.625rem;
+    border-radius: rem(3px);
+    background-color: rgb(22, 22, 22);
+    border: rem(0px) none none;
+    color: rgb(243, 243, 243);
+  }
+  .banner-top__contents__button:hover {
+    padding: 1.125rem 16.25rem;
+    margin: -0.125rem -0.25rem;
+  }
+}
+@media (max-width: 680px) {
+  .banner-top__contents__button {
+    padding: 1rem 13.75rem;
+    border-radius: rem(3px);
+    background-color: rgb(22, 22, 22);
+    border: rem(0px) none none;
+    color: rgb(243, 243, 243);
+  }
+  .banner-top__contents__button:hover {
+    padding: 1.125rem 14.375rem;
+    margin: -0.125rem -0.25rem;
+  }
+}
+@media (max-width: 575px) {
+  .banner-top__bg-image {
+    height: 50%;
+    background-image: url(./assets/banner-top-photo-ea.png);
+    background-color: rgb(22, 22, 22);
+  }
+  .banner-top__container {
+    margin-top: 0;
     height: 60%;
-    max-height: 60%;
-    overflow-x: hidden;
+  }
+  .banner-top__contents__title {
+    font-size: 2rem;
+  }
+  .banner-top__contents svg {
+    height: 6rem;
+    width: 18.75rem;
+  }
+  .banner-top__contents__p {
+    font-size: 1rem;
+  }
+  .banner-top__contents__button {
+    padding: 1rem 10rem;
+    border-radius: rem(3px);
+    background-color: rgb(22, 22, 22);
+    border: rem(0px) none none;
+    color: rgb(243, 243, 243);
+  }
+  .banner-top__contents__button:hover {
+    padding: 1.125rem 10.625rem;
+    margin: -0.125rem -0.25rem;
+  }
+}
+@media (max-width: 460px) {
+  .banner-top__contents__button {
+    padding: 1rem 7.5rem;
+    border-radius: rem(3px);
+    background-color: rgb(22, 22, 22);
+    border: rem(0px) none none;
+    color: rgb(243, 243, 243);
+  }
+  .banner-top__contents__button:hover {
+    padding: 1.125rem 8.125rem;
+    margin: -0.125rem -0.25rem;
+  }
+}
+@media (max-width: 375px) {
+  .banner-top__contents__title {
+    font-size: 1.75rem;
+  }
+  .banner-top__contents__button {
+    padding: 1rem 5.625rem;
+    border-radius: rem(3px);
+    background-color: rgb(22, 22, 22);
+    border: rem(0px) none none;
+    color: rgb(243, 243, 243);
+  }
+  .banner-top__contents__button:hover {
+    padding: 1.125rem 6.25rem;
+    margin: -0.125rem -0.25rem;
   }
 }
 .logo_img, #giochi-in-evidenza .game-card-img-content a {

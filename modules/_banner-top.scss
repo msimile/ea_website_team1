@@ -1,3 +1,5 @@
+/* MARCO SIMILE = BANNER TOP F1 22 */
+
 @use "buttons" as b;
 @use "variabili" as v;
 @use "px-to-rem" as r;
@@ -7,6 +9,7 @@
   max-height: r.rem(600px);
   height: r.rem(549px);
   position: relative;
+  position: relative;
 
   &__bg-image {
     height: 100%;
@@ -14,21 +17,34 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url(../assets/f11-banner.png);
+    background-image: url(./assets/f1-banner-top.png);
+    background-color: v.$ea-light-color ;
+
+    svg {
+      display: none;
+    }
+  }
+
+  &__container {
+    height: 100%;
+    width: 100%;
+    background-color: none;
+    position: absolute;
+    left: r.rem(-288px);
+    top: r.rem(96px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
   }
 
   &__contents {
-    height: 30%;
-    width: 30%;
-    min-width: 400px;
+    height: 50%;
+    width: 33%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
     align-items: center;
-    position: absolute;
-    bottom: 40%;
-    right: 20%;
 
     &__title {
       font-size: v.$header;
@@ -37,7 +53,7 @@
     }
 
     &__p {
-      margin-bottom: 40px;
+      margin-bottom: r.rem(40px);
       font-size: r.rem(18px);
     }
 
@@ -54,13 +70,7 @@
         color: v.$ea-light-color;
       }
 
-      @include b.buttons(
-        v.$ea-dark-color,
-        v.$ea-light-color,
-        0px,
-        none,
-        none
-      );
+      @include b.buttons(v.$ea-dark-color, v.$ea-light-color, 0px, none, none);
 
       &:hover {
         padding: r.rem(18px) r.rem(22px);
@@ -70,75 +80,281 @@
   }
 }
 
-@media (max-width: 1024px) {
+/* RESPONSIVITY AND MEDIA QUERIES */
+
+@media (max-width: 1920px) {
   .banner-top {
-    display: flex;
-    flex-direction: column;
+    &__container {
+      top: r.rem(128px);
+    }
 
-      &__bg-image {
-        height: 50%;
-        
-      }
-
-      &__contents {
-        width: 100%;
-        position: initial;
-        flex-direction: column;
-        justify-content: flex-start;
-        transform: scale(0.85);
-      }
-
-      &__mobile-contents{
-        background-color: v.$ea-light-color;
-        height: 50%;
-        max-height: 50%;
-        overflow-x: hidden;
-      }
-  }
-}
-
-@media (max-width: 768px) {
-  .banner-top {
     &__contents {
-      transform: scale(1);
-      width: 100%;
-
-      &__svg {
-        height: 87px;
-        transform: translateY(-25px)
-      }
-
-
       &__title {
-        font-size:  r.rem(38px);
-        width: 100%;
+        font-size: r.rem(50px);
       }
     }
   }
+}
 
+@media (max-width: 1400px) {
+  .banner-top {
+    display: flex;
+    flex-direction: column;
+    position: initial;
+
+    &__bg-image {
+      height: 60%;
+      background-size: cover;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      svg {
+        display: block;
+        margin-right: r.rem(136px);
+        height: r.rem(208px);
+        width: r.rem(400px);
+      }
+    }
+
+    &__container {
+      height: 40%;
+      position: initial;
+      background-color: none;
+    }
+
+    &__contents {
+      height: 100%;
+      width: 100%;
+      justify-content: center;
+
+      &__title {
+        font-size: r.rem(40px);
+      }
+
+      svg {
+        display: none;
+      }
+
+      &__p {
+        margin: 0.75rem;
+      }
+
+      &__button {
+        padding: r.rem(16px) r.rem(310px);
+
+        @include b.buttons(
+          v.$ea-dark-color,
+          v.$ea-light-color,
+          0px,
+          none,
+          none
+        );
+
+        &:hover {
+          padding: r.rem(18px) r.rem(320px);
+          margin: r.rem(-2px) r.rem(-4px);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 920px) {
+  .banner-top {
+    &__bg-image {
+      height: 50%;
+      svg {
+        display: none;
+      }
+    }
+
+    &__container {
+      height: 50%;
+      padding: 0.5rem 0rem;
+    }
+
+    &__contents {
+      justify-content: space-between;
+      svg {
+        display: block;
+      }
+
+      &__button {
+        padding: r.rem(16px) r.rem(300px);
+
+        @include b.buttons(
+          v.$ea-dark-color,
+          v.$ea-light-color,
+          0px,
+          none,
+          none
+        );
+
+        &:hover {
+          padding: r.rem(18px) r.rem(310px);
+          margin: r.rem(-2px) r.rem(-4px);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .banner-top {
+    &__bg-image {
+      height: 100%;
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url(./assets/f1-banner-top-resize-750.png);
+    }
+
+    &__contents {
+      svg {
+        height: r.rem(96px);
+        width: r.rem(300px);
+      }
+      &__title {
+        font-size: r.rem(32px);
+      }
+      &__p {
+        font-size: 1rem;
+      }
+
+      &__button {
+        padding: r.rem(16px) r.rem(250px);
+
+        @include b.buttons(
+          v.$ea-dark-color,
+          v.$ea-light-color,
+          0px,
+          none,
+          none
+        );
+
+        &:hover {
+          padding: r.rem(18px) r.rem(260px);
+          margin: r.rem(-2px) r.rem(-4px);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .banner-top {
+    &__contents {
+      &__button {
+        padding: r.rem(16px) r.rem(220px);
+
+        @include b.buttons(
+          v.$ea-dark-color,
+          v.$ea-light-color,
+          0px,
+          none,
+          none
+        );
+
+        &:hover {
+          padding: r.rem(18px) r.rem(230px);
+          margin: r.rem(-2px) r.rem(-4px);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .banner-top {
+    &__bg-image {
+      height: 50%;
+      background-image: url(./assets/banner-top-photo-ea.png);
+      background-color: v.$ea-dark-color;
+    }
+    &__container {
+      margin-top: 0;
+      height: 60%;
+    }
+    &__contents {
+      &__title {
+        font-size: r.rem(32px);
+      }
+      svg {
+        height: r.rem(96px);
+        width: r.rem(300px);
+      }
+      &__p {
+        font-size: 1rem;
+      }
+
+      &__button {
+        padding: r.rem(16px) r.rem(160px);
+
+        @include b.buttons(
+          v.$ea-dark-color,
+          v.$ea-light-color,
+          0px,
+          none,
+          none
+        );
+
+        &:hover {
+          padding: r.rem(18px) r.rem(170px);
+          margin: r.rem(-2px) r.rem(-4px);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .banner-top {
+    &__contents {
+      &__button {
+        padding: r.rem(16px) r.rem(120px);
+
+        @include b.buttons(
+          v.$ea-dark-color,
+          v.$ea-light-color,
+          0px,
+          none,
+          none
+        );
+
+        &:hover {
+          padding: r.rem(18px) r.rem(130px);
+          margin: r.rem(-2px) r.rem(-4px);
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 375px) {
   .banner-top {
-    &__bg-image {
-      height: 40%;
-      width: 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-image: url(../assets/banner-top-photo-ea.png);
-    }
-
     &__contents {
-      transform: scale(0.85);
-    }
+      &__title {
+        font-size: r.rem(28px);
+      }
 
-    &__mobile-contents{
-      display: flex;
-      justify-content: center;
-      height: 60%;
-      max-height: 60%;
-      overflow-x: hidden;
+      &__button {
+        padding: r.rem(16px) r.rem(90px);
+
+        @include b.buttons(
+          v.$ea-dark-color,
+          v.$ea-light-color,
+          0px,
+          none,
+          none
+        );
+
+        &:hover {
+          padding: r.rem(18px) r.rem(100px);
+          margin: r.rem(-2px) r.rem(-4px);
+        }
+      }
     }
   }
 }
