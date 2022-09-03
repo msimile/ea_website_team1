@@ -1000,6 +1000,7 @@ header {
   max-width: 66%;
   display: flex;
   margin: auto;
+  margin-top: 1rem;
 }
 #f-bottom-contentwrapper .f-bottom-linkwrapper {
   flex-grow: 1;
@@ -1109,6 +1110,7 @@ header {
 
 @media screen and (min-width: 1024px) {
   #footer-bottom {
+    margin-top: 1rem;
     margin-bottom: 4rem;
   }
   .f-bottom-logowrapper {
@@ -1165,6 +1167,7 @@ header {
 }
 @media screen and (max-width: 1024px) {
   #footer-bottom {
+    margin-top: 1rem;
     margin-bottom: 2rem;
   }
   .f-bottom-logowrapper {
