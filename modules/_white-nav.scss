@@ -74,6 +74,12 @@ header {
 
     &__mobile-menu-container {
         transform: scale(0.70);
+        &:hover{
+            cursor: pointer;
+            .white-nav__mobile-menu{
+                background-color: variabili.$origin-brand-color;
+            }
+        }
     }
 
     &__mobile-menu {
