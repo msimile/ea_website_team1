@@ -28,12 +28,12 @@ Riproduzione della homepage del sito EA 🎮
 
 ## Breakpoint da considerare per la responsività 📌
 
-Tre principali:
+-Tre principali:
 - x1024 (schermo)
 - x768 (tablet)
 - x375 (mobile)
 
-Aggiunta di quelli intermedi per una full responsivity fluida
+-Aggiunta di quelli intermedi per una full responsivity fluida
 
 ## Meet settimanali 📅
 
