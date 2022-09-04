@@ -107,6 +107,7 @@
 
   .game-card-img-content:hover {
     box-shadow: 0 14px 20px 0 rgb(80 80 80 / 24%);
+    cursor: pointer;
 
     &::before {
       content: "";
