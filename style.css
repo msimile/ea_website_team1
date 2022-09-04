@@ -807,6 +807,7 @@ header {
 }
 #giochi-in-evidenza .game-card-img-content:hover {
   box-shadow: 0 14px 20px 0 rgba(80, 80, 80, 0.24);
+  cursor: pointer;
 }
 #giochi-in-evidenza .game-card-img-content:hover::before {
   content: "";
@@ -1372,6 +1373,9 @@ header {
 .aside-wrapper-main-top-card-content-img {
   width: 100%;
 }
+.aside-wrapper-main-top-card-content:hover {
+  cursor: pointer;
+}
 .aside-wrapper-main-top-card-content:hover .logo_img_ea {
   width: 30%;
 }
@@ -1394,6 +1398,7 @@ header {
   margin-bottom: 4rem;
 }
 .aside-wrapper-main-cards-content {
+  cursor: pointer;
   position: relative;
   width: calc(50% - 1rem);
 }

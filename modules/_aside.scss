@@ -90,6 +90,7 @@
       }
 
       &:hover{
+        cursor: pointer;
 
         .logo_img_ea{
           width: 30%;
@@ -123,6 +124,7 @@
 
       &-content {
         @extend %flex-center;
+        cursor: pointer;
         position: relative;
         width: calc(50% - (v.$small-gap / 2));
         
