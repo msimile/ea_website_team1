@@ -24,7 +24,7 @@ Riproduzione della homepage del sito EA 🎮
 - Nomenclatura per i branch "feature" ---> es: feature/header , feature/main , feature/aside , feature/nav
 - Nomenclatura per i commit --->  conventionalcommits.org
 - Nomenclatura specifica per i moduli SCSS ---> es: " _first-footer.scss ", " _white-nav.scss " , " _black-nav.scss " , " _banner-top.scss "
-- Nomenclatura per le classi : BEM notation with grandchildren solution ---> es: banner-top > banner-top__contents > banner-top__contents__title / banner-top__contents__
+- Nomenclatura per le classi : BEM notation with grandchildren solution ---> es: banner-top > banner-top__contents > banner-top__contents__title / banner-top__contents__p--blue
 
 ## Breakpoint da considerare per la responsività 📌
 
