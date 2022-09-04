@@ -308,6 +308,12 @@ header {
 .white-nav__mobile-menu-container {
   transform: scale(0.7);
 }
+.white-nav__mobile-menu-container:hover {
+  cursor: pointer;
+}
+.white-nav__mobile-menu-container:hover .white-nav__mobile-menu {
+  background-color: rgb(255, 71, 71);
+}
 .white-nav__mobile-menu {
   width: 1.875rem;
   height: 0.15625rem;
