@@ -5,7 +5,7 @@ Riproduzione della homepage del sito EA 🎮
 ## Membri del team 👨🏻‍💻
 
 - [@Alessandro Sgherri](https://github.com/AlexSgherri)
-- Francesco M. Ferri
+- [Francesco M. Ferri](https://github.com/Francxmf)
 - [Ivan Frasca](https://github.com/Ivanfras98)
 - [Lorenzo Curreli](https://github.com/loricurreli)
 - [Marco Simile](https://github.com/msimile)
