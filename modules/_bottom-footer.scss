@@ -1,0 +1,333 @@
+@use "buttons" as b;
+@use "variabili" as v;
+@use "px-to-rem" as c;
+
+#footer-bottom {
+  width: 100%;
+  height: auto;
+  align-content: center;
+  justify-content: center;
+}
+
+#f-bottom-contentwrapper {
+  max-width: 66%;
+  display: flex;
+  margin: auto;
+  margin-top: 1rem;
+  
+  .f-bottom-linkwrapper {
+    flex-grow: 1;
+    a {
+      text-decoration: none;
+      color: v.$ea-dark-color;
+    }
+  }
+
+  .f-bottom-upperlinkslot {
+    justify-content: space-between;
+    gap: c.rem(60px);
+    margin-bottom: c.rem(12px);
+
+    .f-b-userlinks-container {
+      margin-right: c.rem(20px);
+      margin-top: c.rem(12px);
+      a {
+        display: inline-block;
+      }
+    }
+  }
+
+  .f-b-regionalselectors-container {
+    gap: c.rem(35px);
+    cursor: pointer;
+
+    .f-b-rs-prices-btn,
+    .f-b-rs-language-btn {
+      border: 2px solid #c2c2c2;
+      display: flex;
+      border-radius: 3px;
+      padding: 0.4rem 0.4rem 0.4rem 0.8rem;
+      transition: all 0.1s ease-in-out;
+      &:hover{
+        padding: 0.6rem 0.6rem 0.6rem 0.9rem;
+        margin: -0.2rem -0.2rem -0.2rem -0.1rem;
+      }
+
+      p {
+        width: 128px;
+        font-size: c.rem(13px);
+        color: #5a5a58;
+        //padding: 0.42rem 0.22rem 0.42rem 0.22rem;
+        transition: transform 0.3s ease-in-out;
+      }
+      .f-b-rs-btn-title2 {
+        display: inline-block;
+        color: v.$ea-dark-color;
+      }
+      .rs-btn-arrow {
+        display: inline-block;
+        transform: rotate(90deg);
+        font-size: c.rem(19px);
+      }
+
+      #f-b-rs-prices-dropdown,
+      #f-b-rs-language-dropdown {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        max-width: 300px;
+        overflow: visible;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        border: 2px solid #c2c2c2;
+        border-radius: 3px;
+        z-index: 1;
+        margin-top: 3.13rem;
+
+        li {
+          color: v.$ea-dark-color;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: inline-block;
+          font-size: c.rem(14.5px);
+        }
+      }
+      #f-b-rs-prices-dropdown.show {
+        display: block;
+      }
+      #f-b-rs-language-dropdown.show {
+        display: block;
+      }
+    }
+    :hover {
+      // .f-b-rs-prices-btn,
+      // .f-b-rs-language-btn {
+      //   margin: -0.1rem;
+      //   padding: 0.1rem 0.1rem 0.1rem 0.1rem;
+      // }
+      p {
+        
+      }
+      .rs-btn-arrow {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  .f-bottom-lowerlinkslot {
+    .ft-b-lelink-copyrightline {
+      display: block;
+    }
+
+    a {
+      font-size: c.rem(14.5px);
+      display: inline-block;
+      margin-right: c.rem(30px);
+    }
+
+    .f-b-TRUSTe-container {
+      margin-bottom: 0;
+      margin-top: auto;
+
+      .f-b-TRUSTe-img {
+        width: 11rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #footer-bottom {
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+  }
+  .f-bottom-logowrapper {
+    margin-left: 1.8rem;
+    .f-bottom-EALOGO {
+      width: 4rem;
+      max-width: 4rem;
+    }
+  }
+
+  .f-bottom-linkwrapper {
+    margin: 0 1.8rem;
+  }
+
+  .f-bottom-upperlinkslot {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    gap: c.rem(60px);
+    margin-bottom: c.rem(12px);
+    a {
+      margin-right: c.rem(40px);
+      margin-bottom: c.rem(20px);
+      font-size: c.rem(16.7px);
+    }
+  }
+
+  .f-b-regionalselectors-container {
+    display: flex;
+  }
+  .f-b-rs-prices-btn,
+  .f-b-rs-language-btn {
+    width: fit-content;
+    border: 2px solid #c2c2c2;
+    display: flex;
+    height: fit-content;
+    border-radius: 3px;
+    padding: 0.4rem 0.4rem 0.4rem 0.8rem;
+
+    .rs-btn-arrow {
+      margin-left: 5rem;
+    }
+  }
+  .f-bottom-lowerlinkslot {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    gap: c.rem(150px);
+  }
+
+  .f-b-TRUSTe-img {
+    margin-left: 3rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #footer-bottom {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .f-bottom-logowrapper {
+    margin-left: 1.8rem;
+    .f-bottom-EALOGO {
+      width: 3rem;
+      max-width: 3rem;
+    }
+  }
+
+  #f-bottom-contentwrapper {
+    max-width: 94%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+    .f-bottom-linkwrapper {
+      margin: 0 1.8rem;
+    }
+  }
+  .f-bottom-upperlinkslot {
+    display: block;
+    a {
+      display: inline-block;
+    }
+    .f-b-userlinks-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+    }
+  }
+  .f-b-regionalselectors-container {
+    width: 88%;
+    margin-left: 0;
+    justify-content: space-between;
+    display: flex;
+
+    .f-b-rs-prices-btn,
+    .f-b-rs-language-btn {
+      width: 50rem;
+      border: 2px solid #c2c2c2;
+      height: fit-content;
+      border-radius: 3px;
+      padding: 0.4rem 0.4rem 0.4rem 0.8rem;
+
+      .f-b-rs-btn-title2 {
+        margin-top: 0.2rem;
+      }
+      .rs-btn-arrow {
+        margin-left: 14rem;
+      }
+    }
+    :hover {
+      .f-b-rs-prices-btn,
+      .f-b-rs-language-btn {
+        margin: -0.1rem;
+        margin-bottom: -0.2rem;
+      }
+    }
+  }
+
+  .ft-b-lelink-copyrightline {
+    font-size: c.rem(15px);
+  }
+  .f-b-TRUSTe-img {
+    margin-top: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #f-bottom-contentwrapper {
+    max-width: 100%;
+    display: flex;
+  }
+
+  .f-bottom-upperlinkslot {
+    display: block;
+    a {
+      display: inline-block;
+      margin-right: 1rem;
+      margin-bottom: 0.7rem;
+    }
+    .f-b-userlinks-container {
+      display: inline-block;
+      align-items: flex-start;
+      margin-bottom: 1.3rem;
+    }
+  }
+
+  .f-b-regionalselectors-container {
+    width: 100%;
+    margin-left: 0;
+       display: flex;
+    flex-direction: column;
+    gap: c.rem(10px);
+
+    .f-b-rs-prices-btn,
+    .f-b-rs-language-btn {
+      width: 100%;
+      border: 2px solid #c2c2c2;
+      height: fit-content;
+      border-radius: 3px;
+      padding: 0.4rem 0.4rem 0.4rem 0.8rem;
+
+      .f-b-rs-btn-title2 {
+        margin-top: 0.2rem;
+      }
+      .rs-btn-arrow {
+        margin-left: 19rem;
+      }
+    }
+  }
+}
+
+@media(max-width : 400px){
+    
+  .f-b-regionalselectors-container {
+        display: flex;
+    flex-direction: column;
+       
+    .f-b-rs-prices-btn,
+    .f-b-rs-language-btn {
+         margin: 0px;
+
+      .f-b-rs-btn-title2 {
+        
+      }
+      .rs-btn-arrow {
+        margin-left: 16rem;
+      }
+    }
+  }
+}

@@ -16,15 +16,15 @@
     
     
     .banner1{
-        color: $ea-light-color;
+        color: variabili.$ea-light-color;
         &:nth-child(2){
-            @include buttons(transparent,$ea-light-color, 2px, $ea-light-color, solid);  //estendo la mixin dei bottoni
+            @include buttons(transparent,variabili.$ea-light-color, 2px, variabili.$ea-light-color, solid);  //estendo la mixin dei bottoni
         }
     }
     .banner2{
-        color: $ea-dark-color;
+        color: variabili.$ea-dark-color;
         &:nth-child(2){
-            @include buttons(transparent,$ea-dark-color, 2px, $ea-dark-color, solid); //estendo la mixin dei bottoni
+            @include buttons(transparent, variabili.$ea-dark-color, 2px, variabili.$ea-dark-color, solid); //estendo la mixin dei bottoni
         }
         
     }

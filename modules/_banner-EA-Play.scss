@@ -1,0 +1,229 @@
+@use "buttons" as b;
+@use "variabili" as v;
+@use "px-to-rem" as f;
+
+.eaBanner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-height: f.rem(600px);
+  height: f.rem(549px);
+  position: relative;
+  .container-bgc-img {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://media.contentapi.ea.com/content/dam/eacom/subscription/ea-play-platform-landing-page/images/2021/01/hero-medium-console-7x2-xl.jpg.adapt.crop7x2.1920w.jpg 1456w");
+  }
+  .img_container {
+    position: absolute;
+    top: 25%;
+    left: 21%;
+  }
+  h6 {
+    width: f.rem(500px);
+    position: absolute;
+    top: 43.7%;
+    left: 21%;
+    font-size: f.rem(18px);
+    color: v.$ea-light-color;
+    font-weight: 100;
+    line-height: 1.7rem;
+  }
+  .iscrivitiSubitoButton {
+    position: absolute;
+    top: 62.7%;
+    left: 21%;
+    font-family: "Electronic Arts Text";
+    font-size: f.rem(18px);
+    font-weight: 100;
+    padding: f.rem(16px) f.rem(18px);
+    border-radius: f.rem(3px);
+    border: f.rem(2px) solid v.$ea-light-color;
+    transition: all 0.08s ease-in-out;
+    cursor: pointer;
+    a {
+      text-decoration: none;
+      color: v.$ea-light-color;
+    }
+    @include b.buttons(
+      transparent,
+      v.$ea-light-color,
+      2px,
+      v.$ea-light-color,
+      solid
+    );
+
+    &:hover {
+      padding: f.rem(19px) f.rem(25px);
+      margin: f.rem(-3px) f.rem(-7px);
+    }
+  }
+}
+
+.blueBanner {
+  display: flex;
+  align-items: center;
+  height: f.rem(112px);
+  background-image: url("https://media.contentapi.ea.com/content/dam/eacom/common/ea-section-bg-esrb-parents-blue-xl.jpg.adapt.320w.jpg");
+  .container-h2-button {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    .container-h2-only {
+      max-width: f.rem(600px);
+      width: 100%;
+      h2 {
+        font-size: f.rem(26px);
+      }
+    }
+    .scopri_di_piu {
+      background-color: transparent;
+      font-family: "Electronic Arts Text";
+      font-size: f.rem(18px);
+      font-weight: 100;
+      padding: f.rem(16px) f.rem(28px);
+      border-radius: f.rem(3px);
+      border: 2px solid v.$ea-dark-color;
+      transition: all 0.08s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        padding: f.rem(19px) f.rem(31px);
+        margin: f.rem(-3px) f.rem(-3px);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .eaBanner {
+    height: f.rem(384px);
+    .container-bgc-img {
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      height: f.rem(384px);
+      background-repeat: no-repeat;
+      background-position: unset;
+      background-size: cover;
+      background-image: url("https://media.contentapi.ea.com/content/dam/eacom/subscription/ea-play-platform-landing-page/images/2021/01/hero-medium-console-7x2-xl.jpg.adapt.crop2x1.1023w.jpg");
+    }
+    .container-elements {
+      padding: f.rem(16px) f.rem(60px);
+      height: 80%;
+      width: 50%;
+      background-color: transparent;
+    }
+    .img_container {
+      position: unset;
+    }
+    h6 {
+      margin-bottom: 10px;
+      position: unset;
+      width: f.rem(312px);
+      font-size: f.rem(16px);
+      font-weight: 200;
+    }
+    .iscrivitiSubitoButton {
+      position: unset;
+      padding: f.rem(12.5px) f.rem(22px);
+      font-size: f.rem(16px);
+      &:hover {
+        padding: f.rem(14.5px) f.rem(24px);
+        margin: f.rem(-2px) f.rem(-2px);
+      }
+    }
+  }
+}
+@media (max-width: 1100px) {
+  .blueBanner {
+    height: f.rem(163px);
+    .container-h2-button {
+      margin: auto;
+      height: 100%;
+      flex-direction: column;
+      .container-h2-only {
+        h2 {
+          text-align: center;
+          font-size: f.rem(24px);
+        }
+      }
+    }
+    .scopri_di_piu {
+      padding: f.rem(12.5px) f.rem(22px);
+      font-size: f.rem(16px);
+      &:hover {
+        padding: f.rem(14.5px) f.rem(24px);
+        margin: f.rem(-2px) f.rem(-2px);
+      }
+    }
+  }
+}
+@media (max-width: 640px) {
+  .eaBanner {
+    .container-bgc-img {
+      .container-elements {
+        .iscrivitiSubitoButton {
+          padding: f.rem(12.5px) f.rem(80px);
+          white-space: nowrap;
+          top: 65%;
+          &:hover {
+            padding: f.rem(15.5px) f.rem(83px);
+            margin: f.rem(-3px) f.rem(-3px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .blueBanner {
+    height: f.rem(212px);
+    .container-h2-button {
+      .container-h2-only {
+        width: 80%;
+      }
+      .scopri_di_piu {
+        padding: f.rem(12.5px) f.rem(105px);
+
+        &:hover {
+          padding: f.rem(15.5px) f.rem(108px);
+          margin: f.rem(-3px) f.rem(-3px);
+        }
+      }
+    }
+  }
+  .eaBanner {
+    height: 600px;
+    .container-bgc-img {
+      background-image: url("https://media.contentapi.ea.com/content/dam/eacom/subscription/ea-play-platform-landing-page/images/2021/01/hero-medium-console-7x2-xl.jpg.adapt.crop3x5.320w.jpg");
+      height: f.rem(600px);
+      .container-elements {
+        padding: f.rem(110px) f.rem(25px);
+
+        .img_container {
+          top: 27%;
+        }
+        h6 {
+          margin-bottom: 10px;
+          top: 44%;
+        }
+        .iscrivitiSubitoButton {
+          padding: f.rem(12.5px) f.rem(100px);
+          white-space: nowrap;
+          top: 65%;
+          &:hover {
+            padding: f.rem(15.5px) f.rem(103px);
+            margin: f.rem(-3px) f.rem(-3px);
+          }
+        }
+      }
+    }
+  }
+}

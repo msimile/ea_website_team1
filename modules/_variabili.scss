@@ -1,0 +1,36 @@
+// colori di default 
+$ea-light-color: rgb(243,243,243);
+$ea-dark-color: rgb(22,22,22);
+$origin-brand-color: rgb(255,71,71);
+$ea-grey-color: rgb(163, 163, 163);
+
+//variabili pagina login
+$login-background: #1d2033;
+$input-login:rgb(20, 23, 36);;
+$accedi-color:rgb(35, 95, 227);
+$link-accedi: rgb(82, 136, 253);
+$facebook-background:rgb(24, 119, 242);
+$xbox-background: rgb(16, 124, 16);
+$playstation-background: rgb(0, 73, 160);
+$separate-color: rgb(144, 142, 151);
+
+// variabili font weight
+$header-w: 600;
+$title-w: 400;
+$body-w: 100;
+
+// valori per il font weight di header, title, body
+$fw_values: $body-w, $title-w, $header-w; 
+
+
+// variabili font size
+$header: 54px;
+$title: 35px;
+$body: 16px;
+
+// variabili per gap 
+$small-gap: 2rem;
+$medium-gap: 2.5rem;
+
+//aside height modules
+$aside-module-height: 3.5rem;

@@ -1,0 +1,263 @@
+@use "px-to-rem" as f;
+@use "variabili";
+
+.nav-nera {
+  -webkit-user-select: none;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out;
+  max-height: f.rem(40px);
+  position: relative;
+  z-index: 999;
+
+  .nav-icons {
+    max-height: f.rem(40px);
+    background-color: variabili.$ea-dark-color;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    z-index: 999;
+
+    .square-icon {
+      height: f.rem(40px);
+      width: f.rem(40px);
+      fill: grey;
+      display: flex;
+      margin-right: f.rem(20px);
+      align-items: center;
+      padding: f.rem(5px);
+      a {
+        fill: grey;
+        height: f.rem(40px);
+        width: f.rem(40px);
+        display: flex;
+        align-items: center;
+        &:hover {
+          fill: #a3a3a3;
+          cursor: pointer;
+        }
+      }
+    }
+    .nav-icons-active {
+      fill: variabili.$ea-light-color;
+    }
+    .ea {
+      margin-right: f.rem(32px);
+      fill: grey;
+    }
+    .square-icon:hover {
+      fill: variabili.$ea-light-color;
+      cursor: pointer;
+    }
+    .ea:hover {
+      fill: #a3a3a3;
+      cursor: pointer;
+    }
+  }
+}
+.header-invisible {
+  transform: translateY(-40px);
+  transition: transform 0.5s ease-in-out;
+}
+.body-block {
+  height: 100%;
+  overflow: hidden;
+}
+.toggle {
+  transform: translateY(-100%);
+}
+//prima estensione
+.nav-nera-extension {
+  height: 400px;
+  background-color: variabili.$ea-dark-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  z-index: 10;
+  transition: transform 0.5s ease-in-out;
+  &-cross {
+    cursor: pointer;
+    fill: variabili.$ea-light-color;
+    position: absolute;
+    top: 12%;
+    left: 97%;
+  }
+  .nav-nera-icons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    text-align: center;
+    transition: transform 0.5s ease-in-out, opacity 0.4s ease-in-out;
+
+    .nav-nera-link-container {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      cursor: pointer;
+      transition: transform 0.4s ease-in-out;
+      &:hover {
+        transform: translateY(-10px);
+      }
+
+      .accedi-container {
+        img {
+          width: 36px;
+          height: 36px;
+        }
+      }
+      .crea-account-container {
+        cursor: pointer;
+        img {
+          width: 36px;
+          height: 36px;
+        }
+      }
+      a {
+        font-family: "Electronic Arts Text";
+        text-decoration: none;
+        font-weight: 500;
+        color: variabili.$ea-light-color;
+      }
+    }
+  }
+  .nav-nera-extension-two-icons-container {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    gap: 7%;
+    height: 100%;
+    align-items: center;
+    margin-bottom: 10%;
+    justify-content: flex-end;
+    position: absolute;
+    transition: transform 0.5s ease-in-out, opacity 0.4s ease-in-out;
+  }
+  .p-footer {
+    font-weight: 500;
+    color: variabili.$ea-light-color;
+    text-align: center;
+    a {
+      text-decoration: none;
+      color: variabili.$origin-brand-color;
+    }
+  }
+  .need-help {
+    color: variabili.$ea-light-color;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: "Electronic Arts Text";
+  }
+  .nav-nera-extension-icons-top {
+    display: flex;
+    width: 70%;
+    justify-content: space-evenly;
+    .nav-nera-link-container-two {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
+      gap: 10px;
+      transition: transform 0.5s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        transform: translateY(-10px);
+      }
+      img {
+        width: 36px;
+        height: 36px;
+      }
+      p {
+        text-align: center;
+        color: variabili.$ea-light-color;
+      }
+    }
+  }
+  .nav-nera-extension-icons-bot {
+    display: flex;
+    width: 70%;
+    justify-content: space-evenly;
+    .nav-nera-link-container-two {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      transition: transform 0.5s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        transform: translateY(-10px);
+      }
+      img {
+        width: 36px;
+        height: 36px;
+      }
+      p {
+        text-align: center;
+        color: variabili.$ea-light-color;
+      }
+    }
+  }
+}
+// media prima estensione
+@media (max-width: 1000px) {
+  .nav-nera-extension {
+    .nav-nera-icons-container {
+      width: 30%;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .nav-nera-extension {
+    .nav-nera-extension-two-icons-container {
+      width: 100%;
+      padding: 20px;
+    }
+    .nav-nera-extension-icons-top,
+    .nav-nera-extension-icons-bot {
+      width: 80%;
+    }
+  }
+}
+.going-up {
+  transform: translateY(-250px);
+}
+.going-up-perc {
+  transform: translateY(-100%);
+}
+.fade-away {
+  opacity: 0;
+}
+@media (max-width: 550px) {
+  .nav-nera-extension {
+    .nav-nera-extension-icons-top,
+    .nav-nera-extension-icons-bot {
+      width: 100%;
+    }
+    .nav-nera-extension-two-icons-container {
+      width: 80%;
+      padding: 10px 10px 20px 10px;
+      gap : 5%
+    }
+    &-cross {
+      left: 90%;
+    }
+    .nav-nera-icons-container {
+      flex-direction: column;
+      height: 50%;
+      padding: 30px;
+
+      .nav-nera-link-container {
+        text-align: center;
+        width: 200px;
+        flex-direction: row;
+        gap: 10px;
+      }
+    }
+  }
+}
