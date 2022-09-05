@@ -74,13 +74,6 @@ crossButton.addEventListener("click", (e) => {
   document.querySelector("body").classList.remove("body-block");
 });
 
-document.querySelector(".wholeCross").addEventListener("click", () => {
-  navNeraExtension.classList.add("toggle");
-  accediButton.classList.remove("nav-icons-active");
-  infoButton.classList.remove("nav-icons-active");
-  document.querySelector("body").classList.remove("body-block");
-});
-
 let shiftedBody = Array.from(bodyToShift.children);
 shiftedBody.shift();
 
